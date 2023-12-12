@@ -7,7 +7,6 @@ mod fetcher;
 
 use crate::fetcher::{CodeDefinition, Problem};
 use regex::Regex;
-use std::env;
 use std::fs;
 use std::fs::File;
 use std::io;
@@ -63,7 +62,7 @@ async  fn main() {
                 .as_str()
                 .parse()
                 .unwrap();
-            deal_solving(&id);
+            deal_solving(&id).await;
             break;
         } else if all_pattern.is_match(id_arg) {
             // deal all problems
@@ -155,7 +154,6 @@ async  fn main() {
 
 fn generate_random_id(except_ids: &[u32]) -> u32 {
     use rand::Rng;
-    use std::fs;
     let mut rng = rand::thread_rng();
     loop {
         let res: u32 = rng.gen_range(1, 1106);
