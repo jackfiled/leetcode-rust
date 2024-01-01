@@ -11,3 +11,4 @@ mod s0912_sort_an_array;
 mod s1276_number_of_burgers_with_no_waste_of_ingredients;
 mod s0006_zigzag_conversion;
 mod s0007_reverse_integer;
+mod s0004_median_of_two_sorted_arrays;
