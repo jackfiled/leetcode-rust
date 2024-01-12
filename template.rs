@@ -1,12 +1,8 @@
 /**
  * [__PROBLEM_ID__] __PROBLEM_TITLE__
- *
- * __PROBLEM_DESC__
  */
-pub struct Solution {}__EXTRA_USE__
-
-// problem: __PROBLEM_LINK__
-// discuss: __DISCUSS_LINK__
+pub struct Solution {}
+__EXTRA_USE__
 
 // submission codes start here
 
