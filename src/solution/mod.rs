@@ -14,3 +14,4 @@ mod s0007_reverse_integer;
 mod s0004_median_of_two_sorted_arrays;
 mod s0743_network_delay_time;
 mod s0447_number_of_boomerangs;
+mod s2085_count_common_words_with_one_occurrence;
