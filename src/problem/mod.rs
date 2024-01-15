@@ -16,3 +16,5 @@ mod p0743_network_delay_time;
 mod p0447_number_of_boomerangs;
 mod p2085_count_common_words_with_one_occurrence;
 mod p2182_construct_string_with_repeat_limit;
+mod p83_remove_duplicates_from_sorted_list;
+mod p82_remove_duplicates_from_sorted_list_ii;
