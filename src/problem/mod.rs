@@ -19,3 +19,4 @@ mod p2182_construct_string_with_repeat_limit;
 mod p83_remove_duplicates_from_sorted_list;
 mod p82_remove_duplicates_from_sorted_list_ii;
 mod p2719_count_of_integers;
+mod p2744_find_maximum_number_of_string_pairs;
