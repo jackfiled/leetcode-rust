@@ -20,3 +20,4 @@ mod p83_remove_duplicates_from_sorted_list;
 mod p82_remove_duplicates_from_sorted_list_ii;
 mod p2719_count_of_integers;
 mod p2744_find_maximum_number_of_string_pairs;
+mod p2171_removing_minimum_number_of_magic_beans;
