@@ -23,3 +23,4 @@ mod p2744_find_maximum_number_of_string_pairs;
 mod p2171_removing_minimum_number_of_magic_beans;
 mod p2809_minimum_time_to_make_array_sum_at_most_x;
 mod p2788_split_strings_by_separator;
+mod p410_split_array_largest_sum;
