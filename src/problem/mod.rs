@@ -27,3 +27,4 @@ mod p410_split_array_largest_sum;
 mod p670_maximum_swap;
 mod p2765_longest_alternating_subarray;
 mod p2865_beautiful_towers_i;
+mod p2859_sum_of_values_at_indices_with_k_set_bits;
