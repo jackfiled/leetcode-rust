@@ -11,36 +11,29 @@ async fn main() {
     let fetcher = Fetcher::new();
 
     let args: Vec<String> = std::env::args().collect();
-    let operation = &args[1].as_str();
+    let id = args[1].parse::<u32>();
 
-    match operation {
-        &"get" => {
-            let id = args[2].parse::<u32>();
-
-            match id {
-                Ok(id) => {
-                    if manager.problem_list.contains(&id) {
-                        eprintln!("Problem {} exists.", id);
-                        return;
-                    }
-
-                    println!("Try to get problem {}...", id);
-
-                    let problem = fetcher.get_problem(id).await
-                        .expect(&*format!("Failed to get problem {}.", id));
-
-                    let file_name = problem.get_filename();
-                    println!("Get problem: {}.", file_name);
-                    let content = problem.get_file_content().expect("Failed to format file content");
-
-                    write_file(&file_name, &content).expect("Failed to write problem file.");
-                }
-                Err(_) => {
-                    eprintln!("Get operation needs a usize param.")
-                }
+    match id {
+        Ok(id) => {
+            if manager.problem_list.contains(&id) {
+                eprintln!("Problem {} exists.", id);
+                return;
             }
+
+            println!("Try to get problem {}...", id);
+
+            let problem = fetcher.get_problem(id).await
+                .expect(&*format!("Failed to get problem {}.", id));
+
+            let file_name = problem.get_filename();
+            println!("Get problem: {}.", file_name);
+            let content = problem.get_file_content().expect("Failed to format file content");
+
+            write_file(&file_name, &content).expect("Failed to write problem file.");
         }
-        _ => {}
+        Err(_) => {
+            eprintln!("Get operation needs a usize param.")
+        }
     }
 }
 
