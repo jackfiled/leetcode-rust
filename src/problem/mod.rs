@@ -28,3 +28,4 @@ mod p670_maximum_swap;
 mod p2765_longest_alternating_subarray;
 mod p2865_beautiful_towers_i;
 mod p2859_sum_of_values_at_indices_with_k_set_bits;
+mod p2846_minimum_edge_weight_equilibrium_queries_in_a_tree;
