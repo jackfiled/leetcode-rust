@@ -33,3 +33,4 @@ mod p2861_maximum_number_of_alloys;
 mod p365_water_and_jug_problem;
 mod p514_freedom_trail;
 mod p2808_minimum_seconds_to_equalize_a_circular_array;
+mod p2670_find_the_distinct_difference_array;
