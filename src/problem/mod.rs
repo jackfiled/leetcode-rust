@@ -37,3 +37,4 @@ mod p2670_find_the_distinct_difference_array;
 mod lcp24_nums_game;
 mod p1686_stone_game_vi;
 mod p1690_stone_game_vii;
+mod p292_nim_game;
