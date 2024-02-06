@@ -39,3 +39,4 @@ mod p1686_stone_game_vi;
 mod p1690_stone_game_vii;
 mod p292_nim_game;
 mod p1696_jump_game_vi;
+mod lcp30_magic_tower;
