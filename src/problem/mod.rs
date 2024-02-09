@@ -42,3 +42,4 @@ mod p1696_jump_game_vi;
 mod lcp30_magic_tower;
 mod p2641_cousins_in_binary_tree_ii;
 mod p993_cousins_in_binary_tree;
+mod p236_lowest_common_ancestor_of_a_binary_tree;
