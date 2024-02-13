@@ -46,3 +46,4 @@ mod p236_lowest_common_ancestor_of_a_binary_tree;
 mod p94_binary_tree_inorder_traversal;
 mod p144_binary_tree_preorder_traversal;
 mod p145_binary_tree_postorder_traversal;
+mod p987_vertical_order_traversal_of_a_binary_tree;
