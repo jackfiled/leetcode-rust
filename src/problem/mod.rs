@@ -50,3 +50,4 @@ mod p987_vertical_order_traversal_of_a_binary_tree;
 mod p102_binary_tree_level_order_traversal;
 mod p107_binary_tree_level_order_traversal_ii;
 mod p103_binary_tree_zigzag_level_order_traversal;
+mod p105_construct_binary_tree_from_preorder_and_inorder_traversal;
