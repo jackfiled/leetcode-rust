@@ -57,3 +57,4 @@ mod p2583_kth_largest_sum_in_a_binary_tree;
 mod p2476_closest_nodes_queries_in_a_binary_search_tree;
 mod p938_range_sum_of_bst;
 mod p889_construct_binary_tree_from_preorder_and_postorder_traversal;
+mod p2867_count_valid_paths_in_a_tree;
