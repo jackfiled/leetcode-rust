@@ -59,3 +59,4 @@ mod p938_range_sum_of_bst;
 mod p889_construct_binary_tree_from_preorder_and_postorder_traversal;
 mod p2867_count_valid_paths_in_a_tree;
 mod p2673_make_costs_of_paths_equal_in_a_binary_tree;
+mod p2581_count_number_of_possible_root_nodes;
