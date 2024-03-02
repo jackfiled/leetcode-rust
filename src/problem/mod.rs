@@ -61,3 +61,4 @@ mod p2867_count_valid_paths_in_a_tree;
 mod p2673_make_costs_of_paths_equal_in_a_binary_tree;
 mod p2581_count_number_of_possible_root_nodes;
 mod p2369_check_if_there_is_a_valid_partition_for_the_array;
+mod p2368_reachable_nodes_with_restrictions;
