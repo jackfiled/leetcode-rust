@@ -63,3 +63,4 @@ mod p2581_count_number_of_possible_root_nodes;
 mod p2369_check_if_there_is_a_valid_partition_for_the_array;
 mod p2368_reachable_nodes_with_restrictions;
 mod p225_implement_stack_using_queues;
+mod p232_implement_queue_using_stacks;
