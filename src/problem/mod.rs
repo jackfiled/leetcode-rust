@@ -67,3 +67,4 @@ mod p232_implement_queue_using_stacks;
 mod p1976_number_of_ways_to_arrive_at_destination;
 mod p2917_find_the_k_or_of_an_array;
 mod p2575_find_the_divisibility_array_of_a_string;
+mod p2834_find_the_minimum_possible_sum_of_a_beautiful_array;
