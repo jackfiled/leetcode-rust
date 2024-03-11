@@ -70,3 +70,4 @@ mod p2575_find_the_divisibility_array_of_a_string;
 mod p2834_find_the_minimum_possible_sum_of_a_beautiful_array;
 mod p2386_find_the_k_sum_of_an_array;
 mod p299_bulls_and_cows;
+mod p2129_capitalize_the_title;
