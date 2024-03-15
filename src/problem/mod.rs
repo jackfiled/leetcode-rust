@@ -74,3 +74,4 @@ mod p2129_capitalize_the_title;
 mod p1261_find_elements_in_a_contaminated_binary_tree;
 mod p2864_maximum_odd_binary_number;
 mod p2789_largest_element_in_an_array_after_merge_operations;
+mod p2312_selling_pieces_of_wood;
