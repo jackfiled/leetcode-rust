@@ -78,3 +78,4 @@ mod p2312_selling_pieces_of_wood;
 mod p2684_maximum_number_of_moves_in_a_grid;
 mod p310_minimum_height_trees;
 mod p303_range_sum_query_immutable;
+mod p1793_maximum_score_of_a_good_subarray;
