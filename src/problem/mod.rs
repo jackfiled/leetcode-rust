@@ -80,3 +80,4 @@ mod p310_minimum_height_trees;
 mod p303_range_sum_query_immutable;
 mod p1793_maximum_score_of_a_good_subarray;
 mod p1969_minimum_non_zero_product_of_the_array_elements;
+mod p2671_frequency_tracker;
