@@ -86,3 +86,4 @@ mod p2549_count_distinct_numbers_on_board;
 mod p322_coin_change;
 mod p518_coin_change_ii;
 mod p2642_design_graph_with_shortest_path_calculator;
+mod p2580_count_ways_to_group_overlapping_ranges;
