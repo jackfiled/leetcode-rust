@@ -88,3 +88,4 @@ mod p518_coin_change_ii;
 mod p2642_design_graph_with_shortest_path_calculator;
 mod p2580_count_ways_to_group_overlapping_ranges;
 mod p1997_first_day_where_you_have_been_in_all_the_rooms;
+mod p2908_minimum_sum_of_mountain_triplets_i;
