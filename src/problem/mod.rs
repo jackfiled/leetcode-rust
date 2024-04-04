@@ -93,3 +93,4 @@ mod p2952_minimum_number_of_coins_to_be_added;
 mod p331_verify_preorder_serialization_of_a_binary_tree;
 mod p88_merge_sorted_array;
 mod p26_remove_duplicates_from_sorted_array;
+mod p27_remove_element;
