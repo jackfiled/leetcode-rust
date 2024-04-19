@@ -106,3 +106,4 @@ mod p380_insert_delete_getrandom_o1;
 mod p238_product_of_array_except_self;
 mod p134_gas_station;
 mod p135_candy;
+mod p42_trapping_rain_water;
