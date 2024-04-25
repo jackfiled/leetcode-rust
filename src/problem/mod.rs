@@ -112,3 +112,4 @@ mod p151_reverse_words_in_a_string;
 mod p28_find_the_index_of_the_first_occurrence_in_a_string;
 mod p68_text_justification;
 mod p125_valid_palindrome;
+mod p392_is_subsequence;
