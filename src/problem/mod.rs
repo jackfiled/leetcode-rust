@@ -118,3 +118,4 @@ mod p209_minimum_size_subarray_sum;
 mod p30_substring_with_concatenation_of_all_words;
 mod p76_minimum_window_substring;
 mod p36_valid_sudoku;
+mod p54_spiral_matrix;
