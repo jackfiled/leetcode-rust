@@ -124,3 +124,4 @@ mod p73_set_matrix_zeroes;
 mod p289_game_of_life;
 mod p383_ransom_note;
 mod p290_word_pattern;
+mod p205_isomorphic_strings;
