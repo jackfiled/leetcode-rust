@@ -125,3 +125,4 @@ mod p289_game_of_life;
 mod p383_ransom_note;
 mod p290_word_pattern;
 mod p205_isomorphic_strings;
+mod p242_valid_anagram;
