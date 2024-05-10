@@ -127,3 +127,4 @@ mod p290_word_pattern;
 mod p205_isomorphic_strings;
 mod p242_valid_anagram;
 mod p49_group_anagrams;
+mod p202_happy_number;
