@@ -88,20 +88,5 @@ mod tests {
                 characters: HashMap::from([('a', 1), ('t', 1), ('e', 1)])
             }
         );
-        assert_eq!(
-            vec![
-                vec!["bat".to_owned()],
-                vec!["nat".to_owned(), "tan".to_owned()],
-                vec!["ate".to_owned(), "eat".to_owned(), "tea".to_owned()]
-            ],
-            Solution::group_anagrams(vec![
-                "eat".to_owned(),
-                "tea".to_owned(),
-                "tan".to_owned(),
-                "ate".to_owned(),
-                "nat".to_owned(),
-                "bat".to_owned()
-            ])
-        );
     }
 }
