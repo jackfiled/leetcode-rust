@@ -4,7 +4,7 @@
 pub struct Solution {}
 
 // submission codes start here
-use std::{collections::HashSet, ops::Add};
+use std::collections::HashSet;
 
 impl Solution {
     pub fn is_happy(n: i32) -> bool {
@@ -13,7 +13,6 @@ impl Solution {
         let mut n = Solution::calculate_square(n);
 
         while n != 1 {
-            dbg!(n);
             if s.contains(&n) {
                 return false;
             }
