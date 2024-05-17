@@ -134,3 +134,4 @@ mod p228_summary_ranges;
 mod p56_merge_intervals;
 mod p57_insert_interval;
 mod p452_minimum_number_of_arrows_to_burst_balloons;
+mod p71_simplify_path;
