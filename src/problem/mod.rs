@@ -138,3 +138,4 @@ mod p71_simplify_path;
 mod p155_min_stack;
 mod p150_evaluate_reverse_polish_notation;
 mod p224_basic_calculator;
+mod p21_merge_two_sorted_lists;
