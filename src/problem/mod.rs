@@ -141,3 +141,4 @@ mod p224_basic_calculator;
 mod p21_merge_two_sorted_lists;
 mod p104_maximum_depth_of_binary_tree;
 mod p100_same_tree;
+mod p226_invert_binary_tree;
