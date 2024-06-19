@@ -153,3 +153,4 @@ mod p199_binary_tree_right_side_view;
 mod p637_average_of_levels_in_binary_tree;
 mod p530_minimum_absolute_difference_in_bst;
 mod p230_kth_smallest_element_in_a_bst;
+mod p98_validate_binary_search_tree;
