@@ -155,3 +155,4 @@ mod p530_minimum_absolute_difference_in_bst;
 mod p230_kth_smallest_element_in_a_bst;
 mod p98_validate_binary_search_tree;
 mod p200_number_of_islands;
+mod p130_surrounded_regions;
