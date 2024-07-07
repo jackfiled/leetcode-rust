@@ -169,3 +169,4 @@ mod p17_letter_combinations_of_a_phone_number;
 mod p77_combinations;
 mod p46_permutations;
 mod p39_combination_sum;
+mod p22_generate_parentheses;
