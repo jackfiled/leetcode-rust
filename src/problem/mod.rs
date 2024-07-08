@@ -170,3 +170,4 @@ mod p77_combinations;
 mod p46_permutations;
 mod p39_combination_sum;
 mod p22_generate_parentheses;
+mod p79_word_search;
