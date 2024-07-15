@@ -174,3 +174,4 @@ mod p79_word_search;
 mod p108_convert_sorted_array_to_binary_search_tree;
 mod p53_maximum_subarray;
 mod p918_maximum_sum_circular_subarray;
+mod p35_search_insert_position;
