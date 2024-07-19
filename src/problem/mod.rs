@@ -178,3 +178,4 @@ mod p35_search_insert_position;
 mod p74_search_a_2d_matrix;
 mod p33_search_in_rotated_sorted_array;
 mod p34_find_first_and_last_position_of_element_in_sorted_array;
+mod p153_find_minimum_in_rotated_sorted_array;
