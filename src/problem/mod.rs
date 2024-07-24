@@ -183,3 +183,4 @@ mod p215_kth_largest_element_in_an_array;
 mod p502_ipo;
 mod p373_find_k_pairs_with_smallest_sums;
 mod p295_find_median_from_data_stream;
+mod p67_add_binary;
