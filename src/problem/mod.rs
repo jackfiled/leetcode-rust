@@ -186,3 +186,4 @@ mod p295_find_median_from_data_stream;
 mod p67_add_binary;
 mod p190_reverse_bits;
 mod p191_number_of_1_bits;
+mod p136_single_number;
