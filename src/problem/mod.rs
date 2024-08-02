@@ -192,3 +192,4 @@ mod p201_bitwise_and_of_numbers_range;
 mod p66_plus_one;
 mod p172_factorial_trailing_zeroes;
 mod p69_sqrtx;
+mod p50_powx_n;
