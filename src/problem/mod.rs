@@ -194,3 +194,4 @@ mod p172_factorial_trailing_zeroes;
 mod p69_sqrtx;
 mod p50_powx_n;
 mod p149_max_points_on_a_line;
+mod p70_climbing_stairs;
