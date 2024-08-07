@@ -197,3 +197,4 @@ mod p149_max_points_on_a_line;
 mod p70_climbing_stairs;
 mod p198_house_robber;
 mod p139_word_break;
+mod p300_longest_increasing_subsequence;
