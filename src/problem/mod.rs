@@ -202,3 +202,4 @@ mod p120_triangle;
 mod p64_minimum_path_sum;
 mod p63_unique_paths_ii;
 mod p97_interleaving_string;
+mod p72_edit_distance;
