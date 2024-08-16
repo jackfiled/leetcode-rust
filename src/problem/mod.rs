@@ -206,3 +206,4 @@ mod p72_edit_distance;
 mod p123_best_time_to_buy_and_sell_stock_iii;
 mod p188_best_time_to_buy_and_sell_stock_iv;
 mod p221_maximal_square;
+mod p3117_minimum_sum_of_values_by_dividing_array;
