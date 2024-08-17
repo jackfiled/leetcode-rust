@@ -207,3 +207,4 @@ mod p123_best_time_to_buy_and_sell_stock_iii;
 mod p188_best_time_to_buy_and_sell_stock_iv;
 mod p221_maximal_square;
 mod p3117_minimum_sum_of_values_by_dividing_array;
+mod p3137_minimum_number_of_operations_to_make_word_k_periodic;
