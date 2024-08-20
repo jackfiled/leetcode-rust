@@ -211,3 +211,4 @@ mod p3137_minimum_number_of_operations_to_make_word_k_periodic;
 mod p551_student_attendance_record_i;
 
 mod p552_student_attendance_record_ii;
+mod p3154_find_number_of_ways_to_reach_the_k_th_stair;
