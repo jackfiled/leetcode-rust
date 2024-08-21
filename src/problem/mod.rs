@@ -212,3 +212,4 @@ mod p551_student_attendance_record_i;
 
 mod p552_student_attendance_record_ii;
 mod p3154_find_number_of_ways_to_reach_the_k_th_stair;
+mod p3007_maximum_number_that_sum_of_the_prices_is_less_than_or_equal_to_k;
