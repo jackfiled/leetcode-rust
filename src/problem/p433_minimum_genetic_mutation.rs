@@ -81,7 +81,7 @@ mod tests {
                     "AAACGGTA".to_owned()
                 ]
             ),
-            3
+            2
         );
     }
 }
