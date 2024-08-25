@@ -216,3 +216,4 @@ mod p3007_maximum_number_that_sum_of_the_prices_is_less_than_or_equal_to_k;
 mod p3133_minimum_array_end;
 mod p3145_find_products_of_elements_of_big_array;
 mod p3146_permutation_difference_between_two_strings;
+mod p698_partition_to_k_equal_sum_subsets;
