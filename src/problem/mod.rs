@@ -218,3 +218,4 @@ mod p3145_find_products_of_elements_of_big_array;
 mod p3146_permutation_difference_between_two_strings;
 mod p698_partition_to_k_equal_sum_subsets;
 mod p3134_find_the_median_of_the_uniqueness_array;
+mod p3144_minimum_substring_partition_of_equal_character_frequency;
