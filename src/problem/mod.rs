@@ -221,3 +221,4 @@ mod p3134_find_the_median_of_the_uniqueness_array;
 mod p3144_minimum_substring_partition_of_equal_character_frequency;
 mod p3142_check_if_grid_satisfies_conditions;
 mod p3153_sum_of_digit_differences_of_all_pairs;
+mod p3127_make_a_square_with_the_same_color;
