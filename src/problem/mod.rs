@@ -222,3 +222,4 @@ mod p3144_minimum_substring_partition_of_equal_character_frequency;
 mod p3142_check_if_grid_satisfies_conditions;
 mod p3153_sum_of_digit_differences_of_all_pairs;
 mod p3127_make_a_square_with_the_same_color;
+mod p1450_number_of_students_doing_homework_at_a_given_time;
