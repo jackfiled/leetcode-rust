@@ -224,3 +224,4 @@ mod p3153_sum_of_digit_differences_of_all_pairs;
 mod p3127_make_a_square_with_the_same_color;
 mod p1450_number_of_students_doing_homework_at_a_given_time;
 mod p2024_maximize_the_confusion_of_an_exam;
+mod p2708_maximum_strength_of_a_group;
