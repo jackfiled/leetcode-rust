@@ -226,3 +226,4 @@ mod p1450_number_of_students_doing_homework_at_a_given_time;
 mod p2024_maximize_the_confusion_of_an_exam;
 mod p2708_maximum_strength_of_a_group;
 mod p2860_happy_students;
+mod p3174_clear_digits;
