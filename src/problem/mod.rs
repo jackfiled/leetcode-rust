@@ -227,3 +227,4 @@ mod p2024_maximize_the_confusion_of_an_exam;
 mod p2708_maximum_strength_of_a_group;
 mod p2860_happy_students;
 mod p3174_clear_digits;
+mod p3176_find_the_maximum_length_of_a_good_subsequence_i;
