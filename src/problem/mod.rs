@@ -231,3 +231,4 @@ mod p3176_find_the_maximum_length_of_a_good_subsequence_i;
 mod p3177_find_the_maximum_length_of_a_good_subsequence_ii;
 mod p977_squares_of_a_sorted_array;
 mod p2181_merge_nodes_in_between_zeros;
+mod p2552_count_increasing_quadruplets;
