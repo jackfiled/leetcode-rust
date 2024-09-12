@@ -1,6 +1,9 @@
 #!/usr/bin/env just --justfile
 
-build:
+update:
+    git pull
+
+build: update
     cargo build --release
 
 test:
