@@ -234,3 +234,4 @@ mod p2181_merge_nodes_in_between_zeros;
 mod p2552_count_increasing_quadruplets;
 mod p2555_maximize_win_from_two_segments;
 mod p2576_find_the_maximum_number_of_marked_indices;
+mod p2398_maximum_number_of_robots_within_budget;
