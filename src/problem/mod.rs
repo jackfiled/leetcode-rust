@@ -236,3 +236,4 @@ mod p2555_maximize_win_from_two_segments;
 mod p2576_find_the_maximum_number_of_marked_indices;
 mod p2398_maximum_number_of_robots_within_budget;
 mod p2390_removing_stars_from_a_string;
+mod p2848_points_that_intersect_with_cars;
