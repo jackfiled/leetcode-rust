@@ -239,3 +239,4 @@ mod p2390_removing_stars_from_a_string;
 mod p2848_points_that_intersect_with_cars;
 mod p1184_distance_between_bus_stops;
 mod p815_bus_routes;
+mod p2332_the_latest_time_to_catch_a_bus;
