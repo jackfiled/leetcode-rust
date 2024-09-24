@@ -1,10 +1,8 @@
-use regex::escape;
-
 /**
  * [997] Find the Town Judge
  */
 pub struct Solution {}
-    
+
 
 // submission codes start here
 
