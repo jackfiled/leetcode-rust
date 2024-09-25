@@ -245,3 +245,4 @@ mod p2376_count_special_integers;
 mod p2374_node_with_highest_edge_score;
 mod p997_find_the_town_judge;
 mod p2207_maximize_number_of_subsequences_in_a_string;
+mod p2306_naming_a_company;
