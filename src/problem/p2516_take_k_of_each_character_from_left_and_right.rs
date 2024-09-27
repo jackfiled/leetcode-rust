@@ -26,19 +26,37 @@ impl Solution {
             return -1;
         }
         
-        let mut result = 0;
+        let mut result = n;
         let mut right = 0;
-        let mut right_counts = vec![0;3];
         
         // 左指针从右往左移动
-        for left in (0..n - 1).rev() {
-            
-        }
-        
-        
-        
+        for left in (0..=n - 1).rev() {
+            while left_counts.iter().any(|x| *x < k) {
+                match s[n - 1 - right] {
+                    'a' => left_counts[0] += 1,
+                    'b' => left_counts[1] += 1,
+                    'c' => left_counts[2] += 1,
+                    _ => unreachable!()
+                };
 
-        result
+                right += 1;
+            }
+
+            result = result.min(left + 1 + right);
+            
+            match s[left] {
+                'a' => left_counts[0] -= 1,
+                'b' => left_counts[1] -= 1,
+                'c' => left_counts[2] -= 1,
+                _ => unreachable!()
+            };
+        }
+
+        if !left_counts.iter().any(|x| *x < k) {
+            result = result.min(right);
+        }
+
+        result as i32
     }
 }
 
@@ -50,5 +68,8 @@ mod tests {
 
     #[test]
     fn test_2516() {
+        assert_eq!(8, Solution::take_characters("aabaaaacaabc".to_owned(), 2));
+        assert_eq!(-1, Solution::take_characters("a".to_owned(), 1));
+        assert_eq!(0, Solution::take_characters("a".to_owned(), 0));
     }
 }
