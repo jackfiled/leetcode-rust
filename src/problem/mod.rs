@@ -248,3 +248,4 @@ mod p2207_maximize_number_of_subsequences_in_a_string;
 mod p2306_naming_a_company;
 mod p2535_difference_between_element_sum_and_digit_sum_of_an_array;
 mod p2516_take_k_of_each_character_from_left_and_right;
+mod p2286_booking_concert_tickets_in_groups;
