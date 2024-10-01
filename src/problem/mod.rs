@@ -251,3 +251,4 @@ mod p2516_take_k_of_each_character_from_left_and_right;
 mod p2286_booking_concert_tickets_in_groups;
 mod p2073_time_needed_to_buy_tickets;
 mod p1845_seat_reservation_manager;
+mod p983_minimum_cost_for_tickets;
