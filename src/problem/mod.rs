@@ -254,3 +254,4 @@ mod p1845_seat_reservation_manager;
 mod p983_minimum_cost_for_tickets;
 mod p1870_minimum_speed_to_arrive_on_time;
 mod p1928_minimum_cost_to_reach_destination_in_time;
+mod p1227_airplane_seat_assignment_probability;
