@@ -256,3 +256,4 @@ mod p1870_minimum_speed_to_arrive_on_time;
 mod p1928_minimum_cost_to_reach_destination_in_time;
 mod p1227_airplane_seat_assignment_probability;
 mod p2187_minimum_time_to_complete_trips;
+mod p871_minimum_number_of_refueling_stops;
