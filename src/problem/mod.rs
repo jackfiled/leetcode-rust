@@ -258,3 +258,4 @@ mod p1227_airplane_seat_assignment_probability;
 mod p2187_minimum_time_to_complete_trips;
 mod p871_minimum_number_of_refueling_stops;
 mod p1436_destination_city;
+mod p3171_find_subarray_with_bitwise_or_closest_to_k;
