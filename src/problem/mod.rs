@@ -264,3 +264,4 @@ mod p3164_find_the_number_of_good_pairs_ii;
 mod p3158_find_the_xor_of_numbers_which_appear_twice;
 mod p1884_egg_drop_with_2_eggs_and_n_floors;
 mod p887_super_egg_drop;
+mod p3200_maximum_height_of_a_triangle;
