@@ -267,3 +267,4 @@ mod p887_super_egg_drop;
 mod p3200_maximum_height_of_a_triangle;
 mod p3194_minimum_average_of_smallest_and_largest_elements;
 mod p3193_count_the_number_of_inversions;
+mod p3191_minimum_operations_to_make_binary_array_elements_equal_to_one_i;
