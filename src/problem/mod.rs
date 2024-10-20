@@ -269,3 +269,4 @@ mod p3194_minimum_average_of_smallest_and_largest_elements;
 mod p3193_count_the_number_of_inversions;
 mod p3191_minimum_operations_to_make_binary_array_elements_equal_to_one_i;
 mod p3192_minimum_operations_to_make_binary_array_elements_equal_to_one_ii;
+mod p908_smallest_range_i;
