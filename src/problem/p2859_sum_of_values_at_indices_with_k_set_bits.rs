@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -41,9 +40,18 @@ mod tests {
 
     #[test]
     fn test_2859() {
-        assert_eq!(Solution::sum_indices_with_k_set_bits(vec![5,10,1,5,2], 1), 13);
-        assert_eq!(Solution::sum_indices_with_k_set_bits(vec![4,3,2,1], 2), 1);
+        assert_eq!(
+            Solution::sum_indices_with_k_set_bits(vec![5, 10, 1, 5, 2], 1),
+            13
+        );
+        assert_eq!(
+            Solution::sum_indices_with_k_set_bits(vec![4, 3, 2, 1], 2),
+            1
+        );
         assert_eq!(Solution::sum_indices_with_k_set_bits(vec![1], 0), 1);
-        assert_eq!(Solution::sum_indices_with_k_set_bits(vec![1,1,3,1,6], 2), 1);
+        assert_eq!(
+            Solution::sum_indices_with_k_set_bits(vec![1, 1, 3, 1, 6], 2),
+            1
+        );
     }
 }

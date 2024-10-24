@@ -46,7 +46,8 @@ impl Solution {
                 }
             }
 
-            1 + Self::dp(k - 1, left - 1, memory).max(Self::dp(k, n - left, memory))
+            1 + Self::dp(k - 1, left - 1, memory)
+                .max(Self::dp(k, n - left, memory))
                 .min(Self::dp(k - 1, right - 1, memory).max(Self::dp(k, n - right, memory)))
         };
 

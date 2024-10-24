@@ -3,29 +3,26 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::{HashMap, HashSet};
 
 struct FrequencyTracker {
-    number_map : HashMap<i32, i32>,
-    frequency_map : HashMap<i32, HashSet<i32>>,
+    number_map: HashMap<i32, i32>,
+    frequency_map: HashMap<i32, HashSet<i32>>,
 }
-
 
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl FrequencyTracker {
-
     fn new() -> Self {
         FrequencyTracker {
             number_map: HashMap::new(),
             frequency_map: HashMap::new(),
         }
     }
-    
+
     fn add(&mut self, number: i32) {
         let mut entry = self.number_map.entry(number).or_insert(0);
 
@@ -36,11 +33,10 @@ impl FrequencyTracker {
         }
 
         *entry += 1;
-        let set = self.frequency_map.entry(*entry)
-            .or_insert(HashSet::new());
+        let set = self.frequency_map.entry(*entry).or_insert(HashSet::new());
         set.insert(number);
     }
-    
+
     fn delete_one(&mut self, number: i32) {
         if let Some(entry) = self.number_map.get_mut(&number) {
             if *entry == 0 {
@@ -52,18 +48,17 @@ impl FrequencyTracker {
             }
 
             *entry -= 1;
-            let set = self.frequency_map.entry(*entry)
-                .or_insert(HashSet::new());
+            let set = self.frequency_map.entry(*entry).or_insert(HashSet::new());
             set.insert(number);
-        } 
+        }
     }
-    
+
     fn has_frequency(&self, frequency: i32) -> bool {
         let set = self.frequency_map.get(&frequency);
 
         match set {
             Some(set) => set.len() != 0,
-            None => false
+            None => false,
         }
     }
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -47,8 +46,14 @@ mod tests {
 
     #[test]
     fn test_977() {
-        assert_eq!(vec![0, 1, 9, 16, 100], Solution::sorted_squares(vec![-4, -1, 0, 3, 10]));
-        assert_eq!(vec![4, 9, 9, 49, 121], Solution::sorted_squares(vec![-7, -3, 2, 3, 11]));
+        assert_eq!(
+            vec![0, 1, 9, 16, 100],
+            Solution::sorted_squares(vec![-4, -1, 0, 3, 10])
+        );
+        assert_eq!(
+            vec![4, 9, 9, 49, 121],
+            Solution::sorted_squares(vec![-7, -3, 2, 3, 11])
+        );
         assert_eq!(vec![1, 4], Solution::sorted_squares(vec![-2, -1]));
     }
 }

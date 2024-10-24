@@ -41,7 +41,7 @@ pub struct Solution {}
 use std::cmp::min;
 impl Solution {
     pub fn make_smallest_palindrome(s: String) -> String {
-        let mut result : Vec<u8> = s.bytes().collect();
+        let mut result: Vec<u8> = s.bytes().collect();
         let mut left = 0;
         let mut right = result.len() - 1;
 
@@ -69,11 +69,17 @@ mod tests {
 
     #[test]
     fn test_2697() {
-        assert_eq!(String::from("efcfe"),
-                   Solution::make_smallest_palindrome(String::from("egcfe")));
-        assert_eq!(String::from("abba"),
-                   Solution::make_smallest_palindrome(String::from("abcd")));
-        assert_eq!(String::from("neven"),
-                   Solution::make_smallest_palindrome(String::from("seven")));
+        assert_eq!(
+            String::from("efcfe"),
+            Solution::make_smallest_palindrome(String::from("egcfe"))
+        );
+        assert_eq!(
+            String::from("abba"),
+            Solution::make_smallest_palindrome(String::from("abcd"))
+        );
+        assert_eq!(
+            String::from("neven"),
+            Solution::make_smallest_palindrome(String::from("seven"))
+        );
     }
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -40,7 +39,9 @@ impl Solution {
                 break;
             }
 
-            if (state >> i) & 1 == 1 && Self::search(state ^ (1 << i), (now + n) % target, dp, target, nums) {
+            if (state >> i) & 1 == 1
+                && Self::search(state ^ (1 << i), (now + n) % target, dp, target, nums)
+            {
                 return true;
             }
         }
@@ -57,6 +58,9 @@ mod tests {
 
     #[test]
     fn test_698() {
-        assert!(Solution::can_partition_k_subsets(vec![4, 3, 2, 3, 5, 2, 1], 4));
+        assert!(Solution::can_partition_k_subsets(
+            vec![4, 3, 2, 3, 5, 2, 1],
+            4
+        ));
     }
 }

@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::linked_list::{ListNode, to_list};
+use crate::util::linked_list::{to_list, ListNode};
 
 // submission codes start here
 
@@ -33,7 +33,7 @@ impl Solution {
                 if node.val == next.val {
                     node.next = next.next.take();
                 } else {
-                    break
+                    break;
                 }
             }
 
@@ -51,6 +51,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_83() {
-    }
+    fn test_83() {}
 }

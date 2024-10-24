@@ -5,25 +5,25 @@
  * Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
  *  
  * <strong class="example">Example 1:
- * 
+ *
  * Input: x = 123
  * Output: 321
- * 
+ *
  * <strong class="example">Example 2:
- * 
+ *
  * Input: x = -123
  * Output: -321
- * 
+ *
  * <strong class="example">Example 3:
- * 
+ *
  * Input: x = 120
  * Output: 21
- * 
+ *
  *  
  * Constraints:
- * 
+ *
  * 	-2^31 <= x <= 2^31 - 1
- * 
+ *
  */
 pub struct Solution {}
 
@@ -34,11 +34,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn reverse(x: i32) -> i32 {
-        let (num, negative) = if x < 0 {
-            (-x, true)
-        } else {
-            (x, false)
-        };
+        let (num, negative) = if x < 0 { (-x, true) } else { (x, false) };
 
         let str = num.to_string();
         let mut str: String = str.chars().rev().collect();

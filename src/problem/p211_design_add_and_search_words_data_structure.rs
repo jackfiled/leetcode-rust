@@ -4,7 +4,11 @@
 pub struct Solution {}
 
 // submission codes start here
-use std::{rc::Rc, cell::RefCell, collections::{HashMap, VecDeque}};
+use std::{
+    cell::RefCell,
+    collections::{HashMap, VecDeque},
+    rc::Rc,
+};
 
 struct TireNode {
     is_word: bool,
@@ -31,7 +35,7 @@ struct WordDictionary {
 impl WordDictionary {
     fn new() -> Self {
         WordDictionary {
-            dummy_head: Rc::new(RefCell::new(TireNode::new(false)))
+            dummy_head: Rc::new(RefCell::new(TireNode::new(false))),
         }
     }
 
@@ -41,16 +45,17 @@ impl WordDictionary {
         for (i, c) in word.chars().enumerate() {
             if node.borrow().next.contains_key(&c) {
                 if i == word.len() - 1 {
-                    node.borrow().next
-                        .get(&c)
-                        .unwrap()
-                        .borrow_mut().is_word = true;
+                    node.borrow().next.get(&c).unwrap().borrow_mut().is_word = true;
                 }
             } else {
                 if i == word.len() - 1 {
-                    node.borrow_mut().next.insert(c, Rc::new(RefCell::new(TireNode::new(true))));
+                    node.borrow_mut()
+                        .next
+                        .insert(c, Rc::new(RefCell::new(TireNode::new(true))));
                 } else {
-                    node.borrow_mut().next.insert(c, Rc::new(RefCell::new(TireNode::new(false))));
+                    node.borrow_mut()
+                        .next
+                        .insert(c, Rc::new(RefCell::new(TireNode::new(false))));
                 }
             }
 
@@ -74,9 +79,7 @@ impl WordDictionary {
                 let node = queue.pop_front().unwrap();
 
                 if i == word.len() - 1 {
-                    if c == '.' && node.borrow().next.iter().any(|(_, n)| {
-                        n.borrow().is_word
-                    }) {
+                    if c == '.' && node.borrow().next.iter().any(|(_, n)| n.borrow().is_word) {
                         return true;
                     }
 

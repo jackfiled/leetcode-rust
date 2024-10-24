@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -12,7 +11,7 @@ impl Solution {
 
         for peek in 0..max_heights.len() {
             let mut total_height = max_heights[peek] as i64;
-            let mut heights = vec![0;max_heights.len()];
+            let mut heights = vec![0; max_heights.len()];
             heights[peek] = max_heights[peek];
 
             for i in (0..peek).rev() {
@@ -28,7 +27,6 @@ impl Solution {
             result = result.max(total_height);
         }
 
-
         result
     }
 }
@@ -41,8 +39,8 @@ mod tests {
 
     #[test]
     fn test_2865() {
-        assert_eq!(Solution::maximum_sum_of_heights(vec![5,3,4,1,1]), 13);
-        assert_eq!(Solution::maximum_sum_of_heights(vec![6,5,3,9,2,6]), 22);
-        assert_eq!(Solution::maximum_sum_of_heights(vec![3,2,5,5,2,3]), 18);
+        assert_eq!(Solution::maximum_sum_of_heights(vec![5, 3, 4, 1, 1]), 13);
+        assert_eq!(Solution::maximum_sum_of_heights(vec![6, 5, 3, 9, 2, 6]), 22);
+        assert_eq!(Solution::maximum_sum_of_heights(vec![3, 2, 5, 5, 2, 3]), 18);
     }
 }

@@ -1,7 +1,7 @@
 pub struct Solution {}
 
-use std::collections::BinaryHeap;
 use std::cmp::Reverse;
+use std::collections::BinaryHeap;
 
 impl Solution {
     pub fn magic_tower(nums: Vec<i32>) -> i32 {
@@ -41,9 +41,10 @@ mod tests {
 
     #[test]
     fn test_lcp30() {
-        assert_eq!(Solution::magic_tower(
-            vec![100,100,100,-250,-60,-140,-50,-50,100,150]), 1);
-        assert_eq!(Solution::magic_tower(
-            vec![-200,-300,400,0]), -1);
+        assert_eq!(
+            Solution::magic_tower(vec![100, 100, 100, -250, -60, -140, -50, -50, 100, 150]),
+            1
+        );
+        assert_eq!(Solution::magic_tower(vec![-200, -300, 400, 0]), -1);
     }
 }

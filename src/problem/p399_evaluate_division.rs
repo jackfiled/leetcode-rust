@@ -3,13 +3,12 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
 struct UnionFind {
-    parents : Vec<usize>,
-    weights : Vec<f64>
+    parents: Vec<usize>,
+    weights: Vec<f64>,
 }
 
 impl UnionFind {
@@ -22,10 +21,7 @@ impl UnionFind {
             weights.push(1f64);
         }
 
-        UnionFind {
-            parents,
-            weights
-        }
+        UnionFind { parents, weights }
     }
 
     fn find(&mut self, x: usize) -> usize {
@@ -62,7 +58,11 @@ impl UnionFind {
 }
 
 impl Solution {
-    pub fn calc_equation(equations: Vec<Vec<String>>, values: Vec<f64>, queries: Vec<Vec<String>>) -> Vec<f64> {
+    pub fn calc_equation(
+        equations: Vec<Vec<String>>,
+        values: Vec<f64>,
+        queries: Vec<Vec<String>>,
+    ) -> Vec<f64> {
         let count = equations.len();
         let mut union_find = UnionFind::new(count * 2);
         let mut id_map = HashMap::with_capacity(count * 2);
@@ -70,7 +70,7 @@ impl Solution {
 
         for (i, equation) in equations.iter().enumerate() {
             let (x, y) = (&equation[0], &equation[1]);
-            
+
             let x_id = *id_map.entry(x).or_insert_with(|| {
                 let inserted_id = id;
                 id += 1;
@@ -95,10 +95,10 @@ impl Solution {
             if x_id.is_none() || y_id.is_none() {
                 result.push(-1f64);
             } else {
-                result.push(union_find.is_connected(*x_id.unwrap(),*y_id.unwrap()));
+                result.push(union_find.is_connected(*x_id.unwrap(), *y_id.unwrap()));
             }
         }
-    
+
         result
     }
 }

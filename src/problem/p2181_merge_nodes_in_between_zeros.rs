@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::linked_list::{ListNode, to_list};
+use crate::util::linked_list::{to_list, ListNode};
 
 // submission codes start here
 
@@ -62,7 +62,13 @@ mod tests {
 
     #[test]
     fn test_2181() {
-        assert_eq!(to_list(vec![4, 11]), Solution::merge_nodes(to_list(vec![0, 3, 1, 0, 4, 5, 2, 0])));
-        assert_eq!(to_list(vec![1, 3, 4]), Solution::merge_nodes(to_list(vec![0, 1, 0, 3, 0, 2, 2, 0])));
+        assert_eq!(
+            to_list(vec![4, 11]),
+            Solution::merge_nodes(to_list(vec![0, 3, 1, 0, 4, 5, 2, 0]))
+        );
+        assert_eq!(
+            to_list(vec![1, 3, 4]),
+            Solution::merge_nodes(to_list(vec![0, 1, 0, 3, 0, 2, 2, 0]))
+        );
     }
 }

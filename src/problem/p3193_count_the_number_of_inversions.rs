@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -36,7 +35,12 @@ impl Solution {
         }
     }
 
-    fn dfs(end: usize, count: usize, requirements: &HashMap<usize, usize>, dp: &mut Vec<Vec<i32>>) -> i32 {
+    fn dfs(
+        end: usize,
+        count: usize,
+        requirements: &HashMap<usize, usize>,
+        dp: &mut Vec<Vec<i32>>,
+    ) -> i32 {
         if end == 0 {
             return 1;
         }
@@ -75,8 +79,17 @@ mod tests {
     #[test]
     fn test_3193() {
         assert_eq!(1, Solution::number_of_permutations(2, vec![vec![1, 1]]));
-        assert_eq!(2, Solution::number_of_permutations(3, vec![vec![2, 2], vec![0, 0]]));
-        assert_eq!(1, Solution::number_of_permutations(3, vec![vec![2, 2], vec![1, 1], vec![0, 0]]));
-        assert_eq!(1, Solution::number_of_permutations(2, vec![vec![0, 0], vec![1, 0]]));
+        assert_eq!(
+            2,
+            Solution::number_of_permutations(3, vec![vec![2, 2], vec![0, 0]])
+        );
+        assert_eq!(
+            1,
+            Solution::number_of_permutations(3, vec![vec![2, 2], vec![1, 1], vec![0, 0]])
+        );
+        assert_eq!(
+            1,
+            Solution::number_of_permutations(2, vec![vec![0, 0], vec![1, 0]])
+        );
     }
 }

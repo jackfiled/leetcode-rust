@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -14,7 +14,7 @@ use crate::util::tree::{TreeNode, to_tree};
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -25,22 +25,30 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
-    pub fn lowest_common_ancestor(root: Option<Rc<RefCell<TreeNode>>>, p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn lowest_common_ancestor(
+        root: Option<Rc<RefCell<TreeNode>>>,
+        p: Option<Rc<RefCell<TreeNode>>>,
+        q: Option<Rc<RefCell<TreeNode>>>,
+    ) -> Option<Rc<RefCell<TreeNode>>> {
         let (root, p, q) = (root?, p?, q?);
         let mut ancestor = root;
 
         loop {
-            ancestor =  if p.borrow().val < ancestor.borrow().val && q.borrow().val < ancestor.borrow().val {
+            ancestor = if p.borrow().val < ancestor.borrow().val
+                && q.borrow().val < ancestor.borrow().val
+            {
                 Rc::clone(&ancestor.borrow().left.as_ref().unwrap())
-            } else if (p.borrow().val > ancestor.borrow().val && q.borrow().val > ancestor.borrow().val ) {
+            } else if (p.borrow().val > ancestor.borrow().val
+                && q.borrow().val > ancestor.borrow().val)
+            {
                 Rc::clone(&ancestor.borrow().right.as_ref().unwrap())
             } else {
                 break;
             }
-        } 
+        }
 
         Some(ancestor)
     }
@@ -53,6 +61,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_235() {
-    }
+    fn test_235() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -13,7 +12,7 @@ impl Solution {
         while left < right {
             right = right & (right - 1);
         }
-        
+
         right
     }
 }

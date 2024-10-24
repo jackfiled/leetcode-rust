@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -14,7 +14,7 @@ use crate::util::tree::{TreeNode, to_tree};
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -25,10 +25,14 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
-    pub fn lowest_common_ancestor(root: Option<Rc<RefCell<TreeNode>>>, p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn lowest_common_ancestor(
+        root: Option<Rc<RefCell<TreeNode>>>,
+        p: Option<Rc<RefCell<TreeNode>>>,
+        q: Option<Rc<RefCell<TreeNode>>>,
+    ) -> Option<Rc<RefCell<TreeNode>>> {
         if root.is_none() || root == p || root == q {
             return root;
         }
@@ -36,13 +40,13 @@ impl Solution {
         let left = Solution::lowest_common_ancestor(
             root.as_ref().unwrap().borrow_mut().left.take(),
             p.clone(),
-            q.clone()
+            q.clone(),
         );
 
         let right = Solution::lowest_common_ancestor(
             root.as_ref().unwrap().borrow_mut().right.take(),
             p.clone(),
-            q.clone()
+            q.clone(),
         );
 
         if left.is_some() && right.is_some() {
@@ -64,6 +68,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_236() {
-    }
+    fn test_236() {}
 }

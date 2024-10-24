@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,11 +25,14 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
-use std::collections::VecDeque;
 use std::cell::RefCell;
+use std::collections::VecDeque;
+use std::rc::Rc;
 impl Solution {
-    pub fn is_same_tree(p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> bool {
+    pub fn is_same_tree(
+        p: Option<Rc<RefCell<TreeNode>>>,
+        q: Option<Rc<RefCell<TreeNode>>>,
+    ) -> bool {
         let mut p_queue = VecDeque::new();
         let mut q_queue = VecDeque::new();
 
@@ -66,7 +69,7 @@ impl Solution {
                 if let Some(p_left) = &p_node.borrow().left {
                     if let Some(q_left) = &q_node.borrow().left {
                         p_queue.push_back(Rc::clone(p_left));
-                        q_queue.push_back(Rc::clone(q_left));  
+                        q_queue.push_back(Rc::clone(q_left));
                     };
                 };
 
@@ -90,6 +93,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_100() {
-    }
+    fn test_100() {}
 }

@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,9 +25,9 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::collections::VecDeque;
+use std::rc::Rc;
 impl Solution {
     pub fn range_sum_bst(root: Option<Rc<RefCell<TreeNode>>>, low: i32, high: i32) -> i32 {
         let root = if let Some(r) = root {
@@ -73,7 +73,21 @@ mod tests {
 
     #[test]
     fn test_938() {
-        assert_eq!(Solution::range_sum_bst(
-            to_tree(vec![Some(10), Some(5), Some(15), Some(3), Some(7), None, Some(18)]), 7, 15), 32);
+        assert_eq!(
+            Solution::range_sum_bst(
+                to_tree(vec![
+                    Some(10),
+                    Some(5),
+                    Some(15),
+                    Some(3),
+                    Some(7),
+                    None,
+                    Some(18)
+                ]),
+                7,
+                15
+            ),
+            32
+        );
     }
 }

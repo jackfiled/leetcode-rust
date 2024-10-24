@@ -5,7 +5,7 @@ pub struct Solution {}
 
 use std::borrow::{Borrow, BorrowMut};
 
-use crate::util::linked_list::{ListNode, to_list};
+use crate::util::linked_list::{to_list, ListNode};
 
 // submission codes start here
 
@@ -26,7 +26,10 @@ use crate::util::linked_list::{ListNode, to_list};
 //   }
 // }
 impl Solution {
-    pub fn merge_two_lists(list1: Option<Box<ListNode>>, list2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    pub fn merge_two_lists(
+        list1: Option<Box<ListNode>>,
+        list2: Option<Box<ListNode>>,
+    ) -> Option<Box<ListNode>> {
         let mut head = None;
         let mut now = &mut head;
 
@@ -46,8 +49,8 @@ impl Solution {
 
                         now = &mut now.insert(b).next
                     }
-                },
-                (x, y) => break x.or(y)
+                }
+                (x, y) => break x.or(y),
             }
         };
 
@@ -62,6 +65,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_21() {
-    }
+    fn test_21() {}
 }

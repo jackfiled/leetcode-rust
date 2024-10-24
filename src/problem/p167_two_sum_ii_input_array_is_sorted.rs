@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -16,17 +15,14 @@ impl Solution {
 
             if sum == target {
                 break;
-            }
-            else if sum < target {
+            } else if sum < target {
                 i += 1;
-            }
-            else {
+            } else {
                 j -= 1;
             }
-            
         }
 
-        vec![(i + 1) as i32 , (j + 1) as i32]
+        vec![(i + 1) as i32, (j + 1) as i32]
     }
 }
 
@@ -38,6 +34,6 @@ mod tests {
 
     #[test]
     fn test_167() {
-        assert_eq!(vec![1,2], Solution::two_sum(vec![2,7,11,15], 9));
+        assert_eq!(vec![1, 2], Solution::two_sum(vec![2, 7, 11, 15], 9));
     }
 }

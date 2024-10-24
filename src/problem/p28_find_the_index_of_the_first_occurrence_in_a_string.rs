@@ -3,14 +3,13 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn str_str(haystack: String, needle: String) -> i32 {
-        match haystack.find(&needle)  {
+        match haystack.find(&needle) {
             Some(pos) => pos as i32,
-            None => -1   
+            None => -1,
         }
     }
 }
@@ -22,6 +21,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_28() {
-    }
+    fn test_28() {}
 }

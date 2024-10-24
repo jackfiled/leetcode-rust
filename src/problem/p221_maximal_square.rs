@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -20,10 +19,10 @@ impl Solution {
 
                 if i == 0 || j == 0 {
                     dp[i][j] = 1;
-                } else { 
+                } else {
                     dp[i][j] = dp[i - 1][j - 1].min(dp[i - 1][j]).min(dp[i][j - 1]) + 1;
                 }
-                
+
                 result = result.max(dp[i][j]);
             }
         }
@@ -40,7 +39,10 @@ mod tests {
 
     #[test]
     fn test_221() {
-        assert_eq!(1, Solution::maximal_square(vec![vec!['0', '1'], vec!['1', '0']]));
+        assert_eq!(
+            1,
+            Solution::maximal_square(vec![vec!['0', '1'], vec!['1', '0']])
+        );
         assert_eq!(0, Solution::maximal_square(vec![vec!['0']]));
     }
 }

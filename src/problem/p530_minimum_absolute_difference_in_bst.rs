@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,8 +25,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     fn inorder_iterate(node: &Rc<RefCell<TreeNode>>, arrap: &mut Vec<i32>) {
         if let Some(left) = node.borrow().left.as_ref() {
@@ -46,7 +46,7 @@ impl Solution {
         if let Some(root) = root {
             Self::inorder_iterate(&root, &mut array);
         }
-        
+
         let mut result = i32::MAX;
 
         for i in 1..array.len() {
@@ -64,6 +64,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_530() {
-    }
+    fn test_530() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -41,6 +40,9 @@ mod tests {
 
     #[test]
     fn test_64() {
-        assert_eq!(7, Solution::min_path_sum(vec![vec![1, 3, 1], vec![1, 5, 1], vec![4, 2, 1]]));
+        assert_eq!(
+            7,
+            Solution::min_path_sum(vec![vec![1, 3, 1], vec![1, 5, 1], vec![4, 2, 1]])
+        );
     }
 }

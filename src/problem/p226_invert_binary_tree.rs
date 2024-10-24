@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,26 +25,22 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
         match root {
             None => None,
             Some(root) => {
-                let left =  Self::invert_tree(
-                    root.borrow_mut().left.take()
-                );
-                let right = Self::invert_tree(
-                    root.borrow_mut().right.take()
-                );
+                let left = Self::invert_tree(root.borrow_mut().left.take());
+                let right = Self::invert_tree(root.borrow_mut().right.take());
 
                 root.borrow_mut().left = right;
                 root.borrow_mut().right = left;
 
                 Some(root)
             }
-        }        
+        }
     }
 }
 

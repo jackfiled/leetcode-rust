@@ -1,16 +1,14 @@
-
 /**
  * [2374] Node With Highest Edge Score
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn edge_score(edges: Vec<i32>) -> i32 {
-        use std::collections::HashMap;
         use std::cmp::Ordering;
+        use std::collections::HashMap;
 
         let mut map = HashMap::new();
 
@@ -18,14 +16,15 @@ impl Solution {
             let entry = map.entry(v).or_insert(0);
             *entry += i;
         }
-        
-        *map.iter().max_by(|a, b| {
-            match a.1.cmp(b.1) {
-                Ordering::Less => { Ordering::Less }
-                Ordering::Equal => { b.0.cmp(a.0) }
-                Ordering::Greater => { Ordering::Greater }
-            }
-        }).unwrap().0
+
+        *map.iter()
+            .max_by(|a, b| match a.1.cmp(b.1) {
+                Ordering::Less => Ordering::Less,
+                Ordering::Equal => b.0.cmp(a.0),
+                Ordering::Greater => Ordering::Greater,
+            })
+            .unwrap()
+            .0
     }
 }
 

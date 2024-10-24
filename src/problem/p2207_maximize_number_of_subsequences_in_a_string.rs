@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -19,7 +18,7 @@ impl Solution {
                 result += first_count;
                 second_count += 1;
             }
-            
+
             if c == first {
                 first_count += 1;
             }
@@ -37,7 +36,13 @@ mod tests {
 
     #[test]
     fn test_2207() {
-        assert_eq!(4, Solution::maximum_subsequence_count("abdcdbc".to_owned(), "ac".to_owned()));
-        assert_eq!(6, Solution::maximum_subsequence_count("aabb".to_owned(), "ab".to_owned()));
+        assert_eq!(
+            4,
+            Solution::maximum_subsequence_count("abdcdbc".to_owned(), "ac".to_owned())
+        );
+        assert_eq!(
+            6,
+            Solution::maximum_subsequence_count("aabb".to_owned(), "ab".to_owned())
+        );
     }
 }

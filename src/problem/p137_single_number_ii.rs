@@ -3,18 +3,17 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn single_number(nums: Vec<i32>) -> i32 {
-        let (mut a, mut b)  = (0, 0);
-        
+        let (mut a, mut b) = (0, 0);
+
         for i in nums {
             b = !a & (b ^ i);
-            a = !b & ( a ^ i);
+            a = !b & (a ^ i);
         }
-        
+
         b
     }
 }

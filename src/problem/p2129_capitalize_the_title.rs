@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -31,7 +30,13 @@ mod tests {
 
     #[test]
     fn test_2129() {
-        assert_eq!("Capitalize The Title", Solution::capitalize_title("capiTalIze tHe titLe".to_owned()));
-        assert_eq!("First Letter of Each Word", Solution::capitalize_title("First leTTeR of EACH Word".to_owned()));
+        assert_eq!(
+            "Capitalize The Title",
+            Solution::capitalize_title("capiTalIze tHe titLe".to_owned())
+        );
+        assert_eq!(
+            "First Letter of Each Word",
+            Solution::capitalize_title("First leTTeR of EACH Word".to_owned())
+        );
     }
 }

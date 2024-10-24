@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -14,15 +13,15 @@ impl Solution {
             Self::quick_pow(x, n)
         }
     }
-    
+
     fn quick_pow(x: f64, n: i32) -> f64 {
         if n == 0 {
             1f64
-        } else { 
+        } else {
             let y = Self::quick_pow(x, n / 2);
             if n % 2 == 0 {
                 y * y
-            } else { 
+            } else {
                 y * y * x
             }
         }
@@ -36,6 +35,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_50() {
-    }
+    fn test_50() {}
 }

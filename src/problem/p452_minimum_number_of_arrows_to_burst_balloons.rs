@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -12,11 +11,9 @@ impl Solution {
             return 0;
         }
 
-        let mut points : Vec<(i32, i32)> = points.iter().map(|p|{(p[0], p[1])}).collect();
+        let mut points: Vec<(i32, i32)> = points.iter().map(|p| (p[0], p[1])).collect();
 
-        points.sort_unstable_by(|a, b| {
-            a.1.cmp(&b.1)
-        });
+        points.sort_unstable_by(|a, b| a.1.cmp(&b.1));
 
         let mut result = 0;
         let mut pos = points[0].1;
@@ -39,6 +36,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_452() {
-    }
+    fn test_452() {}
 }

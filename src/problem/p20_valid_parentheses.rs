@@ -10,26 +10,26 @@
  * </ol>
  *  
  * <strong class="example">Example 1:
- * 
+ *
  * Input: s = "()"
  * Output: true
- * 
+ *
  * <strong class="example">Example 2:
- * 
+ *
  * Input: s = "()[]{}"
  * Output: true
- * 
+ *
  * <strong class="example">Example 3:
- * 
+ *
  * Input: s = "(]"
  * Output: false
- * 
+ *
  *  
  * Constraints:
- * 
+ *
  * 	1 <= s.length <= 10^4
  * 	s consists of parentheses only '()[]{}'.
- * 
+ *
  */
 pub struct Solution {}
 
@@ -48,23 +48,21 @@ impl Solution {
         for c in s.chars() {
             if left.contains(&c) {
                 stack.push(c)
-            }
-            else if right.contains(&c) {
+            } else if right.contains(&c) {
                 let target = match c {
                     ')' => '(',
                     ']' => '[',
                     '}' => '{',
-                    _ => return false
+                    _ => return false,
                 };
 
                 if stack.ends_with(&[target]) {
                     stack.pop();
-                }
-                else {
-                    return false
+                } else {
+                    return false;
                 }
             } else {
-                return false
+                return false;
             }
         }
 

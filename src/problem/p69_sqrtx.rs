@@ -1,9 +1,7 @@
-
 /**
  * [69] Sqrt(x)
  */
 pub struct Solution {}
-
 
 // submission codes start here
 
@@ -13,7 +11,7 @@ impl Solution {
         if x == 0 {
             return 0;
         }
-        
+
         let c = x as f64;
         let mut x = x as f64;
 
@@ -24,7 +22,7 @@ impl Solution {
             }
             x = xi;
         }
-        
+
         return x as i32;
     }
 }

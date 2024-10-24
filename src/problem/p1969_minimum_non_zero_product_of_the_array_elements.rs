@@ -5,7 +5,6 @@ use std::convert::TryInto;
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -13,14 +12,16 @@ impl Solution {
         let p = p as i64;
         if p == 1 {
             return 1;
-        }        
+        }
 
         let m = 1e9 as i64 + 7;
         let x = Solution::fast_power(2, p, m) - 1;
         let y = 1 << (p - 1);
         dbg!(x, y);
 
-        return (Solution::fast_power(x - 1, y - 1, m) * x % m).try_into().unwrap();
+        return (Solution::fast_power(x - 1, y - 1, m) * x % m)
+            .try_into()
+            .unwrap();
     }
 
     fn fast_power(x: i64, n: i64, m: i64) -> i64 {

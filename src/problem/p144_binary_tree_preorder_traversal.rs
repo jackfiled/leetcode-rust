@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,8 +25,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn preorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let mut result = Vec::new();
@@ -56,7 +56,9 @@ mod tests {
 
     #[test]
     fn test_144() {
-        assert_eq!(Solution::preorder_traversal(to_tree(
-            vec![Some(1), None, Some(2), Some(3)])), vec![1,2,3]);
+        assert_eq!(
+            Solution::preorder_traversal(to_tree(vec![Some(1), None, Some(2), Some(3)])),
+            vec![1, 2, 3]
+        );
     }
 }

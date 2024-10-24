@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -37,6 +36,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_205() {
-    }
+    fn test_205() {}
 }

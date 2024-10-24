@@ -1,7 +1,7 @@
+use crate::fetch_problem::{Fetcher, ProblemManager};
 use std::fs;
 use std::io::Write;
 use std::path::Path;
-use crate::fetch_problem::{Fetcher, ProblemManager};
 
 mod fetch_problem;
 
@@ -22,12 +22,16 @@ async fn main() {
 
             println!("Try to get problem {}...", id);
 
-            let problem = fetcher.get_problem(id).await
+            let problem = fetcher
+                .get_problem(id)
+                .await
                 .expect(&*format!("Failed to get problem {}.", id));
 
             let file_name = problem.get_filename();
             println!("Get problem: {}.", file_name);
-            let content = problem.get_file_content().expect("Failed to format file content");
+            let content = problem
+                .get_file_content()
+                .expect("Failed to format file content");
 
             write_file(&file_name, &content).expect("Failed to write problem file.");
         }

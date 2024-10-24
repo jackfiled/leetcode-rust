@@ -3,33 +3,30 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::VecDeque;
 
 struct MyQueue {
     in_stack: VecDeque<i32>,
-    out_stack: VecDeque<i32>
+    out_stack: VecDeque<i32>,
 }
-
 
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MyQueue {
-
     fn new() -> Self {
         MyQueue {
             in_stack: VecDeque::new(),
-            out_stack: VecDeque::new()
+            out_stack: VecDeque::new(),
         }
     }
-    
+
     fn push(&mut self, x: i32) {
         self.in_stack.push_back(x);
     }
-    
+
     fn pop(&mut self) -> i32 {
         if self.out_stack.is_empty() {
             while let Some(top) = self.in_stack.pop_back() {
@@ -39,7 +36,7 @@ impl MyQueue {
 
         self.out_stack.pop_back().unwrap()
     }
-    
+
     fn peek(&mut self) -> i32 {
         if self.out_stack.is_empty() {
             while let Some(top) = self.in_stack.pop_back() {
@@ -49,7 +46,7 @@ impl MyQueue {
 
         *self.out_stack.back().unwrap()
     }
-    
+
     fn empty(&self) -> bool {
         self.out_stack.is_empty() && self.in_stack.is_empty()
     }

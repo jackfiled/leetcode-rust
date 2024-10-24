@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -39,11 +38,7 @@ impl Solution {
     }
 
     fn reverse(pos: usize, nums: &mut Vec<i32>) {
-        nums[pos] = if nums[pos] == 1 {
-            0
-        } else {
-            1
-        }
+        nums[pos] = if nums[pos] == 1 { 0 } else { 1 }
     }
 }
 

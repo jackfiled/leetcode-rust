@@ -5,7 +5,7 @@ pub struct Solution {}
 
 use surf::url::UrlQuery;
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -27,8 +27,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn closest_nodes(root: Option<Rc<RefCell<TreeNode>>>, queries: Vec<i32>) -> Vec<Vec<i32>> {
         let mut array = Vec::new();
@@ -55,7 +55,7 @@ impl Solution {
             match pos {
                 Ok(pos) => {
                     result.push(vec![array[pos], array[pos]]);
-                },
+                }
                 Err(pos) => {
                     if pos == 0 {
                         result.push(vec![-1, array[pos]]);
@@ -79,6 +79,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_2476() {
-    }
+    fn test_2476() {}
 }

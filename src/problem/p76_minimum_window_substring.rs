@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -16,10 +15,10 @@ impl Solution {
             *entry += 1;
         }
 
-        let s : Vec<char> = s.chars().collect();
+        let s: Vec<char> = s.chars().collect();
         let mut s_map = HashMap::new();
 
-        let (mut i , mut j) = (0, 0);
+        let (mut i, mut j) = (0, 0);
         let mut result_left = 0;
         let mut result_length = usize::MAX;
 
@@ -51,7 +50,7 @@ impl Solution {
         }
     }
 
-    fn check_map(s : &HashMap<char, i32>, t : &HashMap<char, i32>) -> bool {
+    fn check_map(s: &HashMap<char, i32>, t: &HashMap<char, i32>) -> bool {
         for (key, value) in t {
             match s.get(key) {
                 Some(real_value) => {
@@ -77,6 +76,9 @@ mod tests {
 
     #[test]
     fn test_76() {
-        assert_eq!("BANC".to_owned(), Solution::min_window("ADOBECODEBANC".to_owned(), "ABC".to_owned()));
+        assert_eq!(
+            "BANC".to_owned(),
+            Solution::min_window("ADOBECODEBANC".to_owned(), "ABC".to_owned())
+        );
     }
 }

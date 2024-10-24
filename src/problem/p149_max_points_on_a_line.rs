@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -33,10 +32,7 @@ impl Slope {
             y /= gcd;
         }
 
-        Self {
-            x,
-            y,
-        }
+        Self { x, y }
     }
 
     fn gcd(a: i32, b: i32) -> i32 {
@@ -60,20 +56,20 @@ impl Solution {
             if result > n - i || result > n / 2 {
                 break;
             }
-            
+
             let mut map = HashMap::new();
-            for j in i+1..n {
+            for j in i + 1..n {
                 let slope = Slope::new(&points[i], &points[j]);
-                
+
                 let entry = map.entry(slope).or_insert(0);
                 *entry += 1;
             }
-            
+
             let mut max = 0;
             for i in map.values() {
                 max = max.max(*i);
             }
-            
+
             result = result.max(max + 1);
         }
 

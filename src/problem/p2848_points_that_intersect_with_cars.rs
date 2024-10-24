@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -36,8 +35,14 @@ mod tests {
 
     #[test]
     fn test_2848() {
-        assert_eq!(7, Solution::number_of_points(vec![vec![3, 6], vec![1, 5], vec![4, 7]]));
+        assert_eq!(
+            7,
+            Solution::number_of_points(vec![vec![3, 6], vec![1, 5], vec![4, 7]])
+        );
         assert_eq!(7, Solution::number_of_points(vec![vec![1, 3], vec![5, 8]]));
-        assert_eq!(8, Solution::number_of_points(vec![vec![4, 4], vec![9, 10], vec![9, 10], vec![3, 8]]));
+        assert_eq!(
+            8,
+            Solution::number_of_points(vec![vec![4, 4], vec![9, 10], vec![9, 10], vec![3, 8]])
+        );
     }
 }

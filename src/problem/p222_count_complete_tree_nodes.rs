@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,9 +25,9 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::collections::VecDeque;
+use std::rc::Rc;
 impl Solution {
     pub fn count_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         let mut result = 0;
@@ -43,7 +43,7 @@ impl Solution {
             let node = queue.pop_front().unwrap();
 
             if let Some(left) = &node.borrow().left {
-                queue.push_back(Rc::clone(left));  
+                queue.push_back(Rc::clone(left));
             };
 
             if let Some(right) = &node.borrow().right {
@@ -62,6 +62,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_222() {
-    }
+    fn test_222() {}
 }

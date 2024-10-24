@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -32,7 +31,7 @@ impl Solution {
             i += 1;
             j -= 1;
         }
-        
+
         true
     }
 }
@@ -45,7 +44,9 @@ mod tests {
 
     #[test]
     fn test_125() {
-        assert!(Solution::is_palindrome("A man, a plan, a canal: Panama".to_owned()));
+        assert!(Solution::is_palindrome(
+            "A man, a plan, a canal: Panama".to_owned()
+        ));
         assert!(!Solution::is_palindrome("0P".to_owned()));
     }
 }

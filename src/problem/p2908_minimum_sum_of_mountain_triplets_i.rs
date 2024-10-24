@@ -3,13 +3,11 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn minimum_sum(nums: Vec<i32>) -> i32 {
         let mut result = i32::MAX;
-
 
         for j in 1..nums.len() - 1 {
             let mut first = i32::MAX;
@@ -35,11 +33,7 @@ impl Solution {
             result = result.min(first + nums[j] + last);
         }
 
-        return if result == i32::MAX {
-            -1
-        } else {
-            result
-        };
+        return if result == i32::MAX { -1 } else { result };
     }
 }
 
@@ -51,6 +45,6 @@ mod tests {
 
     #[test]
     fn test_2908() {
-        assert_eq!(9, Solution::minimum_sum(vec![8,6,1,5,3]));
+        assert_eq!(9, Solution::minimum_sum(vec![8, 6, 1, 5, 3]));
     }
 }

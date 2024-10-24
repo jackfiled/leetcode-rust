@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -34,9 +33,19 @@ mod tests {
 
     #[test]
     fn test_3142() {
-        assert!(Solution::satisfies_conditions(vec![vec![1, 0, 2], vec![1, 0, 2]]));
-        assert!(!Solution::satisfies_conditions(vec![vec![1, 1, 1], vec![0, 0, 0]]));
+        assert!(Solution::satisfies_conditions(vec![
+            vec![1, 0, 2],
+            vec![1, 0, 2]
+        ]));
+        assert!(!Solution::satisfies_conditions(vec![
+            vec![1, 1, 1],
+            vec![0, 0, 0]
+        ]));
         assert!(Solution::satisfies_conditions(vec![vec![0]]));
-        assert!(!Solution::satisfies_conditions(vec![vec![1], vec![2], vec![3]]));
+        assert!(!Solution::satisfies_conditions(vec![
+            vec![1],
+            vec![2],
+            vec![3]
+        ]));
     }
 }

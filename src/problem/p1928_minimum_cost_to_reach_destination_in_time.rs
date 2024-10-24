@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -12,7 +11,7 @@ impl Solution {
         let max_time = max_time as usize;
 
         let max_value = i32::MAX / 2;
-        let mut dp = vec![vec![max_value;n];max_time + 1];
+        let mut dp = vec![vec![max_value; n]; max_time + 1];
 
         dp[0][0] = passing_fees[0];
 
@@ -26,7 +25,7 @@ impl Solution {
                 }
             }
         }
-        
+
         let mut result = max_value;
 
         for t in 1..=max_time {
@@ -38,7 +37,7 @@ impl Solution {
         } else {
             result
         }
-   }
+    }
 }
 
 // submission codes end
@@ -48,7 +47,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_1928() {
-        
-    }
+    fn test_1928() {}
 }

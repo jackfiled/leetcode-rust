@@ -3,9 +3,8 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
-use std::{rc::Rc, cell::RefCell, collections::HashMap};
+use std::{cell::RefCell, collections::HashMap, rc::Rc};
 
 struct Trie {
     is_word: bool,
@@ -80,9 +79,21 @@ mod tests {
 
     #[test]
     fn test_139() {
-        assert!(Solution::word_break("leetcode".to_owned(), vec_string!("leet", "code")));
-        assert!(Solution::word_break("applepenapple".to_owned(), vec_string!("apple", "pen")));
-        assert!(!Solution::word_break("catsandog".to_owned(), vec_string!("cats", "cat", "sand", "and", "cat")));
-        assert!(Solution::word_break("aaaaaaa".to_owned(), vec_string!("aaa", "aaaa")));
+        assert!(Solution::word_break(
+            "leetcode".to_owned(),
+            vec_string!("leet", "code")
+        ));
+        assert!(Solution::word_break(
+            "applepenapple".to_owned(),
+            vec_string!("apple", "pen")
+        ));
+        assert!(!Solution::word_break(
+            "catsandog".to_owned(),
+            vec_string!("cats", "cat", "sand", "and", "cat")
+        ));
+        assert!(Solution::word_break(
+            "aaaaaaa".to_owned(),
+            vec_string!("aaa", "aaaa")
+        ));
     }
 }

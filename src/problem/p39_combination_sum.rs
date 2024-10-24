@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashSet;
 
@@ -19,7 +18,13 @@ impl Solution {
         result.iter().map(|x| x.clone()).collect()
     }
 
-    fn dfs(candidates: &Vec<i32>, target: i32, path: &mut Vec<i32>, sum: i32, result: &mut HashSet<Vec<i32>>) {
+    fn dfs(
+        candidates: &Vec<i32>,
+        target: i32,
+        path: &mut Vec<i32>,
+        sum: i32,
+        result: &mut HashSet<Vec<i32>>,
+    ) {
         if sum > target {
             return;
         }
@@ -52,10 +57,10 @@ mod tests {
     #[test]
     fn test_39() {
         let mut set = HashSet::new();
-        
-        set.insert(vec![1,2]);
-        set.insert(vec![1,2]);
-        
+
+        set.insert(vec![1, 2]);
+        set.insert(vec![1, 2]);
+
         assert_eq!(set.len(), 1);
     }
 }

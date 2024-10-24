@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -38,6 +37,6 @@ mod tests {
 
     #[test]
     fn test_2917() {
-        assert_eq!(9, Solution::find_k_or(vec![7,12,9,8,9,15], 4));
+        assert_eq!(9, Solution::find_k_or(vec![7, 12, 9, 8, 9, 15], 4));
     }
 }

@@ -3,12 +3,11 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn divisibility_array(word: String, m: i32) -> Vec<i32> {
-        let mut result = vec![0;word.len()];
+        let mut result = vec![0; word.len()];
         let mut now = 0;
         let m = m as i64;
 
@@ -23,7 +22,7 @@ impl Solution {
                 now = now % m;
             }
         }
-        
+
         result
     }
 }
@@ -36,6 +35,9 @@ mod tests {
 
     #[test]
     fn test_2575() {
-        assert_eq!(vec![1,1,0,0,0,1], Solution::divisibility_array("998244".to_owned(), 3));
+        assert_eq!(
+            vec![1, 1, 0, 0, 0, 1],
+            Solution::divisibility_array("998244".to_owned(), 3)
+        );
     }
 }

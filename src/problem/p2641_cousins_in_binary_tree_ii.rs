@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,10 +25,12 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
-    pub fn replace_value_in_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn replace_value_in_tree(
+        root: Option<Rc<RefCell<TreeNode>>>,
+    ) -> Option<Rc<RefCell<TreeNode>>> {
         let root = if let Some(r) = root {
             r
         } else {
@@ -76,7 +78,6 @@ impl Solution {
             queue = next_queue;
         }
 
-
         root.borrow_mut().val = 0;
         Some(root)
     }
@@ -90,8 +91,25 @@ mod tests {
 
     #[test]
     fn test_2641() {
-        assert_eq!(Solution::replace_value_in_tree(to_tree(
-            vec![Some(5),Some(4),Some(9),Some(1),Some(10),None,Some(7)])),
-                   to_tree(vec![Some(0),Some(0),Some(0),Some(7),Some(7),None,Some(11)]));
+        assert_eq!(
+            Solution::replace_value_in_tree(to_tree(vec![
+                Some(5),
+                Some(4),
+                Some(9),
+                Some(1),
+                Some(10),
+                None,
+                Some(7)
+            ])),
+            to_tree(vec![
+                Some(0),
+                Some(0),
+                Some(0),
+                Some(7),
+                Some(7),
+                None,
+                Some(11)
+            ])
+        );
     }
 }

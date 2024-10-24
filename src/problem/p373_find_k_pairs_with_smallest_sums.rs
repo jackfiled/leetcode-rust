@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::cmp::Ordering;
 
@@ -17,19 +16,14 @@ struct Pair<'a> {
 
 impl Pair<'_> {
     fn new<'a>(nums1: &'a Vec<i32>, nums2: &'a Vec<i32>, x: usize, y: usize) -> Pair<'a> {
-        Pair {
-            nums1,
-            nums2,
-            x,
-            y,
-        }
+        Pair { nums1, nums2, x, y }
     }
 }
 
 impl Ord for Pair<'_> {
     fn cmp(&self, other: &Self) -> Ordering {
-        (other.nums1[other.x] + other.nums2[other.y]).cmp(
-            &(self.nums1[self.x] + self.nums2[self.y]))
+        (other.nums1[other.x] + other.nums2[other.y])
+            .cmp(&(self.nums1[self.x] + self.nums2[self.y]))
     }
 }
 
@@ -67,7 +61,6 @@ impl Solution {
             count += 1;
         }
 
-
         result.iter().map(|(x, y)| vec![*x, *y]).collect()
     }
 }
@@ -80,7 +73,9 @@ mod tests {
 
     #[test]
     fn test_373() {
-        assert_eq!(vec![vec![1, 2], vec![1, 4], vec![1, 6]],
-                   Solution::k_smallest_pairs(vec![1, 7, 11], vec![2, 4, 6], 3));
+        assert_eq!(
+            vec![vec![1, 2], vec![1, 4], vec![1, 6]],
+            Solution::k_smallest_pairs(vec![1, 7, 11], vec![2, 4, 6], 3)
+        );
     }
 }

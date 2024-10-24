@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 use std::collections::HashMap;
@@ -46,7 +45,9 @@ mod tests {
 
     #[test]
     fn test_2670() {
-        assert_eq!(Solution::distinct_difference_array(vec![1, 2, 3, 4, 5]),
-                   vec![-3, -1, 1, 3, 5]);
+        assert_eq!(
+            Solution::distinct_difference_array(vec![1, 2, 3, 4, 5]),
+            vec![-3, -1, 1, 3, 5]
+        );
     }
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -33,7 +32,11 @@ impl Solution {
             queue.push_back(i);
 
             // 判断当前left开始的机器人是否会导致超过预算
-            while left <= i && (i - left + 1) as i64 * running_costs_sum + charge_times[*queue.front().unwrap()] as i64 > budget {
+            while left <= i
+                && (i - left + 1) as i64 * running_costs_sum
+                    + charge_times[*queue.front().unwrap()] as i64
+                    > budget
+            {
                 if let Some(&front) = queue.front() {
                     if front == left {
                         queue.pop_front();
@@ -60,7 +63,13 @@ mod tests {
 
     #[test]
     fn test_2398() {
-        assert_eq!(3, Solution::maximum_robots(vec![3, 6, 1, 3, 4], vec![2, 1, 3, 4, 5], 25));
-        assert_eq!(0, Solution::maximum_robots(vec![11, 12, 19], vec![10, 8, 7], 19));
+        assert_eq!(
+            3,
+            Solution::maximum_robots(vec![3, 6, 1, 3, 4], vec![2, 1, 3, 4, 5], 25)
+        );
+        assert_eq!(
+            0,
+            Solution::maximum_robots(vec![11, 12, 19], vec![10, 8, 7], 19)
+        );
     }
 }

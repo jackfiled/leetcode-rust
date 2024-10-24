@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,9 +25,9 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::collections::VecDeque;
+use std::rc::Rc;
 
 impl Solution {
     pub fn level_order_bottom(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
@@ -73,8 +73,17 @@ mod tests {
 
     #[test]
     fn test_107() {
-        assert_eq!(Solution::level_order_bottom(
-            to_tree(vec![Some(3), Some(9), Some(20), None, None, Some(15), Some(7)])
-        ), vec![vec![15, 7], vec![9, 20], vec![3]]);
+        assert_eq!(
+            Solution::level_order_bottom(to_tree(vec![
+                Some(3),
+                Some(9),
+                Some(20),
+                None,
+                None,
+                Some(15),
+                Some(7)
+            ])),
+            vec![vec![15, 7], vec![9, 20], vec![3]]
+        );
     }
 }

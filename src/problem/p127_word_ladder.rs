@@ -19,7 +19,7 @@ impl Solution {
                 start = i;
                 break;
             }
-        } 
+        }
 
         let mut neighbors = vec![HashSet::new(); word_list.len()];
 
@@ -51,43 +51,43 @@ impl Solution {
         // 如果开始和结束相同
         // 则必然是跳了一步
         if start == end {
-            return 2; 
+            return 2;
         }
 
         let mut result = i32::MAX;
 
         // dijkstra算法
         let mut distances = vec![i32::MAX; word_list.len()];
-            let mut flags = vec![false; word_list.len()];
-            distances[start] = 0;
-            flags[start] = true;
-            for &i in &neighbors[start] {
-                distances[i] = 1;
-            }
+        let mut flags = vec![false; word_list.len()];
+        distances[start] = 0;
+        flags[start] = true;
+        for &i in &neighbors[start] {
+            distances[i] = 1;
+        }
 
-            for _ in 1..word_list.len() {
-                let mut min = i32::MAX;
-                let mut next = 0;
+        for _ in 1..word_list.len() {
+            let mut min = i32::MAX;
+            let mut next = 0;
 
-                for i in 0..word_list.len() {
-                    if !flags[i] && distances[i] < min {
-                        min = distances[i];
-                        next = i;
-                    }
-                }
-
-                flags[next] = true;
-                if next == end {
-                    result = result.min(min);
-                    break;
-                }
-
-                for &i in &neighbors[next] {
-                    if !flags[i] && min + 1 < distances[i] {
-                        distances[i] = min + 1;
-                    }
+            for i in 0..word_list.len() {
+                if !flags[i] && distances[i] < min {
+                    min = distances[i];
+                    next = i;
                 }
             }
+
+            flags[next] = true;
+            if next == end {
+                result = result.min(min);
+                break;
+            }
+
+            for &i in &neighbors[next] {
+                if !flags[i] && min + 1 < distances[i] {
+                    distances[i] = min + 1;
+                }
+            }
+        }
 
         if result == i32::MAX {
             0
@@ -140,36 +140,43 @@ mod tests {
             ),
             5
         );
-        
-        assert_eq!(Solution::ladder_length("a".to_owned(), "c".to_owned(), vec![
-            "a".to_owned(),
-            "b".to_owned(),
-            "c".to_owned()
-        ]), 2);
-        
-        assert_eq!(Solution::ladder_length("a".to_owned(), "c".to_owned(), vec![
-            "c".to_owned()
-        ]), 2);
-        
+
+        assert_eq!(
+            Solution::ladder_length(
+                "a".to_owned(),
+                "c".to_owned(),
+                vec!["a".to_owned(), "b".to_owned(), "c".to_owned()]
+            ),
+            2
+        );
+
+        assert_eq!(
+            Solution::ladder_length("a".to_owned(), "c".to_owned(), vec!["c".to_owned()]),
+            2
+        );
+
         assert_eq!(
             Solution::ladder_length(
                 "hot".to_owned(),
                 "dog".to_owned(),
-                vec![
-                    "hot".to_owned(),
-                    "dot".to_owned(),
-                    "dog".to_owned(),
-                ]
+                vec!["hot".to_owned(), "dot".to_owned(), "dog".to_owned(),]
             ),
             3
         );
 
-        assert_eq!(Solution::ladder_length("lost".to_owned(), "cost".to_owned(), vec![
-            "most".to_owned(),
-            "fist".to_owned(),
-            "lost".to_owned(),
-            "cost".to_owned(),
-            "fish".to_owned()
-        ]), 2);
+        assert_eq!(
+            Solution::ladder_length(
+                "lost".to_owned(),
+                "cost".to_owned(),
+                vec![
+                    "most".to_owned(),
+                    "fist".to_owned(),
+                    "lost".to_owned(),
+                    "cost".to_owned(),
+                    "fish".to_owned()
+                ]
+            ),
+            2
+        );
     }
 }

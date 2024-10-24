@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -14,7 +13,7 @@ impl Solution {
         if words.len() != pattern.len() {
             return false;
         }
-        
+
         let mut map = HashMap::new();
         let mut reverse_map = HashMap::new();
 
@@ -23,7 +22,7 @@ impl Solution {
 
             if *entry != word {
                 return false;
-            }            
+            }
 
             let entry = reverse_map.entry(word).or_insert(c);
 
@@ -44,6 +43,9 @@ mod tests {
 
     #[test]
     fn test_290() {
-        assert!(Solution::word_pattern("abba".to_owned(), "dog cat cat dog".to_owned()));
+        assert!(Solution::word_pattern(
+            "abba".to_owned(),
+            "dog cat cat dog".to_owned()
+        ));
     }
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -40,7 +39,7 @@ mod tests {
 
     #[test]
     fn test_27() {
-        let mut array = vec![3,2,2,3];
+        let mut array = vec![3, 2, 2, 3];
         assert_eq!(2, Solution::remove_element(&mut array, 3));
         for i in 0..2 {
             assert_eq!(2, array[i]);

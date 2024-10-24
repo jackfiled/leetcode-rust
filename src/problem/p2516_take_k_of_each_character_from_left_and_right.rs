@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -19,16 +18,16 @@ impl Solution {
                 'b' => left_counts[1] += 1,
                 'c' => left_counts[2] += 1,
                 _ => unreachable!(),
-            }       
+            }
         }
 
         if left_counts.iter().any(|x| *x < k) {
             return -1;
         }
-        
+
         let mut result = n;
         let mut right = 0;
-        
+
         // 左指针从右往左移动
         for left in (0..=n - 1).rev() {
             while left_counts.iter().any(|x| *x < k) {
@@ -36,19 +35,19 @@ impl Solution {
                     'a' => left_counts[0] += 1,
                     'b' => left_counts[1] += 1,
                     'c' => left_counts[2] += 1,
-                    _ => unreachable!()
+                    _ => unreachable!(),
                 };
 
                 right += 1;
             }
 
             result = result.min(left + 1 + right);
-            
+
             match s[left] {
                 'a' => left_counts[0] -= 1,
                 'b' => left_counts[1] -= 1,
                 'c' => left_counts[2] -= 1,
-                _ => unreachable!()
+                _ => unreachable!(),
             };
         }
 

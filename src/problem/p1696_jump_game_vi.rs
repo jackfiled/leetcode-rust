@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 use std::collections::VecDeque;
@@ -12,7 +11,7 @@ impl Solution {
     pub fn max_result(nums: Vec<i32>, k: i32) -> i32 {
         let n = nums.len();
         let k = k as usize;
-        let mut dp = vec![0;n];
+        let mut dp = vec![0; n];
         let mut queue = VecDeque::new();
 
         dp[0] = nums[0];
@@ -50,8 +49,11 @@ mod tests {
 
     #[test]
     fn test_1696() {
-        assert_eq!(Solution::max_result(vec![1,-1,-2,4,-7,3], 2), 7);
-        assert_eq!(Solution::max_result(vec![10,-5,-2,4,0,3], 3), 17);
-        assert_eq!(Solution::max_result(vec![1,-5,-20,4,-1,3,-6,-3], 2), 0);
+        assert_eq!(Solution::max_result(vec![1, -1, -2, 4, -7, 3], 2), 7);
+        assert_eq!(Solution::max_result(vec![10, -5, -2, 4, 0, 3], 3), 17);
+        assert_eq!(
+            Solution::max_result(vec![1, -5, -20, 4, -1, 3, -6, -3], 2),
+            0
+        );
     }
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::VecDeque;
 
@@ -41,6 +40,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_918() {
-    }
+    fn test_918() {}
 }

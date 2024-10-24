@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,8 +25,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn kth_largest_level_sum(root: Option<Rc<RefCell<TreeNode>>>, k: i32) -> i64 {
         let root = if let Some(r) = root {
@@ -35,7 +35,7 @@ impl Solution {
             return -1;
         };
         let k = k as usize;
-        
+
         let mut levels = Vec::new();
         let mut level = vec![root];
 
@@ -45,7 +45,7 @@ impl Solution {
 
             for node in level {
                 sum += node.borrow().val as i64;
-                
+
                 if let Some(left) = &node.borrow().left {
                     new_level.push(Rc::clone(left));
                 }
@@ -75,6 +75,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_2583() {
-    }
+    fn test_2583() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -69,6 +68,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_130() {
-    }
+    fn test_130() {}
 }

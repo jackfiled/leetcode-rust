@@ -19,7 +19,7 @@ impl Solution {
             if max_reach >= nums.len() - 1 {
                 return true;
             }
-        } 
+        }
 
         false
     }

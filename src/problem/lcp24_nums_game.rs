@@ -1,15 +1,14 @@
 pub struct Solution {}
 
-use std::collections::BinaryHeap;
 use std::cmp::Reverse;
+use std::collections::BinaryHeap;
 
 impl Solution {
     pub fn nums_game(nums: Vec<i32>) -> Vec<i32> {
         let mut result = Vec::with_capacity(nums.len());
         let m = 1000000007i64;
 
-        let (mut lower, mut upper) =
-            (BinaryHeap::new(), BinaryHeap::new());
+        let (mut lower, mut upper) = (BinaryHeap::new(), BinaryHeap::new());
         let (mut lower_sum, mut upper_sum) = (0i64, 0i64);
 
         for (index, value) in nums.iter().enumerate() {
@@ -41,10 +40,9 @@ impl Solution {
             }
 
             if (index + 1) % 2 == 0 {
-                result.push(((upper_sum - lower_sum) % m) as i32 );
+                result.push(((upper_sum - lower_sum) % m) as i32);
             } else {
-                result.push(((upper_sum - lower_sum  + *lower.peek().unwrap() as i64)
-                    % m) as i32);
+                result.push(((upper_sum - lower_sum + *lower.peek().unwrap() as i64) % m) as i32);
             }
         }
 
@@ -58,8 +56,14 @@ mod tests {
 
     #[test]
     fn test_lcp24() {
-        assert_eq!(Solution::nums_game(vec![3,4,5,1,6,7]), vec![0,0,0,5,6,7]);
-        assert_eq!(Solution::nums_game(vec![1,2,3,4,5]), vec![0,0,0,0,0]);
-        assert_eq!(Solution::nums_game(vec![471, 626, 848]), vec![0, 154,375]);
+        assert_eq!(
+            Solution::nums_game(vec![3, 4, 5, 1, 6, 7]),
+            vec![0, 0, 0, 5, 6, 7]
+        );
+        assert_eq!(
+            Solution::nums_game(vec![1, 2, 3, 4, 5]),
+            vec![0, 0, 0, 0, 0]
+        );
+        assert_eq!(Solution::nums_game(vec![471, 626, 848]), vec![0, 154, 375]);
     }
 }

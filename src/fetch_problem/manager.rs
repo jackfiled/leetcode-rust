@@ -1,6 +1,6 @@
 use super::{Problem, ProblemManager};
+use regex::Regex;
 use std::fs;
-use regex::{Regex};
 
 impl ProblemManager {
     pub fn scan() -> Result<ProblemManager, Box<dyn std::error::Error>> {
@@ -11,45 +11,43 @@ impl ProblemManager {
         for i in pattern.captures_iter(&mod_content) {
             match i.get(1) {
                 None => {}
-                Some(value) => {
-                    match value.as_str().parse::<u32>() {
-                        Ok(id) => {
-                            problems.push(id);
-                        }
-                        Err(_) => {}
+                Some(value) => match value.as_str().parse::<u32>() {
+                    Ok(id) => {
+                        problems.push(id);
                     }
-                }
+                    Err(_) => {}
+                },
             }
         }
 
         Ok(ProblemManager {
-            problem_list: problems
+            problem_list: problems,
         })
     }
 }
 
 impl Problem {
     pub fn get_filename(&self) -> String {
-        format!("p{}_{}", self.question_id, self.title_slug.replace('-', "_"))
+        format!(
+            "p{}_{}",
+            self.question_id,
+            self.title_slug.replace('-', "_")
+        )
     }
 
     pub fn get_file_content(&self) -> Result<String, Box<dyn std::error::Error>> {
         let template = fs::read_to_string("./template.rs")?;
 
-        let code = self.code_definition
-            .iter()
-            .find(|x| x.value == "rust");
+        let code = self.code_definition.iter().find(|x| x.value == "rust");
 
         let code = code.ok_or::<Box<dyn std::error::Error>>(
-            format!("problem {} doesn't have rust version", self.question_id).into()
+            format!("problem {} doesn't have rust version", self.question_id).into(),
         )?;
 
         let source = template
             .replace("__PROBLEM_TITLE__", &self.title)
             .replace("__PROBLEM_ID__", self.question_id.to_string().as_str())
-            .replace(
-                "__PROBLEM_DEFAULT_CODE__",
-                &code.default_code)
+            .replace("__PROBLEM_DEFAULT_CODE__", &code.default_code)
             .replace("__EXTRA_USE__", &parse_extra_use(&code.default_code));
 
         Ok(source)

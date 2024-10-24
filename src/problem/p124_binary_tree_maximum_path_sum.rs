@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,27 +25,29 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     fn max_sum(node: &Rc<RefCell<TreeNode>>, result: &mut i32) -> i32 {
         if node.borrow().left.is_none() && node.borrow().right.is_none() {
             *result = (*result).max(node.borrow().val);
 
             return node.borrow().val;
-        }   
+        }
 
         let left_sum = if let Some(left) = &node.borrow().left {
             Self::max_sum(left, result)
         } else {
             0
-        }.max(0);
+        }
+        .max(0);
 
         let right_sum = if let Some(right) = &node.borrow().right {
             Self::max_sum(right, result)
         } else {
             0
-        }.max(0);
+        }
+        .max(0);
 
         *result = (*result).max(node.borrow().val + left_sum + right_sum);
 
@@ -70,6 +72,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_124() {
-    }
+    fn test_124() {}
 }

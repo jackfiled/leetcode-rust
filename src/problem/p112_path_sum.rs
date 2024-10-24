@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,8 +25,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     fn dfs(node: &Rc<RefCell<TreeNode>>, current_sum: i32, target_sum: i32) -> bool {
         // 到达叶子节点
@@ -49,7 +49,6 @@ impl Solution {
         false
     }
 
-
     pub fn has_path_sum(root: Option<Rc<RefCell<TreeNode>>>, target_sum: i32) -> bool {
         if let Some(root) = root {
             return Self::dfs(&root, 0, target_sum);
@@ -66,6 +65,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_112() {
-    }
+    fn test_112() {}
 }

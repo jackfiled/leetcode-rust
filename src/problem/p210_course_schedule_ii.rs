@@ -3,15 +3,14 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::VecDeque;
 
 impl Solution {
     pub fn find_order(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> Vec<i32> {
         let num = num_courses as usize;
-        let mut edges = vec![vec![];num];
-        let mut in_degs = vec![0;num];
+        let mut edges = vec![vec![]; num];
+        let mut in_degs = vec![0; num];
 
         for edge in prerequisites {
             let (x, y) = (edge[1] as usize, edge[0] as usize);
@@ -58,6 +57,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_210() {
-    }
+    fn test_210() {}
 }

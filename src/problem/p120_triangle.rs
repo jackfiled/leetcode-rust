@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -37,6 +36,9 @@ mod tests {
 
     #[test]
     fn test_120() {
-        assert_eq!(11, Solution::minimum_total(vec![vec![2], vec![3, 4], vec![6, 5, 7], vec![4, 1, 8, 3]]));
+        assert_eq!(
+            11,
+            Solution::minimum_total(vec![vec![2], vec![3, 4], vec![6, 5, 7], vec![4, 1, 8, 3]])
+        );
     }
 }

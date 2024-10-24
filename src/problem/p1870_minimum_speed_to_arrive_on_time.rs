@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -14,9 +13,8 @@ impl Solution {
             return -1;
         }
 
-        let max_speed = (*dist.iter().max().unwrap()).max(
-            ((dist[n - 1] as f64) / (hour - (n - 1) as f64)).ceil() as i32
-        );
+        let max_speed = (*dist.iter().max().unwrap())
+            .max(((dist[n - 1] as f64) / (hour - (n - 1) as f64)).ceil() as i32);
 
         let check = |v: i32| -> bool {
             let mut time = 0;
@@ -58,7 +56,10 @@ mod tests {
     #[test]
     fn test_1870() {
         assert_eq!(-1, Solution::min_speed_on_time(vec![1, 1], 1.0));
-        assert_eq!(10_000_000, Solution::min_speed_on_time(vec![1, 1, 100_000], 2.01));
+        assert_eq!(
+            10_000_000,
+            Solution::min_speed_on_time(vec![1, 1, 100_000], 2.01)
+        );
         assert_eq!(1, Solution::min_speed_on_time(vec![1, 3, 2], 6f64));
         assert_eq!(3, Solution::min_speed_on_time(vec![1, 3, 2], 2.7));
         assert_eq!(-1, Solution::min_speed_on_time(vec![1, 3, 2], 1.9));

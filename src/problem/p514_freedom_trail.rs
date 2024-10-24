@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 use std::collections::HashMap;
@@ -19,7 +18,7 @@ impl Solution {
 
         let mut dp = Vec::with_capacity(key.len());
         for _ in 0..key.len() {
-            dp.push(vec![i32::MAX;ring.len()]);
+            dp.push(vec![i32::MAX; ring.len()]);
         }
 
         let key: Vec<char> = key.chars().collect();
@@ -40,8 +39,11 @@ impl Solution {
                         let last = *j as i32;
 
                         dp[index][*i] = dp[index][*i].min(
-                            dp[index - 1][*j] + (now - last).abs().min(
-                                ring.len() as i32 - (now - last).abs()) + 1
+                            dp[index - 1][*j]
+                                + (now - last)
+                                    .abs()
+                                    .min(ring.len() as i32 - (now - last).abs())
+                                + 1,
                         )
                     }
                 }
@@ -60,7 +62,13 @@ mod tests {
 
     #[test]
     fn test_514() {
-        assert_eq!(Solution::find_rotate_steps("godding".to_string(), "gd".to_string()), 4);
-        assert_eq!(Solution::find_rotate_steps("godding".to_string(), "godding".to_string()), 13);
+        assert_eq!(
+            Solution::find_rotate_steps("godding".to_string(), "gd".to_string()),
+            4
+        );
+        assert_eq!(
+            Solution::find_rotate_steps("godding".to_string(), "godding".to_string()),
+            13
+        );
     }
 }

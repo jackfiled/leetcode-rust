@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::cmp::Ordering;
 
@@ -28,12 +27,10 @@ impl Solution {
                 }
             }
 
-            pos_to_bit.sort_by(|a, b| {
-                match b.0.cmp(&a.0) {
-                    Ordering::Less => { Ordering::Less }
-                    Ordering::Equal => { b.1.cmp(&a.1) }
-                    Ordering::Greater => { Ordering::Greater }
-                }
+            pos_to_bit.sort_by(|a, b| match b.0.cmp(&a.0) {
+                Ordering::Less => Ordering::Less,
+                Ordering::Equal => b.1.cmp(&a.1),
+                Ordering::Greater => Ordering::Greater,
             });
 
             let mut value = 0;

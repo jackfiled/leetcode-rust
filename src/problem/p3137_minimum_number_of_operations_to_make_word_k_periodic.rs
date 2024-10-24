@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -22,7 +21,6 @@ impl Solution {
 
             result = result.min((n / k) as i32 - *entry);
         }
-        
 
         result
     }
@@ -36,6 +34,9 @@ mod tests {
 
     #[test]
     fn test_3137() {
-        assert_eq!(1, Solution::minimum_operations_to_make_k_periodic("leetcodeleet".to_owned(), 4));
+        assert_eq!(
+            1,
+            Solution::minimum_operations_to_make_k_periodic("leetcodeleet".to_owned(), 4)
+        );
     }
 }

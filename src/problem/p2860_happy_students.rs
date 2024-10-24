@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -13,17 +12,17 @@ impl Solution {
         nums.sort();
 
         // 是否能不选中任何学生
-        let mut result = 0; 
+        let mut result = 0;
 
         for i in 0..=n {
             if i > 0 && nums[i - 1] >= i {
                 continue;
-            } 
-            
+            }
+
             if i < n && nums[i] <= i {
                 continue;
             }
-            
+
             result += 1;
         }
 

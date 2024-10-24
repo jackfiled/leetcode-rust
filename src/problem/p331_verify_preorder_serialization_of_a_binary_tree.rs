@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -44,7 +43,9 @@ mod tests {
 
     #[test]
     fn test_331() {
-        assert!(Solution::is_valid_serialization(String::from("9,3,4,#,#,1,#,#,2,#,6,#,#")));
+        assert!(Solution::is_valid_serialization(String::from(
+            "9,3,4,#,#,1,#,#,2,#,6,#,#"
+        )));
         assert!(!Solution::is_valid_serialization(String::from("1,#")));
         assert!(!Solution::is_valid_serialization(String::from("9,#,#,1")));
     }

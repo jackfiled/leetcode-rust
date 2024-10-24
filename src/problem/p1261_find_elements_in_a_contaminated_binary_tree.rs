@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,18 +25,16 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::{collections::HashSet, collections::VecDeque, cell::RefCell, rc::Rc};
+use std::{cell::RefCell, collections::HashSet, collections::VecDeque, rc::Rc};
 struct FindElements {
-    collected_set: HashSet<i32>
+    collected_set: HashSet<i32>,
 }
-
 
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl FindElements {
-
     fn new(root: Option<Rc<RefCell<TreeNode>>>) -> Self {
         let mut queue = VecDeque::new();
         let mut collected_set = HashSet::new();
@@ -61,11 +59,9 @@ impl FindElements {
             };
         }
 
-        FindElements {
-            collected_set
-        }
+        FindElements { collected_set }
     }
-    
+
     fn find(&self, target: i32) -> bool {
         self.collected_set.contains(&target)
     }
@@ -84,6 +80,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_1261() {
-    }
+    fn test_1261() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -11,12 +10,21 @@ impl Solution {
         let m = board.len();
         let n = board[0].len();
 
-        let directions = vec![(-1, -1), (0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0)];
+        let directions = vec![
+            (-1, -1),
+            (0, -1),
+            (1, -1),
+            (1, 0),
+            (1, 1),
+            (0, 1),
+            (-1, 1),
+            (-1, 0),
+        ];
 
         for i in 0..m {
             for j in 0..n {
                 let mut count = 0;
-                
+
                 for (delta_x, delta_y) in directions.iter() {
                     let x = i as i32 + *delta_x;
                     let y = j as i32 + *delta_y;
@@ -68,6 +76,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_289() {
-    }
+    fn test_289() {}
 }

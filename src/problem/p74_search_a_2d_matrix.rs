@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -16,7 +15,7 @@ impl Solution {
 
         while lower < upper {
             let middle = (upper - lower) / 2 + lower;
-            
+
             // WTF?
             if lower == middle {
                 break;
@@ -43,7 +42,7 @@ impl Solution {
 
         if left < n {
             matrix[lower][left] == target
-        } else { 
+        } else {
             false
         }
     }
@@ -58,11 +57,11 @@ mod tests {
     #[test]
     fn test_74() {
         let matrix = vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 60]];
-        
+
         assert!(Solution::search_matrix(matrix, 3));
-        
+
         let matrix = vec![vec![1]];
-        
+
         assert!(!Solution::search_matrix(matrix, 2));
     }
 }

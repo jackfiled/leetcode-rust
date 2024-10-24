@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,8 +25,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Tree {
     root: Rc<RefCell<TreeNode>>,
@@ -35,7 +35,7 @@ struct Tree {
     x_parent: i32,
     y: i32,
     y_height: usize,
-    y_parent: i32
+    y_parent: i32,
 }
 
 impl Tree {
@@ -47,8 +47,8 @@ impl Tree {
             x_parent: 0,
             y,
             y_height: 0,
-            y_parent: 0
-        }
+            y_parent: 0,
+        };
     }
 
     fn dfs(&mut self, node: &Rc<RefCell<TreeNode>>, height: usize, parent: i32) {
@@ -93,7 +93,6 @@ impl Solution {
         let mut tree = Tree::new(Rc::clone(&root), x, y);
         tree.dfs(&root, 0, -1);
 
-
         tree.x_height == tree.y_height && tree.x_parent != tree.y_parent
     }
 }
@@ -106,7 +105,10 @@ mod tests {
 
     #[test]
     fn test_993() {
-        assert!(!Solution::is_cousins(to_tree(vec![Some(1),Some(2),Some(3),Some(4)]),
-                                      4, 3));
+        assert!(!Solution::is_cousins(
+            to_tree(vec![Some(1), Some(2), Some(3), Some(4)]),
+            4,
+            3
+        ));
     }
 }

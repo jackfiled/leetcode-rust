@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -16,11 +15,7 @@ impl Solution {
                 candidate = i;
             }
 
-            count += if candidate == i {
-                1
-            } else {
-                -1
-            };
+            count += if candidate == i { 1 } else { -1 };
         }
 
         candidate
@@ -35,6 +30,6 @@ mod tests {
 
     #[test]
     fn test_169() {
-        assert_eq!(3, Solution::majority_element(vec![3,2,3]));
+        assert_eq!(3, Solution::majority_element(vec![3, 2, 3]));
     }
 }

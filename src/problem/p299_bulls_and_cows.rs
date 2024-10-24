@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -49,7 +48,13 @@ mod tests {
 
     #[test]
     fn test_299() {
-        assert_eq!("1A3B", Solution::get_hint("1807".to_owned(), "7810".to_owned()));
-        assert_eq!("1A1B", Solution::get_hint("1123".to_owned(), "0111".to_owned()));
+        assert_eq!(
+            "1A3B",
+            Solution::get_hint("1807".to_owned(), "7810".to_owned())
+        );
+        assert_eq!(
+            "1A1B",
+            Solution::get_hint("1123".to_owned(), "0111".to_owned())
+        );
     }
 }

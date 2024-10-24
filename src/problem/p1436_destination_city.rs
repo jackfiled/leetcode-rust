@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -19,7 +18,12 @@ impl Solution {
             out_map.entry(&path[1]).or_insert(0);
         }
 
-        out_map.iter().filter(|(_, &v)| v == 0).map(|(k, _)| k.to_string()).next().unwrap()
+        out_map
+            .iter()
+            .filter(|(_, &v)| v == 0)
+            .map(|(k, _)| k.to_string())
+            .next()
+            .unwrap()
     }
 }
 
@@ -31,6 +35,13 @@ mod tests {
 
     #[test]
     fn test_1436() {
-        assert_eq!("A".to_owned(), Solution::dest_city(vec![vec_string!("B", "C"), vec_string!("D", "B"), vec_string!("C", "A")]));
+        assert_eq!(
+            "A".to_owned(),
+            Solution::dest_city(vec![
+                vec_string!("B", "C"),
+                vec_string!("D", "B"),
+                vec_string!("C", "A")
+            ])
+        );
     }
 }

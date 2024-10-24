@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -60,8 +59,8 @@ mod tests {
 
     #[test]
     fn test_410() {
-        assert_eq!(Solution::split_array(vec![7,2,5,10,8], 2), 18);
-        assert_eq!(Solution::split_array(vec![1,2,3,4,5], 2), 9);
-        assert_eq!(Solution::split_array(vec![1,4,4], 3), 4);
+        assert_eq!(Solution::split_array(vec![7, 2, 5, 10, 8], 2), 18);
+        assert_eq!(Solution::split_array(vec![1, 2, 3, 4, 5], 2), 9);
+        assert_eq!(Solution::split_array(vec![1, 4, 4], 3), 4);
     }
 }

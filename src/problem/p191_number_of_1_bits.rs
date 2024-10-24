@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -39,17 +38,17 @@ impl Solution {
             1 << 3,
             1 << 2,
             1 << 1,
-            1
+            1,
         ];
-        
+
         let mut result = 0;
-        
+
         for i in 0..31 {
             if n & ARRAY[i] == ARRAY[i] {
                 result += 1;
             }
         }
-        
+
         result
     }
 }

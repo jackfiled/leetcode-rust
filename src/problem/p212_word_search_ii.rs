@@ -3,9 +3,12 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
-use std::{rc::Rc, cell::RefCell, collections::{HashMap, HashSet}};
+use std::{
+    cell::RefCell,
+    collections::{HashMap, HashSet},
+    rc::Rc,
+};
 
 #[derive(Debug)]
 struct TrieNode {
@@ -39,9 +42,13 @@ impl Solution {
                     }
                 } else {
                     if i == word.len() - 1 {
-                        node.borrow_mut().next.insert(c, Rc::new(RefCell::new(TrieNode::new(true, index))));
+                        node.borrow_mut()
+                            .next
+                            .insert(c, Rc::new(RefCell::new(TrieNode::new(true, index))));
                     } else {
-                        node.borrow_mut().next.insert(c, Rc::new(RefCell::new(TrieNode::new(false, usize::MAX))));
+                        node.borrow_mut()
+                            .next
+                            .insert(c, Rc::new(RefCell::new(TrieNode::new(false, usize::MAX))));
                     }
                 };
 
@@ -63,8 +70,15 @@ impl Solution {
         result.iter().map(|s| s.to_owned()).collect()
     }
 
-    fn dfs(board: &Vec<Vec<char>>, node: &Rc<RefCell<TrieNode>>, words: &Vec<String>, result: &mut HashSet<String>,
-        visited: &mut Vec<Vec<bool>>, x: i32, y: i32) {
+    fn dfs(
+        board: &Vec<Vec<char>>,
+        node: &Rc<RefCell<TrieNode>>,
+        words: &Vec<String>,
+        result: &mut HashSet<String>,
+        visited: &mut Vec<Vec<bool>>,
+        x: i32,
+        y: i32,
+    ) {
         let (m, n) = (board.len() as i32, board[0].len() as i32);
 
         if x < 0 || x >= m || y < 0 || y >= n {
@@ -88,7 +102,7 @@ impl Solution {
             Self::dfs(board, next, words, result, visited, x + 1, y);
             Self::dfs(board, next, words, result, visited, x, y - 1);
         };
-        
+
         visited[x as usize][y as usize] = false;
     }
 }
@@ -105,7 +119,7 @@ mod tests {
             vec!['o', 'a', 'a', 'n'],
             vec!['e', 't', 'a', 'e'],
             vec!['i', 'h', 'k', 'r'],
-            vec!['i', 'f', 'l', 'v']
+            vec!['i', 'f', 'l', 'v'],
         ];
 
         let words = vec_string!("oath", "pea", "eat", "rain");
@@ -120,9 +134,7 @@ mod tests {
 
     #[test]
     fn test_212_2() {
-        let board = vec![
-            vec!['a', 'a']
-        ];
+        let board = vec![vec!['a', 'a']];
 
         let words = vec_string!("aaa");
 
@@ -130,19 +142,19 @@ mod tests {
 
         assert_eq!(result.len(), 0);
     }
-    
+
     #[test]
     fn test_212_3() {
         let board = vec![
             vec!['a', 'b', 'c', 'e'],
             vec!['x', 'x', 'c', 'd'],
-            vec!['x', 'x', 'b', 'a']
+            vec!['x', 'x', 'b', 'a'],
         ];
-        
+
         let words = vec_string!("abc", "abcd");
-        
+
         let result = Solution::find_words(board, words);
-        
+
         assert_eq!(result.len(), 2);
         assert!(result.contains(&"abc".to_owned()));
         assert!(result.contains(&"abcd".to_owned()));

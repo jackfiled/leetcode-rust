@@ -5,7 +5,7 @@ use std::collections::HashMap;
 impl Solution {
     pub fn count_pairs_of_connectable_servers(edges: Vec<Vec<i32>>, signal_speed: i32) -> Vec<i32> {
         let n = edges.len();
-        let mut graph = vec![vec![];n];
+        let mut graph = vec![vec![]; n];
         let signal_speed = signal_speed as i64;
 
         for edge in &edges {
@@ -17,17 +17,22 @@ impl Solution {
             graph[y].push((x, weight));
         }
 
-        let mut connection = vec![(0,0);n];
-        for next in &graph[0] {
-
-        }        
+        let mut connection = vec![(0, 0); n];
+        for next in &graph[0] {}
 
         let mut result = Vec::with_capacity(n);
 
         result
     }
 
-    fn dfs(graph: &Vec<Vec<(usize, i64)>>, conection: &mut Vec<(i64, usize)>, now: usize, pre: usize, distance: i64, start: usize) {
+    fn dfs(
+        graph: &Vec<Vec<(usize, i64)>>,
+        conection: &mut Vec<(i64, usize)>,
+        now: usize,
+        pre: usize,
+        distance: i64,
+        start: usize,
+    ) {
         for next in &graph[now] {
             if next.0 == pre {
                 continue;
@@ -39,8 +44,14 @@ impl Solution {
         }
     }
 
-    fn tree_dp(graph: &Vec<Vec<(usize, i64)>>, conection: &mut Vec<(i64, usize)>, result: &mut Vec<i32>, 
-        now: usize, pre: usize, signal_speed: i64) {
+    fn tree_dp(
+        graph: &Vec<Vec<(usize, i64)>>,
+        conection: &mut Vec<(i64, usize)>,
+        result: &mut Vec<i32>,
+        now: usize,
+        pre: usize,
+        signal_speed: i64,
+    ) {
         let mut count = HashMap::new();
 
         for node in conection {

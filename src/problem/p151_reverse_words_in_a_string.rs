@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -15,7 +14,7 @@ impl Solution {
                 words.push(word);
             }
         }
-        
+
         let length = words.len();
         let mut result = String::from(words[length - 1]);
 
@@ -36,6 +35,9 @@ mod tests {
 
     #[test]
     fn test_151() {
-        assert_eq!("blue is sky the".to_owned(), Solution::reverse_words("the sky is blue".to_owned()));
+        assert_eq!(
+            "blue is sky the".to_owned(),
+            Solution::reverse_words("the sky is blue".to_owned())
+        );
     }
 }

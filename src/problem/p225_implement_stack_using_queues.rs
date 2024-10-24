@@ -3,27 +3,24 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::VecDeque;
 
 struct MyStack {
-    queue: VecDeque<i32>
+    queue: VecDeque<i32>,
 }
-
 
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MyStack {
-
     fn new() -> Self {
         return MyStack {
-            queue: VecDeque::new()
-        }
+            queue: VecDeque::new(),
+        };
     }
-    
+
     fn push(&mut self, x: i32) {
         let mut new_queue = VecDeque::with_capacity(self.queue.capacity() + 1);
         new_queue.push_back(x);
@@ -34,15 +31,15 @@ impl MyStack {
 
         self.queue = new_queue;
     }
-    
+
     fn pop(&mut self) -> i32 {
         self.queue.pop_front().unwrap()
     }
-    
+
     fn top(&self) -> i32 {
         *self.queue.front().unwrap()
     }
-    
+
     fn empty(&self) -> bool {
         self.queue.is_empty()
     }

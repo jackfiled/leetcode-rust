@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -25,7 +24,7 @@ impl Solution {
                     if *value == 0 {
                         map.remove(&c);
                     }
-                },
+                }
                 None => {
                     return false;
                 }
@@ -44,6 +43,9 @@ mod tests {
 
     #[test]
     fn test_242() {
-        assert!(Solution::is_anagram("anagram".to_owned(), "nagaram".to_owned()));
+        assert!(Solution::is_anagram(
+            "anagram".to_owned(),
+            "nagaram".to_owned()
+        ));
     }
 }

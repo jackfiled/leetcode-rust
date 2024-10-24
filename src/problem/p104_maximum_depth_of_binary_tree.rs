@@ -36,7 +36,7 @@ impl Solution {
 
         if let Some(node) = root {
             queue.push_back(node);
-        }        
+        }
 
         while !queue.is_empty() {
             let level = queue.len();

@@ -11,7 +11,7 @@ impl Solution {
         let mut map = HashMap::new();
 
         for c in magazine.chars() {
-            let entry  = map.entry(c).or_insert(0);
+            let entry = map.entry(c).or_insert(0);
 
             *entry += 1;
         }
@@ -24,13 +24,12 @@ impl Solution {
                     }
 
                     *entry -= 1;
-                },
+                }
                 None => {
                     return false;
                 }
             }
         }
-
 
         true
     }

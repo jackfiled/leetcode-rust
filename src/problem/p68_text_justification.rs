@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -13,7 +12,7 @@ impl Solution {
         let mut result = Vec::with_capacity(words.len());
 
         let mut line_length = 0;
-        let mut lines : Vec<String> = Vec::new();
+        let mut lines: Vec<String> = Vec::new();
         while pos < words.len() {
             if line_length + words[pos].len() > max_width {
                 let line_count = lines.len();
@@ -33,7 +32,7 @@ impl Solution {
 
                 let actual_line_length: usize = lines.iter().map(|word| word.len()).sum();
                 let mut mod_length = (max_width - actual_line_length) % (line_count - 1);
-                let average_length = (max_width - actual_line_length) / (line_count - 1); 
+                let average_length = (max_width - actual_line_length) / (line_count - 1);
 
                 for i in 0..line_count {
                     line.push_str(&lines[i]);
@@ -48,8 +47,8 @@ impl Solution {
 
                         for j in 0..space_length {
                             line.push(' ');
-                        }                        
-                    } 
+                        }
+                    }
                 }
 
                 result.push(line);
@@ -92,8 +91,16 @@ mod tests {
 
     #[test]
     fn test_68() {
-        let words = vec!["This", "is", "an", "example", "of", "text", "justification."];
-        let words: Vec<String> = words.iter().map(|word| {String::from(*word)}).collect();
+        let words = vec![
+            "This",
+            "is",
+            "an",
+            "example",
+            "of",
+            "text",
+            "justification.",
+        ];
+        let words: Vec<String> = words.iter().map(|word| String::from(*word)).collect();
 
         for line in Solution::full_justify(words, 16) {
             println!("{}", line);

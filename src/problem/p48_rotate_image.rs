@@ -3,13 +3,12 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn rotate(matrix: &mut Vec<Vec<i32>>) {
         let n = matrix.len();
-        
+
         // 首先上下水平翻转
         for i in (0..n / 2) {
             for j in 0..n {
@@ -37,6 +36,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_48() {
-    }
+    fn test_48() {}
 }

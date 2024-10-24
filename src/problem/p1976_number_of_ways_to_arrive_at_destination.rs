@@ -3,14 +3,13 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::BinaryHeap;
 
 #[derive(PartialEq, Eq)]
 struct Node {
     node: usize,
-    distance: i64
+    distance: i64,
 }
 
 impl PartialOrd for Node {
@@ -29,8 +28,8 @@ impl Solution {
     pub fn count_paths(n: i32, roads: Vec<Vec<i32>>) -> i32 {
         let m = 1e9 as i32 + 7;
         let n = n as usize;
-        let mut graph = vec![vec![];n];
-        
+        let mut graph = vec![vec![]; n];
+
         for road in roads {
             let x = road[0] as usize;
             let y = road[1] as usize;
@@ -40,17 +39,20 @@ impl Solution {
             graph[y].push((x, t));
         }
 
-        let mut distance = vec![i64::MAX;n];
+        let mut distance = vec![i64::MAX; n];
         distance[0] = 0;
-        let mut ways = vec![0;n];
+        let mut ways = vec![0; n];
         ways[0] = 1;
 
         let mut queue = BinaryHeap::new();
-        queue.push(Node {node: 0, distance: 0});
+        queue.push(Node {
+            node: 0,
+            distance: 0,
+        });
 
         while !queue.is_empty() {
             let now = queue.pop().unwrap();
-            
+
             if now.distance > distance[now.node] {
                 continue;
             }
@@ -60,7 +62,10 @@ impl Solution {
                     distance[next.0] = now.distance + next.1;
                     ways[next.0] = ways[now.node];
 
-                    queue.push(Node {node: next.0, distance: now.distance + next.1});
+                    queue.push(Node {
+                        node: next.0,
+                        distance: now.distance + next.1,
+                    });
                 } else if now.distance + next.1 == distance[next.0] {
                     ways[next.0] = (ways[now.node] + ways[next.0]) % m;
                 }
@@ -78,7 +83,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_1976() {
-
-    }
+    fn test_1976() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -33,6 +32,6 @@ mod tests {
 
     #[test]
     fn test_121() {
-        assert_eq!(1, Solution::max_profit(vec![1,2]));
+        assert_eq!(1, Solution::max_profit(vec![1, 2]));
     }
 }

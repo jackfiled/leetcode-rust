@@ -21,7 +21,7 @@ impl Solution {
                     "-" => stack.push(first - second),
                     "*" => stack.push(first * second),
                     "/" => stack.push(first / second),
-                    _ => {},
+                    _ => {}
                 }
             }
         }
@@ -38,6 +38,6 @@ mod tests {
 
     #[test]
     fn test_150() {
-        assert_eq!(9, Solution::eval_rpn(vec_string!["2","1","+","3","*"]));
+        assert_eq!(9, Solution::eval_rpn(vec_string!["2", "1", "+", "3", "*"]));
     }
 }

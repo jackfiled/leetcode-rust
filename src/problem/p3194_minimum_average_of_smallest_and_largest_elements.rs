@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -30,7 +29,10 @@ mod tests {
 
     #[test]
     fn test_3194() {
-        assert_eq!(5.5, Solution::minimum_average(vec![7, 8, 3, 4, 15, 13, 4, 1]));
+        assert_eq!(
+            5.5,
+            Solution::minimum_average(vec![7, 8, 3, 4, 15, 13, 4, 1])
+        );
         assert_eq!(5.5, Solution::minimum_average(vec![1, 9, 8, 3, 10, 5]));
         assert_eq!(5.0, Solution::minimum_average(vec![1, 2, 3, 7, 8, 9]));
     }

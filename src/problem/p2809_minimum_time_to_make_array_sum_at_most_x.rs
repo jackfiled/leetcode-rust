@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 struct Pair {
@@ -55,11 +54,11 @@ mod tests {
 
     #[test]
     fn test_2809() {
-        assert_eq!(Solution::minimum_time(vec![1, 2, 3], vec![1, 2, 3], 4),
-                   3);
-        assert_eq!(Solution::minimum_time(vec![1, 2, 3], vec![3, 3, 3], 4),
-                   -1);
-        assert_eq!(Solution::minimum_time(vec![4, 4, 9, 10], vec![4, 4, 1, 3], 16),
-                   4);
+        assert_eq!(Solution::minimum_time(vec![1, 2, 3], vec![1, 2, 3], 4), 3);
+        assert_eq!(Solution::minimum_time(vec![1, 2, 3], vec![3, 3, 3], 4), -1);
+        assert_eq!(
+            Solution::minimum_time(vec![4, 4, 9, 10], vec![4, 4, 1, 3], 16),
+            4
+        );
     }
 }

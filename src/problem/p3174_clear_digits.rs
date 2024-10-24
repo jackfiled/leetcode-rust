@@ -3,19 +3,18 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn clear_digits(s: String) -> String {
         let s: Vec<char> = s.chars().collect();
         let mut mark = vec![true; s.len()];
-        
+
         for (i, &c) in s.iter().enumerate() {
             if !c.is_ascii_digit() {
                 continue;
             }
-            
+
             // 是数字
             mark[i] = false;
             let mut last = i - 1;
@@ -25,14 +24,11 @@ impl Solution {
             }
             mark[last] = false;
         }
-        
-        s.iter().enumerate().filter_map(|(i, &c)| {
-            if mark[i] {
-                Some(c)
-            } else { 
-                None
-            }
-        }).collect()
+
+        s.iter()
+            .enumerate()
+            .filter_map(|(i, &c)| if mark[i] { Some(c) } else { None })
+            .collect()
     }
 }
 

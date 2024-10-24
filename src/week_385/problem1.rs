@@ -3,10 +3,8 @@ pub struct Solution;
 impl Solution {
     pub fn count_prefix_suffix_pairs(words: Vec<String>) -> i32 {
         let mut result = 0;
-        let words: Vec<Vec<char>> = words.iter()
-            .map(|s| {s.chars().collect()})
-            .collect();
-        
+        let words: Vec<Vec<char>> = words.iter().map(|s| s.chars().collect()).collect();
+
         for j in 1..words.len() {
             for i in 0..j {
                 if Solution::is_prefix_and_suffix(&words[i], &words[j]) {

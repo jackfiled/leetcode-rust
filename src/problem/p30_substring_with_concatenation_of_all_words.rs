@@ -77,9 +77,12 @@ mod tests {
 
     #[test]
     fn test_30() {
-        assert_eq!(vec![0,9], Solution::find_substring("barfoothefoobarman".to_owned(), vec![
-            "foo".to_owned(),
-            "bar".to_owned()
-        ]))
+        assert_eq!(
+            vec![0, 9],
+            Solution::find_substring(
+                "barfoothefoobarman".to_owned(),
+                vec!["foo".to_owned(), "bar".to_owned()]
+            )
+        )
     }
 }

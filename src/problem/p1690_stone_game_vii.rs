@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -15,13 +14,12 @@ impl Solution {
             sum[index + 1] = sum[index] + *value;
         }
 
-        let mut dp = vec![vec![0;n];n];
+        let mut dp = vec![vec![0; n]; n];
 
-        for i in (0..=n-2).rev() {
-            for j in i+1..n {
-                dp[i][j] = (sum[j + 1] - sum[i + 1] - dp[i + 1][j]).max(
-                    sum[j] - sum[i] - dp[i][j - 1]
-                );
+        for i in (0..=n - 2).rev() {
+            for j in i + 1..n {
+                dp[i][j] =
+                    (sum[j + 1] - sum[i + 1] - dp[i + 1][j]).max(sum[j] - sum[i] - dp[i][j - 1]);
             }
         }
 
@@ -37,6 +35,6 @@ mod tests {
 
     #[test]
     fn test_1690() {
-        assert_eq!(Solution::stone_game_vii(vec![5,3,1,4,2]), 6);
+        assert_eq!(Solution::stone_game_vii(vec![5, 3, 1, 4, 2]), 6);
     }
 }

@@ -3,14 +3,13 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::VecDeque;
 
 impl Solution {
     pub fn find_min_height_trees(n: i32, edges: Vec<Vec<i32>>) -> Vec<i32> {
         let n = n as usize;
-        let mut graph = vec![vec![];n];
+        let mut graph = vec![vec![]; n];
 
         for edge in &edges {
             let x = edge[0] as usize;
@@ -20,7 +19,7 @@ impl Solution {
             graph[y].push(x);
         }
 
-        let mut parents = vec![usize::MAX;n];
+        let mut parents = vec![usize::MAX; n];
         let x = Solution::find_longest_node(0, &mut parents, &graph);
         let mut y = Solution::find_longest_node(x, &mut parents, &graph);
 
@@ -46,7 +45,7 @@ impl Solution {
         let n = graph.len();
 
         let mut queue = VecDeque::with_capacity(n);
-        let mut visited = vec![false;n];
+        let mut visited = vec![false; n];
 
         queue.push_back(node);
         visited[node] = true;
@@ -64,7 +63,7 @@ impl Solution {
                     queue.push_back(next);
                 }
             }
-        } 
+        }
 
         result
     }
@@ -78,6 +77,9 @@ mod tests {
 
     #[test]
     fn test_310() {
-        assert_eq!(vec![1], Solution::find_min_height_trees(4, vec![vec![1,0], vec![1,2], vec![1,3]]));
+        assert_eq!(
+            vec![1],
+            Solution::find_min_height_trees(4, vec![vec![1, 0], vec![1, 2], vec![1, 3]])
+        );
     }
 }

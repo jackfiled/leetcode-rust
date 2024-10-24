@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -25,7 +24,7 @@ impl Solution {
                 count += 1;
             }
         }
-        
+
         now as i32
     }
 }
@@ -38,8 +37,8 @@ mod tests {
 
     #[test]
     fn test_80() {
-        let mut nums = vec![1,1,1,2,2,3];
+        let mut nums = vec![1, 1, 1, 2, 2, 3];
         assert_eq!(5, Solution::remove_duplicates(&mut nums));
-        assert_eq!(vec![1,1,2,2,3,3], nums);
+        assert_eq!(vec![1, 1, 2, 2, 3, 3], nums);
     }
 }

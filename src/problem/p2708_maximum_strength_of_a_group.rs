@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -29,7 +28,7 @@ impl Solution {
                 result *= r as i64;
                 found = true;
                 now += 2;
-            } else { 
+            } else {
                 now += 1;
             }
         }
@@ -43,7 +42,7 @@ impl Solution {
 
         match found {
             true => result,
-            false => 0
+            false => 0,
         }
     }
 }

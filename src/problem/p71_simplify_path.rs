@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -22,7 +21,7 @@ impl Solution {
                 path.pop();
             } else {
                 path.push(name)
-            }            
+            }
         }
 
         let mut result = String::new();
@@ -30,7 +29,7 @@ impl Solution {
         for name in path {
             result.push_str("/");
             result.push_str(name);
-        }        
+        }
 
         if result.len() == 0 {
             "/".to_owned()
@@ -48,6 +47,9 @@ mod tests {
 
     #[test]
     fn test_71() {
-        assert_eq!("/home".to_owned(), Solution::simplify_path("/home//".to_owned()));
+        assert_eq!(
+            "/home".to_owned(),
+            Solution::simplify_path("/home//".to_owned())
+        );
     }
 }

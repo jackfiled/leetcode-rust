@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::HashMap;
 
@@ -12,19 +11,20 @@ impl Solution {
         let mut prices_map = HashMap::with_capacity(prices.len());
 
         for price in prices {
-            prices_map.insert(Solution::hash(price[0] as usize, price[1] as usize), 
-                price[2] as i64);
+            prices_map.insert(
+                Solution::hash(price[0] as usize, price[1] as usize),
+                price[2] as i64,
+            );
         }
-        
+
         let (m, n) = (m as usize, n as usize);
 
-        let mut dp = vec![vec![-1;n + 1];m + 1];
-
+        let mut dp = vec![vec![-1; n + 1]; m + 1];
 
         Solution::dfs(m, n, &mut dp, &prices_map)
     }
 
-    fn hash(x: usize, y: usize)-> usize {
+    fn hash(x: usize, y: usize) -> usize {
         return x * 1000 + y;
     }
 
@@ -33,20 +33,21 @@ impl Solution {
             return dp[x][y];
         }
 
-        let mut result  = *prices_map.get(&Solution::hash(x, y))
-            .unwrap_or_else(|| &0);
+        let mut result = *prices_map.get(&Solution::hash(x, y)).unwrap_or_else(|| &0);
 
         if x > 1 {
-            for i in  1..x {
-                result = result.max(Solution::dfs(i, y, dp, prices_map) + 
-                    Solution::dfs(x - i, y, dp, prices_map));   
+            for i in 1..x {
+                result = result.max(
+                    Solution::dfs(i, y, dp, prices_map) + Solution::dfs(x - i, y, dp, prices_map),
+                );
             }
         }
 
         if y > 1 {
             for j in 1..y {
-                result = result.max(Solution::dfs(x, j, dp, prices_map) + 
-                    Solution::dfs(x, y - j, dp, prices_map));
+                result = result.max(
+                    Solution::dfs(x, j, dp, prices_map) + Solution::dfs(x, y - j, dp, prices_map),
+                );
             }
         }
 
@@ -62,6 +63,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_2312() {
-    }
+    fn test_2312() {}
 }

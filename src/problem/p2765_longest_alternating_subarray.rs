@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -32,9 +31,9 @@ mod tests {
 
     #[test]
     fn test_2765() {
-        assert_eq!(Solution::alternating_subarray(vec![2,3,4,3,4]), 4);
-        assert_eq!(Solution::alternating_subarray(vec![4,5,6]), 2);
-        assert_eq!(Solution::alternating_subarray(vec![21,9,5]), -1);
-        assert_eq!(Solution::alternating_subarray(vec![21,22]), 2);
+        assert_eq!(Solution::alternating_subarray(vec![2, 3, 4, 3, 4]), 4);
+        assert_eq!(Solution::alternating_subarray(vec![4, 5, 6]), 2);
+        assert_eq!(Solution::alternating_subarray(vec![21, 9, 5]), -1);
+        assert_eq!(Solution::alternating_subarray(vec![21, 22]), 2);
     }
 }

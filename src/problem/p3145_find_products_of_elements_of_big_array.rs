@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -88,7 +87,7 @@ impl Solution {
         result + sum
     }
 
-    /// 计算小于等于x所有数的数位对幂的贡献之和 
+    /// 计算小于等于x所有数的数位对幂的贡献之和
     fn count_power(x: i64) -> i64 {
         let mut result = 0;
         let mut sum = 0;
@@ -133,7 +132,13 @@ mod tests {
 
     #[test]
     fn test_3145() {
-        assert_eq!(vec![4], Solution::find_products_of_elements(vec![vec![1, 3, 7]]));
-        assert_eq!(vec![2, 2], Solution::find_products_of_elements(vec![vec![2, 5, 3], vec![7, 7, 4]]));
+        assert_eq!(
+            vec![4],
+            Solution::find_products_of_elements(vec![vec![1, 3, 7]])
+        );
+        assert_eq!(
+            vec![2, 2],
+            Solution::find_products_of_elements(vec![vec![2, 5, 3], vec![7, 7, 4]])
+        );
     }
 }

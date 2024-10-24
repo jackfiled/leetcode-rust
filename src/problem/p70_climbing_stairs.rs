@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -13,16 +12,16 @@ impl Solution {
         } else if n == 2 {
             return 2;
         }
-        
+
         let mut last_last = 1;
         let mut last = 2;
-        
+
         for i in 3..=n {
             let now = last + last_last;
             last_last = last;
             last = now;
         }
-        
+
         last
     }
 }

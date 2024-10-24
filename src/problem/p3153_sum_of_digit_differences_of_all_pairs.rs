@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -23,11 +22,11 @@ impl Solution {
                 map[digit] += 1;
             }
 
-            result += map.iter().filter_map(|x| if *x == 0 {
-                None
-            } else {
-                Some(*x * (n - *x))
-            }).sum::<i64>() / 2;
+            result += map
+                .iter()
+                .filter_map(|x| if *x == 0 { None } else { Some(*x * (n - *x)) })
+                .sum::<i64>()
+                / 2;
 
             base *= 10;
         }

@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::linked_list::{ListNode, to_list};
+use crate::util::linked_list::{to_list, ListNode};
 
 // submission codes start here
 
@@ -38,8 +38,8 @@ impl Solution {
             let now = node.val;
 
             if head.as_ref().map_or(true, |next| next.val != now)
-                && prev.map_or(true, |pre| pre != now) {
-
+                && prev.map_or(true, |pre| pre != now)
+            {
                 tail.next = Some(node);
                 tail = tail.next.as_mut()?;
             }
@@ -58,6 +58,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_82() {
-    }
+    fn test_82() {}
 }

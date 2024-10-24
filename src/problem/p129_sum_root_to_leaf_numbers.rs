@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,8 +25,8 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     fn dfs_sum(node: &Rc<RefCell<TreeNode>>, last_num: i32, result: &mut i32) {
         if node.borrow().left.is_none() && node.borrow().right.is_none() {
@@ -42,14 +42,12 @@ impl Solution {
         }
     }
 
-
     pub fn sum_numbers(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         let mut result = 0;
 
         if let Some(root) = root {
             Self::dfs_sum(&root, 0, &mut result);
         }
-
 
         result
     }
@@ -62,6 +60,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_129() {
-    }
+    fn test_129() {}
 }

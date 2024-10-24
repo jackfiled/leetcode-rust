@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -12,36 +11,36 @@ impl Solution {
 
         while left < right {
             let middle = (left + right + 1) / 2;
-            
+
             if Self::accumulate_price(x, middle) > k {
                 right = middle - 1;
             } else {
                 left = middle;
             }
         }
-        
+
         left
     }
-    
+
     fn accumulate_price(x: i32, num: i64) -> i64 {
         let mut result = 0;
         let length = 64 - i64::leading_zeros(num) as i32;
-        
+
         for i in (x..=length).step_by(x as usize) {
             result += Self::accumulate_bit_price(i, num);
         }
-        
+
         result
     }
-    
+
     fn accumulate_bit_price(x: i32, num: i64) -> i64 {
         let period = 1i64 << x;
         let mut result = period / 2 * (num / period);
-        
+
         if num % period >= period / 2 {
             result += num % period - (period / 2 - 1);
         }
-        
+
         result
     }
 }

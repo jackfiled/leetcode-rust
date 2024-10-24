@@ -3,13 +3,12 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 use std::collections::HashMap;
 
 struct UnionFind {
-    parents : Vec<usize>
+    parents: Vec<usize>,
 }
 
 impl UnionFind {
@@ -20,9 +19,7 @@ impl UnionFind {
             parents.push(i);
         }
 
-        UnionFind {
-            parents
-        }
+        UnionFind { parents }
     }
 
     fn find(&mut self, x: usize) -> usize {
@@ -42,14 +39,14 @@ impl UnionFind {
 struct Tree {
     matrix: Vec<HashMap<usize, usize>>,
     // 从节点0到节点i上权值为j边的个数
-    count : Vec<Vec<i32>>,
+    count: Vec<Vec<i32>>,
     length: usize,
     // tarjan算法辅助数组
-    least_common_ancestor : Vec<usize>,
+    least_common_ancestor: Vec<usize>,
     // (i, x) 表示边，y 是least_common_ancestor的下标
     query_edges: Vec<Vec<(usize, usize)>>,
     uf: UnionFind,
-    visited : Vec<bool>
+    visited: Vec<bool>,
 }
 
 impl Tree {
@@ -60,7 +57,7 @@ impl Tree {
 
         for _ in 0..=n {
             matrix.push(HashMap::new());
-            count.push(vec![0;27])
+            count.push(vec![0; 27])
         }
 
         for edge in edges {
@@ -78,7 +75,7 @@ impl Tree {
             least_common_ancestor: vec![0; queries.len()],
             query_edges: vec![vec![]; n],
             uf: UnionFind::new(n),
-            visited: vec![false; n]
+            visited: vec![false; n],
         };
 
         for (index, query) in queries.iter().enumerate() {
@@ -91,7 +88,7 @@ impl Tree {
         tree
     }
 
-    fn tarjan(&mut self, node : usize, parent : usize) {
+    fn tarjan(&mut self, node: usize, parent: usize) {
         // 顺便构建count数组
         if node != 0 {
             self.count[node] = self.count[parent].clone();
@@ -114,7 +111,7 @@ impl Tree {
 
         for (target, index) in &self.query_edges[node] {
             if *target != node && !self.visited[*target] {
-                continue
+                continue;
             }
 
             self.least_common_ancestor[*index] = self.uf.find(*target);
@@ -125,7 +122,11 @@ impl Tree {
 }
 
 impl Solution {
-    pub fn min_operations_queries(n: i32, edges: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {
+    pub fn min_operations_queries(
+        n: i32,
+        edges: Vec<Vec<i32>>,
+        queries: Vec<Vec<i32>>,
+    ) -> Vec<i32> {
         let mut tree = Tree::new(n, edges, &queries);
         tree.tarjan(0, 0);
 
@@ -136,7 +137,8 @@ impl Solution {
             let (x, y) = (query[0] as usize, query[1] as usize);
 
             for i in 1..=26 {
-                let t = tree.count[x][i] + tree.count[y][i] - 2 * tree.count[tree.least_common_ancestor[index]][i];
+                let t = tree.count[x][i] + tree.count[y][i]
+                    - 2 * tree.count[tree.least_common_ancestor[index]][i];
                 max_count = max_count.max(t);
                 total += t;
             }
@@ -156,17 +158,20 @@ mod tests {
 
     #[test]
     fn test_2846() {
-        assert_eq!(Solution::min_operations_queries(7,
-                                                    vec![vec![0, 1, 1],
-                                                         vec![1, 2, 1],
-                                                         vec![2, 3, 1],
-                                                         vec![3, 4, 2],
-                                                         vec![4, 5, 2],
-                                                         vec![5, 6, 2]],
-                                                    vec![vec![0, 3],
-                                                         vec![3, 6],
-                                                         vec![2, 6],
-                                                         vec![0, 6]]),
-                   vec![0, 0, 1, 3])
+        assert_eq!(
+            Solution::min_operations_queries(
+                7,
+                vec![
+                    vec![0, 1, 1],
+                    vec![1, 2, 1],
+                    vec![2, 3, 1],
+                    vec![3, 4, 2],
+                    vec![4, 5, 2],
+                    vec![5, 6, 2]
+                ],
+                vec![vec![0, 3], vec![3, 6], vec![2, 6], vec![0, 6]]
+            ),
+            vec![0, 0, 1, 3]
+        )
     }
 }

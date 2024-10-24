@@ -8,20 +8,20 @@
  * <img alt="" src="https://assets.leetcode.com/uploads/2019/05/23/931_example_1.png" style="width: 217px; height: 239px;" />
  * Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
  * Output: 2
- * 
+ *
  * <strong class="example">Example 2:
- * 
+ *
  * Input: times = [[1,2,1]], n = 2, k = 1
  * Output: 1
- * 
+ *
  * <strong class="example">Example 3:
- * 
+ *
  * Input: times = [[1,2,1]], n = 2, k = 2
  * Output: -1
- * 
+ *
  *  
  * Constraints:
- * 
+ *
  * 	1 <= k <= n <= 100
  * 	1 <= times.length <= 6000
  * 	times[i].length == 3
@@ -29,7 +29,7 @@
  * 	ui != vi
  * 	0 <= wi <= 100
  * 	All the pairs (ui, vi) are unique. (i.e., no multiple edges.)
- * 
+ *
  */
 pub struct Solution {}
 
@@ -99,17 +99,13 @@ impl Solution {
 
         for i in 1..distances.len() {
             if i == k {
-                continue
+                continue;
             }
 
             result = max(result, distances[i]);
         }
 
-        return if result == i32::MAX {
-            -1
-        } else {
-            result
-        }
+        return if result == i32::MAX { -1 } else { result };
     }
 }
 
@@ -121,9 +117,11 @@ mod tests {
 
     #[test]
     fn test_743() {
-        assert_eq!(Solution::network_delay_time(
-            vec![vec![2,1,1], vec![2,3,1], vec![3,4,1]], 4, 2), 2);
-        assert_eq!(Solution::network_delay_time(vec![vec![1,2,1]], 2, 1), 1);
-        assert_eq!(Solution::network_delay_time(vec![vec![1,2,1]], 2, 2), -1);
+        assert_eq!(
+            Solution::network_delay_time(vec![vec![2, 1, 1], vec![2, 3, 1], vec![3, 4, 1]], 4, 2),
+            2
+        );
+        assert_eq!(Solution::network_delay_time(vec![vec![1, 2, 1]], 2, 1), 1);
+        assert_eq!(Solution::network_delay_time(vec![vec![1, 2, 1]], 2, 2), -1);
     }
 }

@@ -5,30 +5,30 @@
  * Return the number of boomerangs.
  *  
  * <strong class="example">Example 1:
- * 
+ *
  * Input: points = [[0,0],[1,0],[2,0]]
  * Output: 2
  * Explanation: The two boomerangs are [[1,0],[0,0],[2,0]] and [[1,0],[2,0],[0,0]].
- * 
+ *
  * <strong class="example">Example 2:
- * 
+ *
  * Input: points = [[1,1],[2,2],[3,3]]
  * Output: 2
- * 
+ *
  * <strong class="example">Example 3:
- * 
+ *
  * Input: points = [[1,1]]
  * Output: 0
- * 
+ *
  *  
  * Constraints:
- * 
+ *
  * 	n == points.length
  * 	1 <= n <= 500
  * 	points[i].length == 2
  * 	-10^4 <= xi, yi <= 10^4
  * 	All the points are unique.
- * 
+ *
  */
 pub struct Solution {}
 
@@ -55,7 +55,7 @@ impl Solution {
             for (_, v) in &values {
                 // 实际上并不需要，因为最小值为1
                 // 计算的结果为0
-                if  *v >= 2 {
+                if *v >= 2 {
                     // result += A_m^2
                     result += (*v) * (*v - 1);
                 }
@@ -73,6 +73,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_447() {
-    }
+    fn test_447() {}
 }

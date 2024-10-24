@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -42,6 +41,6 @@ mod tests {
     fn test_365() {
         assert!(Solution::can_measure_water(3, 5, 4));
         assert!(!Solution::can_measure_water(2, 6, 5));
-        assert!(Solution::can_measure_water(1,2,3));
+        assert!(Solution::can_measure_water(1, 2, 3));
     }
 }

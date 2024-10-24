@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 use std::collections::BTreeMap;
 
@@ -59,11 +58,13 @@ mod tests {
 
     #[test]
     fn test_2182() {
-        assert_eq!(String::from("zzcccac"), Solution::repeat_limited_string(
-            String::from("cczazcc"), 3
-        ));
-        assert_eq!(String::from("bbabaa"), Solution::repeat_limited_string(
-            String::from("aababab"), 2
-        ));
+        assert_eq!(
+            String::from("zzcccac"),
+            Solution::repeat_limited_string(String::from("cczazcc"), 3)
+        );
+        assert_eq!(
+            String::from("bbabaa"),
+            Solution::repeat_limited_string(String::from("aababab"), 2)
+        );
     }
 }

@@ -3,12 +3,11 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn reverse_bits(x: u32) -> u32 {
-        x.reverse_bits() 
+        x.reverse_bits()
     }
 }
 
@@ -19,6 +18,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_190() {
-    }
+    fn test_190() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -44,7 +43,7 @@ impl Solution {
     }
 }
 
-// submission codes end 
+// submission codes end
 
 #[cfg(test)]
 mod tests {
@@ -52,9 +51,12 @@ mod tests {
 
     #[test]
     fn test_34() {
-        assert_eq!(vec![3, 4], Solution::search_range(vec![5, 7, 7, 8, 8, 10], 8));
+        assert_eq!(
+            vec![3, 4],
+            Solution::search_range(vec![5, 7, 7, 8, 8, 10], 8)
+        );
         assert_eq!(vec![-1, -1], Solution::search_range(vec![2, 2], 3));
         assert_eq!(vec![0, 0], Solution::search_range(vec![1], 1));
         assert_eq!(vec![0, 1], Solution::search_range(vec![2, 2], 2));
-    }   
+    }
 }

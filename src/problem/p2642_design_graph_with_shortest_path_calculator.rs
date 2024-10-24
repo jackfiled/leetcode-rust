@@ -57,7 +57,6 @@ impl Graph {
                     queue.push((Reverse(distances[next]), next));
                 }
             }
-            
         }
 
         -1

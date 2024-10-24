@@ -5,7 +5,7 @@ pub struct Solution {}
 
 use tokio::time::error::Elapsed;
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -28,11 +28,11 @@ use crate::util::tree::{TreeNode, to_tree};
 //   }
 // }
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct BSTIterator {
-    stack: Vec<Rc<RefCell<TreeNode>>>
+    stack: Vec<Rc<RefCell<TreeNode>>>,
 }
 
 /**
@@ -40,13 +40,10 @@ struct BSTIterator {
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl BSTIterator {
-
     fn new(root: Option<Rc<RefCell<TreeNode>>>) -> Self {
         if root.is_none() {
-            return BSTIterator {
-                stack: vec![]
-            };
-        }   
+            return BSTIterator { stack: vec![] };
+        }
 
         let mut stack = vec![];
         let root = root.unwrap();
@@ -64,16 +61,13 @@ impl BSTIterator {
             node = left;
         }
 
-
-        BSTIterator {
-            stack
-        }
+        BSTIterator { stack }
     }
-    
+
     fn next(&mut self) -> i32 {
         let node = self.stack.pop().unwrap();
         let val = node.borrow().val;
-        
+
         if let Some(right) = &node.borrow().right {
             let mut node = Rc::clone(right);
 
@@ -92,7 +86,7 @@ impl BSTIterator {
 
         val
     }
-    
+
     fn has_next(&self) -> bool {
         !self.stack.is_empty()
     }
@@ -112,6 +106,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_173() {
-    }
+    fn test_173() {}
 }

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -27,7 +26,7 @@ impl Solution {
                     break;
                 }
             }
-            
+
             // 无论坐没坐满都要发车
             last_passengers = now_passengers;
             now_passengers = 0;
@@ -36,11 +35,11 @@ impl Solution {
         // 最后一个上车的哥们
         let mut down_passenger = if last_passenger == 0 {
             // 特判一下如果没有哥们可以上车的情况
-            return buses[n - 1]
-        } else { 
+            return buses[n - 1];
+        } else {
             last_passenger - 1
         };
-        
+
         let mut result = if last_passengers < capacity {
             // 最后一辆车上还有空位
             // 直接在最后一辆车来之前上车
@@ -57,11 +56,10 @@ impl Solution {
             }
 
             down_passenger -= 1;
-            
+
             result
         };
 
-        
         loop {
             if result != passengers[down_passenger] {
                 break;
@@ -73,7 +71,7 @@ impl Solution {
             }
             down_passenger -= 1;
         }
-        
+
         result
     }
 }
@@ -86,9 +84,22 @@ mod tests {
 
     #[test]
     fn test_2332() {
-        assert_eq!(16, Solution::latest_time_catch_the_bus(vec![10, 20], vec![2, 17, 18, 19], 2));
-        assert_eq!(20, Solution::latest_time_catch_the_bus(vec![20, 30, 10], vec![19, 13, 26, 4, 25, 11, 21], 2));
-        assert_eq!(1, Solution::latest_time_catch_the_bus(vec![3], vec![2,3], 2));
+        assert_eq!(
+            16,
+            Solution::latest_time_catch_the_bus(vec![10, 20], vec![2, 17, 18, 19], 2)
+        );
+        assert_eq!(
+            20,
+            Solution::latest_time_catch_the_bus(
+                vec![20, 30, 10],
+                vec![19, 13, 26, 4, 25, 11, 21],
+                2
+            )
+        );
+        assert_eq!(
+            1,
+            Solution::latest_time_catch_the_bus(vec![3], vec![2, 3], 2)
+        );
         assert_eq!(1, Solution::latest_time_catch_the_bus(vec![2], vec![2], 1));
         assert_eq!(1, Solution::latest_time_catch_the_bus(vec![2], vec![2], 2));
         assert_eq!(3, Solution::latest_time_catch_the_bus(vec![3], vec![4], 1));

@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -35,6 +34,6 @@ mod tests {
 
     #[test]
     fn test_2673() {
-        assert_eq!(Solution::min_increments(7, vec![1,5,2,2,3,3,1]), 6);
+        assert_eq!(Solution::min_increments(7, vec![1, 5, 2, 2, 3, 3, 1]), 6);
     }
 }

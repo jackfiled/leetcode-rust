@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -36,7 +35,13 @@ mod tests {
 
     #[test]
     fn test_2414() {
-        assert_eq!(2, Solution::longest_continuous_substring("abacaba".to_string()));
-        assert_eq!(5, Solution::longest_continuous_substring("abcde".to_string()));
+        assert_eq!(
+            2,
+            Solution::longest_continuous_substring("abacaba".to_string())
+        );
+        assert_eq!(
+            5,
+            Solution::longest_continuous_substring("abcde".to_string())
+        );
     }
 }

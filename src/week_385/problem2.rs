@@ -41,7 +41,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_385_2() {
-        
-    }
+    fn test_385_2() {}
 }

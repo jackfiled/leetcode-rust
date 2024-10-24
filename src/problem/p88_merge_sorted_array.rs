@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -32,7 +31,6 @@ impl Solution {
                 break;
             }
 
-
             if nums1[i] < nums2[j] {
                 result.push(nums1[i]);
                 i += 1;
@@ -44,7 +42,7 @@ impl Solution {
 
         for (index, &value) in result.iter().enumerate() {
             nums1[index] = value;
-        }    
+        }
     }
 }
 

@@ -40,15 +40,23 @@ impl Solution {
     pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
         let len1 = nums1.len() as i32;
         let len2 = nums2.len() as i32;
-        let left = (len1 + len2 + 1) / 2 ;
+        let left = (len1 + len2 + 1) / 2;
         let right = (len1 + len2 + 2) / 2;
 
-        (Solution::get_k_th(&nums1, 0, len1 - 1, &nums2, 0, len2 - 1, left) as f64 +
-            Solution::get_k_th(&nums1, 0, len1 - 1, &nums2, 0, len2 - 1, right) as f64) * 0.5
+        (Solution::get_k_th(&nums1, 0, len1 - 1, &nums2, 0, len2 - 1, left) as f64
+            + Solution::get_k_th(&nums1, 0, len1 - 1, &nums2, 0, len2 - 1, right) as f64)
+            * 0.5
     }
 
-    fn get_k_th(nums1: &Vec<i32>, start1: i32, end1: i32,
-                nums2: &Vec<i32>, start2: i32, end2: i32, k: i32) -> i32 {
+    fn get_k_th(
+        nums1: &Vec<i32>,
+        start1: i32,
+        end1: i32,
+        nums2: &Vec<i32>,
+        start2: i32,
+        end2: i32,
+        k: i32,
+    ) -> i32 {
         let len1 = end1 + 1 - start1;
         let len2 = end2 + 1 - start2;
 
@@ -68,10 +76,26 @@ impl Solution {
         let j = start2 + min(len2, k / 2) - 1;
 
         return if nums1[i as usize] > nums2[j as usize] {
-            Solution::get_k_th(nums1, start1, end1, nums2, j + 1, end2, k - (j - start2 + 1))
+            Solution::get_k_th(
+                nums1,
+                start1,
+                end1,
+                nums2,
+                j + 1,
+                end2,
+                k - (j - start2 + 1),
+            )
         } else {
-            Solution::get_k_th(nums1, i + 1, end1, nums2, start2, end2, k - (i - start1 + 1))
-        }
+            Solution::get_k_th(
+                nums1,
+                i + 1,
+                end1,
+                nums2,
+                start2,
+                end2,
+                k - (i - start1 + 1),
+            )
+        };
     }
 }
 
@@ -83,8 +107,14 @@ mod tests {
 
     #[test]
     fn test_4() {
-        assert_eq!(2.0, Solution::find_median_sorted_arrays(vec![1, 3], vec![2]));
-        assert_eq!(2.5, Solution::find_median_sorted_arrays(vec![1, 2], vec![3, 4]));
+        assert_eq!(
+            2.0,
+            Solution::find_median_sorted_arrays(vec![1, 3], vec![2])
+        );
+        assert_eq!(
+            2.5,
+            Solution::find_median_sorted_arrays(vec![1, 2], vec![3, 4])
+        );
         assert_eq!(2.0, Solution::find_median_sorted_arrays(vec![2], vec![]));
     }
 }

@@ -3,22 +3,20 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 impl Solution {
     pub fn minimum_possible_sum(n: i32, target: i32) -> i32 {
         let n = n as i64;
         let target = target as i64;
         let m = 1e9 as i64 + 7;
-        
+
         let length = target / 2;
 
         if length >= n {
-            ((1 + n ) * n / 2 % m ) as i32
+            ((1 + n) * n / 2 % m) as i32
         } else {
-            (((1 + length) * length / 2 
-                + (target + target + n - length - 1) * (n - length) / 2) % m)
-            as i32
+            (((1 + length) * length / 2 + (target + target + n - length - 1) * (n - length) / 2)
+                % m) as i32
         }
     }
 }

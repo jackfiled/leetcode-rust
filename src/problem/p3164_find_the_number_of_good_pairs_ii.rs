@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -53,7 +52,13 @@ mod tests {
 
     #[test]
     fn test_3164() {
-        assert_eq!(5, Solution::number_of_pairs(vec![1, 3, 4], vec![1, 3, 4], 1));
-        assert_eq!(2, Solution::number_of_pairs(vec![1, 2, 4, 12], vec![2, 4], 3));
+        assert_eq!(
+            5,
+            Solution::number_of_pairs(vec![1, 3, 4], vec![1, 3, 4], 1)
+        );
+        assert_eq!(
+            2,
+            Solution::number_of_pairs(vec![1, 2, 4, 12], vec![2, 4], 3)
+        );
     }
 }

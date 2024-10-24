@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -12,7 +11,7 @@ impl Solution {
         let mut result: i64 = 0;
         let mut sign = 1;
 
-        let s : Vec<char> = s.chars().collect();
+        let s: Vec<char> = s.chars().collect();
 
         let mut i = 0;
 

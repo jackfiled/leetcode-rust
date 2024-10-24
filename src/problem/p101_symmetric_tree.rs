@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,10 +25,13 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
-    fn is_same(left: &Option<Rc<RefCell<TreeNode>>>, right: &Option<Rc<RefCell<TreeNode>>>) -> bool {
+    fn is_same(
+        left: &Option<Rc<RefCell<TreeNode>>>,
+        right: &Option<Rc<RefCell<TreeNode>>>,
+    ) -> bool {
         if left.is_some() ^ right.is_some() {
             return false;
         }
@@ -44,7 +47,7 @@ impl Solution {
             return false;
         }
 
-        Self::is_same(&left.borrow().left, &right.borrow().right) 
+        Self::is_same(&left.borrow().left, &right.borrow().right)
             && Self::is_same(&left.borrow().right, &right.borrow().left)
     }
 
@@ -65,7 +68,9 @@ mod tests {
 
     #[test]
     fn test_101() {
-        assert!(Solution::is_symmetric(tree![1,2,2,3,4,4,3]));
-        assert!(!Solution::is_symmetric(tree!(1,2,2,"null",3,"null",3)))
+        assert!(Solution::is_symmetric(tree![1, 2, 2, 3, 4, 4, 3]));
+        assert!(!Solution::is_symmetric(tree!(
+            1, 2, 2, "null", 3, "null", 3
+        )))
     }
 }

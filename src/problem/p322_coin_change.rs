@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -37,7 +36,7 @@ mod tests {
 
     #[test]
     fn test_322() {
-        assert_eq!(3, Solution::coin_change(vec![1,2,5], 11));
+        assert_eq!(3, Solution::coin_change(vec![1, 2, 5], 11));
         assert_eq!(-1, Solution::coin_change(vec![2], 3));
         assert_eq!(0, Solution::coin_change(vec![1], 0));
     }

@@ -3,12 +3,15 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn is_interleave(s1: String, s2: String, s3: String) -> bool {
-        let (s1, s2, s3): (Vec<char>, Vec<char>, Vec<char>) = (s1.chars().collect(), s2.chars().collect(), s3.chars().collect());
+        let (s1, s2, s3): (Vec<char>, Vec<char>, Vec<char>) = (
+            s1.chars().collect(),
+            s2.chars().collect(),
+            s3.chars().collect(),
+        );
         let (n, m, t) = (s1.len(), s2.len(), s3.len());
 
         if n + m != t {
@@ -48,6 +51,10 @@ mod tests {
 
     #[test]
     fn test_97() {
-        assert!(Solution::is_interleave("aabcc".to_owned(), "dbbca".to_owned(), "aadbbcbcac".to_owned()));
+        assert!(Solution::is_interleave(
+            "aabcc".to_owned(),
+            "dbbca".to_owned(),
+            "aadbbcbcac".to_owned()
+        ));
     }
 }

@@ -3,16 +3,15 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
-use std::collections::VecDeque;
 use std::collections::HashSet;
+use std::collections::VecDeque;
 
 impl Solution {
     pub fn reachable_nodes(n: i32, edges: Vec<Vec<i32>>, restricted: Vec<i32>) -> i32 {
         let mut result = 0;
         let n = n as usize;
-        let mut graph = vec![vec![];n + 1];
+        let mut graph = vec![vec![]; n + 1];
 
         for edge in edges {
             let x = edge[0] as usize;
@@ -25,7 +24,7 @@ impl Solution {
         let mut queue = VecDeque::new();
         let mut visited = HashSet::new();
         let mut unreachable = HashSet::with_capacity(restricted.len());
-        
+
         for node in restricted {
             unreachable.insert(node as usize);
         }
@@ -58,6 +57,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_2368() {
-    }
+    fn test_2368() {}
 }

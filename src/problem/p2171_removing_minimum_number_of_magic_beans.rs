@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 use std::cmp::min;
@@ -19,8 +18,7 @@ impl Solution {
 
         let mut result = i64::MAX;
         for (index, value) in (&beans).iter().enumerate() {
-            result = min(result,
-                         sum - (*value as i64) * (beans.len() - index) as i64);
+            result = min(result, sum - (*value as i64) * (beans.len() - index) as i64);
         }
 
         result
@@ -35,7 +33,7 @@ mod tests {
 
     #[test]
     fn test_2171() {
-        assert_eq!(Solution::minimum_removal(vec![4,1,6,5]), 4);
-        assert_eq!(Solution::minimum_removal(vec![2,10,3,2]), 7);
+        assert_eq!(Solution::minimum_removal(vec![4, 1, 6, 5]), 4);
+        assert_eq!(Solution::minimum_removal(vec![2, 10, 3, 2]), 7);
     }
 }

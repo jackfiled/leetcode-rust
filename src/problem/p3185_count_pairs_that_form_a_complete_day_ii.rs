@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -22,7 +21,7 @@ impl Solution {
             *entry += 1;
         }
 
-        result      
+        result
     }
 }
 
@@ -34,7 +33,10 @@ mod tests {
 
     #[test]
     fn test_3185() {
-        assert_eq!(2, Solution::count_complete_day_pairs(vec![12, 12, 30, 24, 24]));
+        assert_eq!(
+            2,
+            Solution::count_complete_day_pairs(vec![12, 12, 30, 24, 24])
+        );
         assert_eq!(3, Solution::count_complete_day_pairs(vec![72, 48, 24, 3]));
     }
 }

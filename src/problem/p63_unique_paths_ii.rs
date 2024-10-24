@@ -3,18 +3,13 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn unique_paths_with_obstacles(obstacle_grid: Vec<Vec<i32>>) -> i32 {
         let (m, n) = (obstacle_grid.len(), obstacle_grid[0].len());
         let mut dp = vec![vec![0; n]; m];
-        dp[0][0] = if obstacle_grid[0][0] == 1 {
-            0
-        } else {
-            1
-        };
+        dp[0][0] = if obstacle_grid[0][0] == 1 { 0 } else { 1 };
 
         for i in 0..m {
             for j in 0..n {
@@ -49,7 +44,14 @@ mod tests {
 
     #[test]
     fn test_63() {
-        assert_eq!(2, Solution::unique_paths_with_obstacles(vec![vec![0, 0, 0], vec![0, 1, 0], vec![0, 0, 0]]));
+        assert_eq!(
+            2,
+            Solution::unique_paths_with_obstacles(vec![
+                vec![0, 0, 0],
+                vec![0, 1, 0],
+                vec![0, 0, 0]
+            ])
+        );
         assert_eq!(0, Solution::unique_paths_with_obstacles(vec![vec![1]]));
     }
 }

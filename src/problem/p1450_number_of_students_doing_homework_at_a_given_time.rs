@@ -3,30 +3,25 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
     pub fn busy_student(start_time: Vec<i32>, end_time: Vec<i32>, query_time: i32) -> i32 {
-        let start_pos = start_time.iter().enumerate().filter_map(
-            |(pos, &value)| {
-                if value <= query_time {
-                    Some(pos)
-                } else {
-                    None
-                }
+        let start_pos = start_time.iter().enumerate().filter_map(|(pos, &value)| {
+            if value <= query_time {
+                Some(pos)
+            } else {
+                None
             }
-        );
+        });
 
-        let pos = start_pos.filter_map(
-            |pos| {
-                if end_time[pos] >= query_time {
-                    Some(pos)
-                } else {
-                    None
-                }
+        let pos = start_pos.filter_map(|pos| {
+            if end_time[pos] >= query_time {
+                Some(pos)
+            } else {
+                None
             }
-        );
+        });
 
         pos.count() as i32
     }

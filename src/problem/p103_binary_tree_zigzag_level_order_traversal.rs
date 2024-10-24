@@ -3,7 +3,7 @@
  */
 pub struct Solution {}
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -25,9 +25,9 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
 use std::collections::VecDeque;
+use std::rc::Rc;
 impl Solution {
     pub fn zigzag_level_order(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
         let root = if let Some(r) = root {
@@ -77,8 +77,17 @@ mod tests {
 
     #[test]
     fn test_103() {
-        assert_eq!(Solution::zigzag_level_order(
-            to_tree(vec![Some(3), Some(9), Some(20), None, None, Some(15), Some(7)])
-        ), vec![vec![3], vec![20, 9], vec![15, 7]]);
+        assert_eq!(
+            Solution::zigzag_level_order(to_tree(vec![
+                Some(3),
+                Some(9),
+                Some(20),
+                None,
+                None,
+                Some(15),
+                Some(7)
+            ])),
+            vec![vec![3], vec![20, 9], vec![15, 7]]
+        );
     }
 }

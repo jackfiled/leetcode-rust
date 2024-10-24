@@ -5,7 +5,7 @@ pub struct Solution {}
 
 use surf::middleware::logger::new;
 
-use crate::util::tree::{TreeNode, to_tree};
+use crate::util::tree::{to_tree, TreeNode};
 
 // submission codes start here
 
@@ -27,16 +27,15 @@ use crate::util::tree::{TreeNode, to_tree};
 //     }
 //   }
 // }
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn build_tree(preorder: Vec<i32>, inorder: Vec<i32>) -> Option<Rc<RefCell<TreeNode>>> {
         if preorder.len() == 0 {
             return None;
         }
 
-        let root = Rc::new(RefCell::new(
-            TreeNode::new(preorder[0])));
+        let root = Rc::new(RefCell::new(TreeNode::new(preorder[0])));
         let mut stack = Vec::new();
         stack.push(Rc::clone(&root));
         let mut inorder_index = 0;
@@ -45,8 +44,7 @@ impl Solution {
             let mut node = Rc::clone(stack.last().unwrap());
 
             if node.borrow().val != inorder[inorder_index] {
-                let new_node = Rc::new(RefCell::new(
-                    TreeNode::new(preorder[i])));
+                let new_node = Rc::new(RefCell::new(TreeNode::new(preorder[i])));
                 stack.push(Rc::clone(&new_node));
                 node.borrow_mut().left = Some(new_node);
             } else {
@@ -60,8 +58,7 @@ impl Solution {
                     }
                 }
 
-                let new_node = Rc::new(RefCell::new(
-                    TreeNode::new(preorder[i])));
+                let new_node = Rc::new(RefCell::new(TreeNode::new(preorder[i])));
                 stack.push(Rc::clone(&new_node));
                 node.borrow_mut().right = Some(new_node);
             }
@@ -79,9 +76,17 @@ mod tests {
 
     #[test]
     fn test_105() {
-        assert_eq!(Solution::build_tree(
-            vec![3,9,20,15,7],
-            vec![9,3,15,20,7]),
-        to_tree(vec![Some(3), Some(9), Some(20), None, None, Some(15), Some(7)]));
+        assert_eq!(
+            Solution::build_tree(vec![3, 9, 20, 15, 7], vec![9, 3, 15, 20, 7]),
+            to_tree(vec![
+                Some(3),
+                Some(9),
+                Some(20),
+                None,
+                None,
+                Some(15),
+                Some(7)
+            ])
+        );
     }
 }

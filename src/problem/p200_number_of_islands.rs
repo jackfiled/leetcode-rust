@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -41,7 +40,7 @@ impl Solution {
                 if grid[i][j] == '1' {
                     result += 1;
                     Self::dfs(&mut grid, i as i32, j as i32);
-                } 
+                }
             }
         }
 
@@ -56,6 +55,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_200() {
-    }
+    fn test_200() {}
 }

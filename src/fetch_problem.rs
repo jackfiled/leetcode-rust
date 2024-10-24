@@ -9,7 +9,7 @@ pub struct CodeDefinition {
     pub value: String,
     pub text: String,
     #[serde(rename = "defaultCode")]
-    pub default_code: String
+    pub default_code: String,
 }
 
 /// LeetCode 单个问题
@@ -19,7 +19,7 @@ pub struct Problem {
     pub content: String,
     pub code_definition: Vec<CodeDefinition>,
     pub question_id: u32,
-    pub return_type: String
+    pub return_type: String,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -47,7 +47,7 @@ pub struct StatWithStatus {
 
 #[derive(Serialize, Deserialize)]
 pub struct Problems {
-    pub stat_status_pairs: Vec<StatWithStatus>
+    pub stat_status_pairs: Vec<StatWithStatus>,
 }
 
 const QUESTION_QUERY_STRING: &str = r#"
@@ -68,7 +68,7 @@ pub struct Query {
     #[serde(rename = "operationName")]
     operation_name: String,
     variables: serde_json::Value,
-    query: String
+    query: String,
 }
 
 impl Query {
@@ -78,13 +78,13 @@ impl Query {
             variables: json!({
                 "titleSlug": title
             }),
-            query: QUESTION_QUERY_STRING.to_owned()
+            query: QUESTION_QUERY_STRING.to_owned(),
         }
     }
 }
 
 pub struct Fetcher {
-    client: reqwest::Client
+    client: reqwest::Client,
 }
 
 pub struct ProblemManager {

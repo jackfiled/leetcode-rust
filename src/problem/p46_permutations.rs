@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -21,15 +20,14 @@ impl Solution {
             result.push(output.clone());
             return;
         }
-        
+
         for i in pos..length {
             Self::swap(output, i, pos);
             Self::search(length, output, result, pos + 1);
             Self::swap(output, i, pos);
         }
-        
     }
-    
+
     fn swap(output: &mut Vec<i32>, a: usize, b: usize) {
         let temp = output[a];
         output[a] = output[b];
@@ -44,6 +42,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_46() {
-    }
+    fn test_46() {}
 }

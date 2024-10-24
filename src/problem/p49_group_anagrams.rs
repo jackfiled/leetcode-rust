@@ -38,14 +38,13 @@ impl Eq for WordState {}
 
 impl Hash for WordState {
     fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
-        let mut chars: Vec<(&char, &usize)> = 
-            self.characters.iter().map(|p| p).collect();
-        
+        let mut chars: Vec<(&char, &usize)> = self.characters.iter().map(|p| p).collect();
+
         chars.sort_by_key(|p| p.0);
 
         for (&c, &v) in chars {
             c.hash(state);
-            v.hash(state);   
+            v.hash(state);
         }
     }
 }

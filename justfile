@@ -6,10 +6,13 @@ update:
 build: update
     cargo build --release
 
-test:
+fmt: 
+  cargo fmt
+
+test: fmt
     cargo test
 
-commit:
+commit: test
     #!/usr/bin/env bash
     set -euxo pipefail
     time=$(date "+%Y%m%d")

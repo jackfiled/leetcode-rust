@@ -3,7 +3,6 @@
  */
 pub struct Solution {}
 
-
 // submission codes start here
 
 impl Solution {
@@ -50,6 +49,13 @@ mod tests {
     fn test_871() {
         assert_eq!(0, Solution::min_refuel_stops(1, 1, vec![]));
         assert_eq!(-1, Solution::min_refuel_stops(100, 1, vec![vec![10, 100]]));
-        assert_eq!(2, Solution::min_refuel_stops(100, 10, vec![vec![10, 60], vec![20, 30], vec![30, 30], vec![60, 40]]));
+        assert_eq!(
+            2,
+            Solution::min_refuel_stops(
+                100,
+                10,
+                vec![vec![10, 60], vec![20, 30], vec![30, 30], vec![60, 40]]
+            )
+        );
     }
 }

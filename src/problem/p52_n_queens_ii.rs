@@ -9,17 +9,17 @@
  * Input: n = 4
  * Output: 2
  * Explanation: There are two distinct solutions to the 4-queens puzzle as shown.
- * 
+ *
  * <strong class="example">Example 2:
- * 
+ *
  * Input: n = 1
  * Output: 1
- * 
+ *
  *  
  * Constraints:
- * 
+ *
  * 	1 <= n <= 9
- * 
+ *
  */
 pub struct Solution {}
 
@@ -47,11 +47,11 @@ impl Solution {
         while let Some((x, y, flag)) = stack.pop_back() {
             if flag {
                 x_occupied[y] = false;
-                y_occupied[n -  1 + x - y] = false;
+                y_occupied[n - 1 + x - y] = false;
                 z_occupied[x + y] = false;
             } else {
                 x_occupied[y] = true;
-                y_occupied[n -  1 + x - y] = true;
+                y_occupied[n - 1 + x - y] = true;
                 z_occupied[x + y] = true;
 
                 stack.push_back((x, y, true));
