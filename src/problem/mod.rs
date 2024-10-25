@@ -274,3 +274,5 @@ mod p910_smallest_range_ii;
 mod p977_squares_of_a_sorted_array;
 mod p983_minimum_cost_for_tickets;
 mod p997_find_the_town_judge;
+
+mod p3180_maximum_total_reward_using_operations_i;
