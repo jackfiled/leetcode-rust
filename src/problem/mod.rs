@@ -276,3 +276,5 @@ mod p983_minimum_cost_for_tickets;
 mod p997_find_the_town_judge;
 
 mod p3180_maximum_total_reward_using_operations_i;
+
+mod p3181_maximum_total_reward_using_operations_ii;
