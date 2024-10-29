@@ -282,3 +282,5 @@ mod p3181_maximum_total_reward_using_operations_ii;
 mod p684_redundant_connection;
 
 mod p685_redundant_connection_ii;
+
+mod p3211_generate_binary_strings_without_adjacent_zeros;
