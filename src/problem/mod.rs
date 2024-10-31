@@ -286,3 +286,5 @@ mod p685_redundant_connection_ii;
 mod p3211_generate_binary_strings_without_adjacent_zeros;
 
 mod p3216_lexicographically_smallest_string_after_a_swap;
+
+mod p3165_maximum_sum_of_subsequence_with_non_adjacent_elements;
