@@ -292,3 +292,5 @@ mod p3165_maximum_sum_of_subsequence_with_non_adjacent_elements;
 mod p3259_maximum_energy_boost_from_two_drinks;
 
 mod p3226_number_of_bit_changes_to_make_two_integers_equal;
+
+mod p638_shopping_offers;
