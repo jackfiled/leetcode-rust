@@ -296,3 +296,5 @@ mod p3226_number_of_bit_changes_to_make_two_integers_equal;
 mod p638_shopping_offers;
 
 mod p633_sum_of_square_numbers;
+
+mod p3222_find_the_winning_player_in_coin_game;
