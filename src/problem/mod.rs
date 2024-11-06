@@ -298,3 +298,5 @@ mod p638_shopping_offers;
 mod p633_sum_of_square_numbers;
 
 mod p3222_find_the_winning_player_in_coin_game;
+
+mod p3254_find_the_power_of_k_size_subarrays_i;
