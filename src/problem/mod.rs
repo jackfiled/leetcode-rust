@@ -304,3 +304,5 @@ mod p3254_find_the_power_of_k_size_subarrays_i;
 mod p3255_find_the_power_of_k_size_subarrays_ii;
 
 mod p3235_check_if_the_rectangle_corner_is_reachable;
+
+mod p3242_design_neighbor_sum_service;
