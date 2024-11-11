@@ -308,3 +308,5 @@ mod p3235_check_if_the_rectangle_corner_is_reachable;
 mod p3242_design_neighbor_sum_service;
 
 mod p540_single_element_in_a_sorted_array;
+
+mod p1547_minimum_cost_to_cut_a_stick;
