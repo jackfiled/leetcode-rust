@@ -312,3 +312,5 @@ mod p540_single_element_in_a_sorted_array;
 mod p1547_minimum_cost_to_cut_a_stick;
 
 mod p3258_count_substrings_that_satisfy_k_constraint_i;
+
+mod p3261_count_substrings_that_satisfy_k_constraint_ii;
