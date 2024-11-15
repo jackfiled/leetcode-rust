@@ -316,3 +316,5 @@ mod p3258_count_substrings_that_satisfy_k_constraint_i;
 mod p3261_count_substrings_that_satisfy_k_constraint_ii;
 
 mod p3249_count_the_number_of_good_nodes;
+
+mod p3239_minimum_number_of_flips_to_make_binary_grid_palindromic_i;
