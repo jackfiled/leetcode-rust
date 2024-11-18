@@ -322,3 +322,5 @@ mod p3239_minimum_number_of_flips_to_make_binary_grid_palindromic_i;
 mod p3240_minimum_number_of_flips_to_make_binary_grid_palindromic_ii;
 
 mod p825_friends_of_appropriate_ages;
+
+mod p661_image_smoother;
