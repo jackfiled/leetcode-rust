@@ -324,3 +324,5 @@ mod p3240_minimum_number_of_flips_to_make_binary_grid_palindromic_ii;
 mod p825_friends_of_appropriate_ages;
 
 mod p661_image_smoother;
+
+mod p3243_shortest_distance_after_road_addition_queries_i;
