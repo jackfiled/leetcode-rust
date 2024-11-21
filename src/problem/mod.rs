@@ -328,3 +328,5 @@ mod p661_image_smoother;
 mod p3243_shortest_distance_after_road_addition_queries_i;
 
 mod p3244_shortest_distance_after_road_addition_queries_ii;
+
+mod p3248_snake_in_matrix;
