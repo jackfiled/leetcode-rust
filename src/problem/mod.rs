@@ -330,3 +330,5 @@ mod p3243_shortest_distance_after_road_addition_queries_i;
 mod p3244_shortest_distance_after_road_addition_queries_ii;
 
 mod p3248_snake_in_matrix;
+
+mod p3233_find_the_count_of_numbers_which_are_not_special;
