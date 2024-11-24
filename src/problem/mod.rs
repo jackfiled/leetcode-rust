@@ -334,3 +334,5 @@ mod p3248_snake_in_matrix;
 mod p3233_find_the_count_of_numbers_which_are_not_special;
 
 mod p3238_find_the_number_of_winning_players;
+
+mod p632_smallest_range_covering_elements_from_k_lists;
