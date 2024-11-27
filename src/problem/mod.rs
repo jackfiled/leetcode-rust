@@ -338,3 +338,5 @@ mod p3238_find_the_number_of_winning_players;
 mod p632_smallest_range_covering_elements_from_k_lists;
 
 mod p3206_alternating_groups_i;
+
+mod p3208_alternating_groups_ii;
