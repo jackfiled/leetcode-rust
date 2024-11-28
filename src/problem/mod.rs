@@ -340,3 +340,5 @@ mod p632_smallest_range_covering_elements_from_k_lists;
 mod p3206_alternating_groups_i;
 
 mod p3208_alternating_groups_ii;
+
+mod p3250_find_the_count_of_monotonic_pairs_i;
