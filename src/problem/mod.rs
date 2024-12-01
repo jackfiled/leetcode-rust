@@ -344,3 +344,5 @@ mod p3208_alternating_groups_ii;
 mod p3250_find_the_count_of_monotonic_pairs_i;
 
 mod p3232_find_if_digit_game_can_be_won;
+
+mod p51_n_queens;
