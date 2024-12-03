@@ -346,3 +346,5 @@ mod p3250_find_the_count_of_monotonic_pairs_i;
 mod p3232_find_if_digit_game_can_be_won;
 
 mod p51_n_queens;
+
+mod p3274_check_if_two_chessboard_squares_have_the_same_color;
