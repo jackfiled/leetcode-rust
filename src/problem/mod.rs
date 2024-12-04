@@ -348,3 +348,5 @@ mod p3232_find_if_digit_game_can_be_won;
 mod p51_n_queens;
 
 mod p3274_check_if_two_chessboard_squares_have_the_same_color;
+
+mod p2056_number_of_valid_move_combinations_on_chessboard;
