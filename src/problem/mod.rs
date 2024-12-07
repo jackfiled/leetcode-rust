@@ -354,3 +354,5 @@ mod p2056_number_of_valid_move_combinations_on_chessboard;
 mod p3001_minimum_moves_to_capture_the_queen;
 
 mod p999_available_captures_for_rook;
+
+mod p688_knight_probability_in_chessboard;
