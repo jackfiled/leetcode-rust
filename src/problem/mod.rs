@@ -360,3 +360,5 @@ mod p688_knight_probability_in_chessboard;
 mod p782_transform_to_chessboard;
 
 mod p1812_determine_color_of_a_chessboard_square;
+
+mod p935_knight_dialer;
