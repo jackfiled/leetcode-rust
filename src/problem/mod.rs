@@ -364,3 +364,5 @@ mod p1812_determine_color_of_a_chessboard_square;
 mod p935_knight_dialer;
 
 mod p2717_semi_ordered_permutation;
+
+mod p2931_maximum_spending_after_buying_items;
