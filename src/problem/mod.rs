@@ -368,3 +368,5 @@ mod p2717_semi_ordered_permutation;
 mod p2931_maximum_spending_after_buying_items;
 
 mod p3264_final_array_state_after_k_multiplication_operations_i;
+
+mod p3266_final_array_state_after_k_multiplication_operations_ii;
