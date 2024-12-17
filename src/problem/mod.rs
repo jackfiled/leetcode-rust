@@ -374,3 +374,5 @@ mod p3266_final_array_state_after_k_multiplication_operations_ii;
 mod p1338_reduce_array_size_to_the_half;
 
 mod p1847_closest_room;
+
+mod p3291_minimum_number_of_valid_strings_to_form_target_i;
