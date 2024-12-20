@@ -380,3 +380,5 @@ mod p3291_minimum_number_of_valid_strings_to_form_target_i;
 mod p3292_minimum_number_of_valid_strings_to_form_target_ii;
 
 mod p3285_find_indices_of_stable_mountains;
+
+mod p3138_minimum_length_of_anagram_concatenation;
