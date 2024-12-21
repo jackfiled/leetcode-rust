@@ -382,3 +382,5 @@ mod p3292_minimum_number_of_valid_strings_to_form_target_ii;
 mod p3285_find_indices_of_stable_mountains;
 
 mod p3138_minimum_length_of_anagram_concatenation;
+
+mod p2545_sort_the_students_by_their_kth_score;
