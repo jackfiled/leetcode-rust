@@ -386,3 +386,5 @@ mod p3138_minimum_length_of_anagram_concatenation;
 mod p2545_sort_the_students_by_their_kth_score;
 
 mod p1387_sort_integers_by_the_power_value;
+
+mod p855_exam_room;
