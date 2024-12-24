@@ -388,3 +388,5 @@ mod p2545_sort_the_students_by_their_kth_score;
 mod p1387_sort_integers_by_the_power_value;
 
 mod p855_exam_room;
+
+mod p1705_maximum_number_of_eaten_apples;
