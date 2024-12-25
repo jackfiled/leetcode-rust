@@ -390,3 +390,5 @@ mod p1387_sort_integers_by_the_power_value;
 mod p855_exam_room;
 
 mod p1705_maximum_number_of_eaten_apples;
+
+mod p3218_minimum_cost_for_cutting_cake_i;
