@@ -394,3 +394,5 @@ mod p1705_maximum_number_of_eaten_apples;
 mod p3218_minimum_cost_for_cutting_cake_i;
 
 mod p3083_existence_of_a_substring_in_a_string_and_its_reverse;
+
+mod p3159_find_occurrences_of_an_element_in_an_array;
