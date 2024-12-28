@@ -396,3 +396,5 @@ mod p3218_minimum_cost_for_cutting_cake_i;
 mod p3083_existence_of_a_substring_in_a_string_and_its_reverse;
 
 mod p3159_find_occurrences_of_an_element_in_an_array;
+
+mod p3046_split_the_array;
