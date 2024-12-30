@@ -400,3 +400,5 @@ mod p3159_find_occurrences_of_an_element_in_an_array;
 mod p3046_split_the_array;
 
 mod p1366_rank_teams_by_votes;
+
+mod p1367_linked_list_in_binary_tree;
