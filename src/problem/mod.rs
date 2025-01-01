@@ -404,3 +404,5 @@ mod p1366_rank_teams_by_votes;
 mod p1367_linked_list_in_binary_tree;
 
 mod p3219_minimum_cost_for_cutting_cake_ii;
+
+mod p3280_convert_date_to_binary;
