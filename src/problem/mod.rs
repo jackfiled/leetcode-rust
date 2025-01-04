@@ -410,3 +410,5 @@ mod p3280_convert_date_to_binary;
 mod p729_my_calendar_i;
 
 mod p731_my_calendar_ii;
+
+mod p732_my_calendar_iii;
