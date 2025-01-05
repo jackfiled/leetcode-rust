@@ -412,3 +412,5 @@ mod p729_my_calendar_i;
 mod p731_my_calendar_ii;
 
 mod p732_my_calendar_iii;
+
+mod p2241_design_an_atm_machine;
