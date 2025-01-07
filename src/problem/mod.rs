@@ -416,3 +416,5 @@ mod p732_my_calendar_iii;
 mod p2241_design_an_atm_machine;
 
 mod p2274_maximum_consecutive_floors_without_special_floors;
+
+mod p3019_number_of_changing_keys;
