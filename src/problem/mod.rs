@@ -418,3 +418,5 @@ mod p2241_design_an_atm_machine;
 mod p2274_maximum_consecutive_floors_without_special_floors;
 
 mod p3019_number_of_changing_keys;
+
+mod p2264_largest_3_same_digit_number_in_string;
