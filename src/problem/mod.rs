@@ -422,3 +422,5 @@ mod p3019_number_of_changing_keys;
 mod p2264_largest_3_same_digit_number_in_string;
 
 mod p3297_count_substrings_that_can_be_rearranged_to_contain_a_string_i;
+
+mod p3298_count_substrings_that_can_be_rearranged_to_contain_a_string_ii;
