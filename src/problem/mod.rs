@@ -426,3 +426,5 @@ mod p3297_count_substrings_that_can_be_rearranged_to_contain_a_string_i;
 mod p3298_count_substrings_that_can_be_rearranged_to_contain_a_string_ii;
 
 mod p3270_find_the_key_of_the_numbers;
+
+mod p2275_largest_combination_with_bitwise_and_greater_than_zero;
