@@ -430,3 +430,5 @@ mod p3270_find_the_key_of_the_numbers;
 mod p2275_largest_combination_with_bitwise_and_greater_than_zero;
 
 mod p2270_number_of_ways_to_split_array;
+
+mod p3065_minimum_operations_to_exceed_threshold_value_i;
