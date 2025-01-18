@@ -438,3 +438,5 @@ mod p3066_minimum_operations_to_exceed_threshold_value_ii;
 mod p3095_shortest_subarray_with_or_at_least_k_i;
 
 mod p3097_shortest_subarray_with_or_at_least_k_ii;
+
+mod p3287_find_the_maximum_sequence_value_of_array;
