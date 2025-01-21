@@ -444,3 +444,5 @@ mod p3287_find_the_maximum_sequence_value_of_array;
 mod p2266_count_number_of_texts;
 
 mod p2239_find_closest_number_to_zero;
+
+mod p2218_maximum_value_of_k_coins_from_piles;
