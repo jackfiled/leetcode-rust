@@ -450,3 +450,5 @@ mod p2218_maximum_value_of_k_coins_from_piles;
 mod p1561_maximum_number_of_coins_you_can_get;
 
 mod p2920_maximum_points_after_collecting_coins_from_all_nodes;
+
+mod p2944_minimum_number_of_coins_for_fruits;
