@@ -454,3 +454,5 @@ mod p2920_maximum_points_after_collecting_coins_from_all_nodes;
 mod p2944_minimum_number_of_coins_for_fruits;
 
 mod p2412_minimum_money_required_before_transactions;
+
+mod p40_combination_sum_ii;
