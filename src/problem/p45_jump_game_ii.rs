@@ -7,24 +7,21 @@ pub struct Solution {}
 
 impl Solution {
     pub fn jump(nums: Vec<i32>) -> i32 {
-        let mut dp = vec![i32::MAX; nums.len()];
-        dp[0] = 0;
+        let mut result = 0;
+        let mut max_position = 0;
+        let mut current_position = 0;
 
-        for i in 0..nums.len() {
-            if dp[i] == i32::MAX {
-                continue;
-            }
+        // 注意这里不能遍历到数组最后
+        for i in 0..nums.len() - 1 {
+            max_position = max_position.max(i as i32 + nums[i]);
 
-            for j in 1..=nums[i] as usize {
-                if i + j >= nums.len() {
-                    break;
-                }
-
-                dp[i + j] = dp[i + j].min(dp[i] + 1);
+            if i as i32 == current_position {
+                current_position = max_position;
+                result += 1;
             }
         }
 
-        dp[nums.len() - 1]
+        result
     }
 }
 
@@ -37,5 +34,6 @@ mod tests {
     #[test]
     fn test_45() {
         assert_eq!(2, Solution::jump(vec![2, 3, 1, 1, 4]));
+        assert_eq!(2, Solution::jump(vec![2, 3, 0, 1, 4]));
     }
 }
