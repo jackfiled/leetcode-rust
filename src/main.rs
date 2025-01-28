@@ -1,10 +1,10 @@
 use crate::fetch_problem::{Fetcher, ProblemManager};
+use anyhow::anyhow;
+use serde::de::Error;
 use std::fs;
 use std::fs::exists;
 use std::io::Write;
 use std::path::Path;
-use anyhow::anyhow;
-use serde::de::Error;
 
 mod fetch_problem;
 
@@ -46,7 +46,7 @@ async fn main() {
 
 fn write_file(file_name: &String, file_content: &String) -> anyhow::Result<()> {
     let file_path = Path::new("./src/problem").join(format!("{}.rs", file_name));
-    
+
     if exists(&file_path)? {
         println!("{} has pulled.", file_name);
         return Err(anyhow!("{} has pulled", file_name));

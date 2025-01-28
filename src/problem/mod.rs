@@ -456,3 +456,5 @@ mod p2944_minimum_number_of_coins_for_fruits;
 mod p2412_minimum_money_required_before_transactions;
 
 mod p40_combination_sum_ii;
+
+mod p119_pascals_triangle_ii;
