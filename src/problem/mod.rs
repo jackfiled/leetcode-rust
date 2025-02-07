@@ -474,3 +474,5 @@ mod p922_sort_array_by_parity_ii;
 mod p90_subsets_ii;
 
 mod p47_permutations_ii;
+
+mod p59_spiral_matrix_ii;
