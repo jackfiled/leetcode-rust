@@ -478,3 +478,5 @@ mod p47_permutations_ii;
 mod p59_spiral_matrix_ii;
 
 mod p913_cat_and_mouse;
+
+mod p1728_cat_and_mouse_ii;
