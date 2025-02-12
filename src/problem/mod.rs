@@ -480,3 +480,5 @@ mod p59_spiral_matrix_ii;
 mod p913_cat_and_mouse;
 
 mod p1728_cat_and_mouse_ii;
+
+mod p1760_minimum_limit_of_balls_in_a_bag;
