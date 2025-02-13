@@ -482,3 +482,5 @@ mod p913_cat_and_mouse;
 mod p1728_cat_and_mouse_ii;
 
 mod p1760_minimum_limit_of_balls_in_a_bag;
+
+mod p1742_maximum_number_of_balls_in_a_box;
