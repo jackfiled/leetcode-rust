@@ -488,3 +488,5 @@ mod p1742_maximum_number_of_balls_in_a_box;
 mod p1552_magnetic_force_between_two_balls;
 
 mod p1706_where_will_the_ball_fall;
+
+mod p1299_replace_elements_with_greatest_element_on_right_side;
