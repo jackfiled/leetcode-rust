@@ -492,3 +492,5 @@ mod p1706_where_will_the_ball_fall;
 mod p1299_replace_elements_with_greatest_element_on_right_side;
 
 mod p2080_range_frequency_queries;
+
+mod p624_maximum_distance_in_arrays;
