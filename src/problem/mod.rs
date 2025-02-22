@@ -498,3 +498,5 @@ mod p624_maximum_distance_in_arrays;
 mod p2595_number_of_even_and_odd_bits;
 
 mod p2209_minimum_white_tiles_after_covering_with_carpets;
+
+mod p2506_count_pairs_of_similar_strings;
