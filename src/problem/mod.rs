@@ -500,3 +500,5 @@ mod p2595_number_of_even_and_odd_bits;
 mod p2209_minimum_white_tiles_after_covering_with_carpets;
 
 mod p2506_count_pairs_of_similar_strings;
+
+mod p1206_design_skiplist;
