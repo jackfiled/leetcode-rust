@@ -502,3 +502,5 @@ mod p2209_minimum_white_tiles_after_covering_with_carpets;
 mod p2506_count_pairs_of_similar_strings;
 
 mod p1206_design_skiplist;
+
+mod p1656_design_an_ordered_stream;
