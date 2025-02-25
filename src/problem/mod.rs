@@ -504,3 +504,5 @@ mod p2506_count_pairs_of_similar_strings;
 mod p1206_design_skiplist;
 
 mod p1656_design_an_ordered_stream;
+
+mod p2502_design_memory_allocator;
