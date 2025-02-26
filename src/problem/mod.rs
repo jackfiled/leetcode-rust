@@ -506,3 +506,5 @@ mod p1206_design_skiplist;
 mod p1656_design_an_ordered_stream;
 
 mod p2502_design_memory_allocator;
+
+mod p1472_design_browser_history;
