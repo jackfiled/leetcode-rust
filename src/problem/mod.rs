@@ -514,3 +514,5 @@ mod p2353_design_a_food_rating_system;
 mod p131_palindrome_partitioning;
 
 mod p132_palindrome_partitioning_ii;
+
+mod p1278_palindrome_partitioning_iii;
