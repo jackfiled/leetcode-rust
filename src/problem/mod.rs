@@ -518,3 +518,5 @@ mod p132_palindrome_partitioning_ii;
 mod p1278_palindrome_partitioning_iii;
 
 mod p1745_palindrome_partitioning_iv;
+
+mod p1328_break_a_palindrome;
