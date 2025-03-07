@@ -522,3 +522,5 @@ mod p1745_palindrome_partitioning_iv;
 mod p1328_break_a_palindrome;
 
 mod p2588_count_the_number_of_beautiful_subarrays;
+
+mod p2597_the_number_of_beautiful_subsets;
