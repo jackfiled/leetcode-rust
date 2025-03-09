@@ -526,3 +526,5 @@ mod p2588_count_the_number_of_beautiful_subarrays;
 mod p2597_the_number_of_beautiful_subsets;
 
 mod p2234_maximum_total_beauty_of_the_gardens;
+
+mod p2070_most_beautiful_item_for_each_query;
