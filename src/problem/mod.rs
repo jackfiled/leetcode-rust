@@ -534,3 +534,5 @@ mod p2269_find_the_k_beauty_of_a_number;
 mod p2012_sum_of_beauty_in_the_array;
 
 mod p3305_count_of_substrings_containing_every_vowel_and_k_consonants_i;
+
+mod p3306_count_of_substrings_containing_every_vowel_and_k_consonants_ii;
