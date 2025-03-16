@@ -540,3 +540,5 @@ mod p3306_count_of_substrings_containing_every_vowel_and_k_consonants_ii;
 mod p3340_check_balanced_string;
 
 mod p3110_score_of_a_string;
+
+mod p2272_substring_with_largest_variance;
