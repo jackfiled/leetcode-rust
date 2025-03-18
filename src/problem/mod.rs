@@ -544,3 +544,5 @@ mod p3110_score_of_a_string;
 mod p2272_substring_with_largest_variance;
 
 mod p1963_minimum_number_of_swaps_to_make_the_string_balanced;
+
+mod p2614_prime_in_diagonal;
