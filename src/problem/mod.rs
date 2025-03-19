@@ -546,3 +546,5 @@ mod p2272_substring_with_largest_variance;
 mod p1963_minimum_number_of_swaps_to_make_the_string_balanced;
 
 mod p2614_prime_in_diagonal;
+
+mod p2610_convert_an_array_into_a_2d_array_with_conditions;
