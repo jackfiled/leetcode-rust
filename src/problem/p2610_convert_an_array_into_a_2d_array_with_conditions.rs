@@ -39,9 +39,9 @@ mod tests {
 
     #[test]
     fn test_2610() {
-        assert_eq!(
+        assert_inner_array_unorder_equal!(
             vec![vec![1, 3, 4, 2], vec![1, 3], vec![1]],
-            Solution::find_matrix(vec![1, 3, 4, 1, 2, 3, 1])
+            Solution::find_matrix(vec![1, 3, 4, 1, 2, 3, 1]),
         );
     }
 }
