@@ -552,3 +552,5 @@ mod p2610_convert_an_array_into_a_2d_array_with_conditions;
 mod p2612_minimum_reverse_operations;
 
 mod p2680_maximum_or;
+
+mod p2643_row_with_maximum_ones;
