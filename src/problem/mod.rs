@@ -554,3 +554,5 @@ mod p2612_minimum_reverse_operations;
 mod p2680_maximum_or;
 
 mod p2643_row_with_maximum_ones;
+
+mod p2116_check_if_a_parentheses_string_can_be_valid;
