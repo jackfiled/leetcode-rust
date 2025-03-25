@@ -558,3 +558,5 @@ mod p2643_row_with_maximum_ones;
 mod p2116_check_if_a_parentheses_string_can_be_valid;
 
 mod p2255_count_prefixes_of_a_given_string;
+
+mod p2711_difference_of_number_of_distinct_values_on_diagonals;
