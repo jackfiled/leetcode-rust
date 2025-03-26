@@ -560,3 +560,5 @@ mod p2116_check_if_a_parentheses_string_can_be_valid;
 mod p2255_count_prefixes_of_a_given_string;
 
 mod p2711_difference_of_number_of_distinct_values_on_diagonals;
+
+mod p2829_determine_the_minimum_sum_of_a_k_avoiding_array;
