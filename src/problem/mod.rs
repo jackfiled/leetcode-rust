@@ -562,3 +562,5 @@ mod p2255_count_prefixes_of_a_given_string;
 mod p2711_difference_of_number_of_distinct_values_on_diagonals;
 
 mod p2829_determine_the_minimum_sum_of_a_k_avoiding_array;
+
+mod p2712_minimum_cost_to_make_all_characters_equal;
