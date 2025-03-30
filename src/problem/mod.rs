@@ -568,3 +568,5 @@ mod p2712_minimum_cost_to_make_all_characters_equal;
 mod p2716_minimize_string_length;
 
 mod p2360_longest_cycle_in_a_graph;
+
+mod p2109_adding_spaces_to_a_string;
