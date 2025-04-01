@@ -572,3 +572,5 @@ mod p2360_longest_cycle_in_a_graph;
 mod p2109_adding_spaces_to_a_string;
 
 mod p2278_percentage_of_letter_in_string;
+
+mod p2140_solving_questions_with_brainpower;
