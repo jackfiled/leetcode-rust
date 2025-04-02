@@ -574,3 +574,5 @@ mod p2109_adding_spaces_to_a_string;
 mod p2278_percentage_of_letter_in_string;
 
 mod p2140_solving_questions_with_brainpower;
+
+mod p2873_maximum_value_of_an_ordered_triplet_i;
