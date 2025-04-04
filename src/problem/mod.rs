@@ -578,3 +578,5 @@ mod p2140_solving_questions_with_brainpower;
 mod p2873_maximum_value_of_an_ordered_triplet_i;
 
 mod p2874_maximum_value_of_an_ordered_triplet_ii;
+
+mod p1123_lowest_common_ancestor_of_deepest_leaves;
