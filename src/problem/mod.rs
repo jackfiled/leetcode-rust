@@ -580,3 +580,5 @@ mod p2873_maximum_value_of_an_ordered_triplet_i;
 mod p2874_maximum_value_of_an_ordered_triplet_ii;
 
 mod p1123_lowest_common_ancestor_of_deepest_leaves;
+
+mod p1863_sum_of_all_subset_xor_totals;
