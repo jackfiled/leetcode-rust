@@ -584,3 +584,5 @@ mod p1123_lowest_common_ancestor_of_deepest_leaves;
 mod p1863_sum_of_all_subset_xor_totals;
 
 mod p368_largest_divisible_subset;
+
+mod p416_partition_equal_subset_sum;
