@@ -586,3 +586,5 @@ mod p1863_sum_of_all_subset_xor_totals;
 mod p368_largest_divisible_subset;
 
 mod p416_partition_equal_subset_sum;
+
+mod p3396_minimum_number_of_operations_to_make_elements_in_array_distinct;
