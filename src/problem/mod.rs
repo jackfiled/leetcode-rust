@@ -588,3 +588,6 @@ mod p368_largest_divisible_subset;
 mod p416_partition_equal_subset_sum;
 
 mod p3396_minimum_number_of_operations_to_make_elements_in_array_distinct;
+
+mod p2999_count_the_number_of_powerful_integers;
+mod p3375_minimum_operations_to_make_array_values_equal_to_k;
