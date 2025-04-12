@@ -593,3 +593,5 @@ mod p2999_count_the_number_of_powerful_integers;
 mod p3375_minimum_operations_to_make_array_values_equal_to_k;
 
 mod p2843_count_symmetric_integers;
+
+mod p3272_find_the_count_of_good_integers;
