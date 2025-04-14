@@ -597,3 +597,5 @@ mod p2843_count_symmetric_integers;
 mod p3272_find_the_count_of_good_integers;
 
 mod p1922_count_good_numbers;
+
+mod p1534_count_good_triplets;
