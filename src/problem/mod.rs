@@ -599,3 +599,5 @@ mod p3272_find_the_count_of_good_integers;
 mod p1922_count_good_numbers;
 
 mod p1534_count_good_triplets;
+
+mod p2179_count_good_triplets_in_an_array;
