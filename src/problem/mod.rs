@@ -603,3 +603,5 @@ mod p1534_count_good_triplets;
 mod p2179_count_good_triplets_in_an_array;
 
 mod p2537_count_the_number_of_good_subarrays;
+
+mod p2176_count_equal_and_divisible_pairs_in_an_array;
