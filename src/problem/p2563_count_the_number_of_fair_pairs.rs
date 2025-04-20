@@ -14,7 +14,7 @@ impl Solution {
             let l = nums[0..i].partition_point(|&x| x + nums[i] < lower);
             let r = nums[0..i].partition_point(|&x| x + nums[i] <= upper);
 
-            result += (r - l);
+            result += r - l;
         }
 
         result as i64
