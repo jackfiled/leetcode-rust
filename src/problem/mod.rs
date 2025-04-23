@@ -613,3 +613,6 @@ mod p2563_count_the_number_of_fair_pairs;
 mod p781_rabbits_in_forest;
 
 mod p2145_count_the_hidden_sequences;
+
+mod p1399_count_largest_group;
+mod p2338_count_the_number_of_ideal_arrays;
