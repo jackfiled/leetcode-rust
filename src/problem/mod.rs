@@ -491,4 +491,132 @@ mod p1706_where_will_the_ball_fall;
 
 mod p1299_replace_elements_with_greatest_element_on_right_side;
 
+mod p2080_range_frequency_queries;
+
+mod p624_maximum_distance_in_arrays;
+
+mod p2595_number_of_even_and_odd_bits;
+
+mod p2209_minimum_white_tiles_after_covering_with_carpets;
+
+mod p2506_count_pairs_of_similar_strings;
+
+mod p1206_design_skiplist;
+
+mod p1656_design_an_ordered_stream;
+
+mod p2502_design_memory_allocator;
+
+mod p1472_design_browser_history;
+
+mod p2353_design_a_food_rating_system;
+
+mod p131_palindrome_partitioning;
+
+mod p132_palindrome_partitioning_ii;
+
+mod p1278_palindrome_partitioning_iii;
+
+mod p1745_palindrome_partitioning_iv;
+
+mod p1328_break_a_palindrome;
+
+mod p2588_count_the_number_of_beautiful_subarrays;
+
+mod p2597_the_number_of_beautiful_subsets;
+
+mod p2234_maximum_total_beauty_of_the_gardens;
+
+mod p2070_most_beautiful_item_for_each_query;
+
+mod p2269_find_the_k_beauty_of_a_number;
+
+mod p2012_sum_of_beauty_in_the_array;
+
+mod p3305_count_of_substrings_containing_every_vowel_and_k_consonants_i;
+
+mod p3306_count_of_substrings_containing_every_vowel_and_k_consonants_ii;
+
+mod p3340_check_balanced_string;
+
+mod p3110_score_of_a_string;
+
+mod p2272_substring_with_largest_variance;
+
+mod p1963_minimum_number_of_swaps_to_make_the_string_balanced;
+
+mod p2614_prime_in_diagonal;
+
+mod p2610_convert_an_array_into_a_2d_array_with_conditions;
+
+mod p2612_minimum_reverse_operations;
+
+mod p2680_maximum_or;
+
+mod p2643_row_with_maximum_ones;
+
+mod p2116_check_if_a_parentheses_string_can_be_valid;
+
+mod p2255_count_prefixes_of_a_given_string;
+
+mod p2711_difference_of_number_of_distinct_values_on_diagonals;
+
+mod p2829_determine_the_minimum_sum_of_a_k_avoiding_array;
+
+mod p2712_minimum_cost_to_make_all_characters_equal;
+
+mod p2716_minimize_string_length;
+
+mod p2360_longest_cycle_in_a_graph;
+
+mod p2109_adding_spaces_to_a_string;
+
+mod p2278_percentage_of_letter_in_string;
+
+mod p2140_solving_questions_with_brainpower;
+
+mod p2873_maximum_value_of_an_ordered_triplet_i;
+
+mod p2874_maximum_value_of_an_ordered_triplet_ii;
+
+mod p1123_lowest_common_ancestor_of_deepest_leaves;
+
+mod p1863_sum_of_all_subset_xor_totals;
+
+mod p368_largest_divisible_subset;
+
+mod p416_partition_equal_subset_sum;
+
+mod p3396_minimum_number_of_operations_to_make_elements_in_array_distinct;
+
+mod p2999_count_the_number_of_powerful_integers;
+mod p3375_minimum_operations_to_make_array_values_equal_to_k;
+
+mod p2843_count_symmetric_integers;
+
+mod p3272_find_the_count_of_good_integers;
+
+mod p1922_count_good_numbers;
+
+mod p1534_count_good_triplets;
+
+mod p2179_count_good_triplets_in_an_array;
+
+mod p2537_count_the_number_of_good_subarrays;
+
+mod p2176_count_equal_and_divisible_pairs_in_an_array;
+
+mod p2364_count_number_of_bad_pairs;
+
+mod p2563_count_the_number_of_fair_pairs;
+
+mod p781_rabbits_in_forest;
+
+mod p2145_count_the_hidden_sequences;
+
+mod p1399_count_largest_group;
+mod p2338_count_the_number_of_ideal_arrays;
+
+mod p2845_count_of_interesting_subarrays;
+
 mod p1287_element_appearing_more_than_25_in_sorted_array;
