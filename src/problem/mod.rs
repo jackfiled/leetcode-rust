@@ -490,3 +490,5 @@ mod p1552_magnetic_force_between_two_balls;
 mod p1706_where_will_the_ball_fall;
 
 mod p1299_replace_elements_with_greatest_element_on_right_side;
+
+mod p1287_element_appearing_more_than_25_in_sorted_array;
