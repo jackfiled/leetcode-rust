@@ -616,3 +616,5 @@ mod p2145_count_the_hidden_sequences;
 
 mod p1399_count_largest_group;
 mod p2338_count_the_number_of_ideal_arrays;
+
+mod p2845_count_of_interesting_subarrays;
