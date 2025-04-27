@@ -621,3 +621,5 @@ mod p2845_count_of_interesting_subarrays;
 
 mod p1287_element_appearing_more_than_25_in_sorted_array;
 mod p2444_count_subarrays_with_fixed_bounds;
+
+mod p3392_count_subarrays_of_length_three_with_a_condition;
