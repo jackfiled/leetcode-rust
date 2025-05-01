@@ -626,3 +626,5 @@ mod p3392_count_subarrays_of_length_three_with_a_condition;
 
 mod p2302_count_subarrays_with_score_less_than_k;
 mod p2962_count_subarrays_where_max_element_appears_at_least_k_times;
+
+mod p2071_maximum_number_of_tasks_you_can_assign;
