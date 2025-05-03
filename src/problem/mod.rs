@@ -630,3 +630,5 @@ mod p2962_count_subarrays_where_max_element_appears_at_least_k_times;
 mod p2071_maximum_number_of_tasks_you_can_assign;
 
 mod p838_push_dominoes;
+
+mod p1007_minimum_domino_rotations_for_equal_row;
