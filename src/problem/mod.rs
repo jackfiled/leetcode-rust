@@ -632,3 +632,5 @@ mod p2071_maximum_number_of_tasks_you_can_assign;
 mod p838_push_dominoes;
 
 mod p1007_minimum_domino_rotations_for_equal_row;
+
+mod p1128_number_of_equivalent_domino_pairs;
