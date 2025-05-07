@@ -638,3 +638,5 @@ mod p1128_number_of_equivalent_domino_pairs;
 mod p790_domino_and_tromino_tiling;
 
 mod p1920_build_array_from_permutation;
+
+mod p3341_find_minimum_time_to_reach_last_room_i;
