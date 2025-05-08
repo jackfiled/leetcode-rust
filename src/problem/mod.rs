@@ -640,3 +640,5 @@ mod p790_domino_and_tromino_tiling;
 mod p1920_build_array_from_permutation;
 
 mod p3341_find_minimum_time_to_reach_last_room_i;
+
+mod p3342_find_minimum_time_to_reach_last_room_ii;
