@@ -644,3 +644,5 @@ mod p3341_find_minimum_time_to_reach_last_room_i;
 mod p3342_find_minimum_time_to_reach_last_room_ii;
 
 mod p3343_count_number_of_balanced_permutations;
+
+mod p2918_minimum_equal_sum_of_two_arrays_after_replacing_zeros;
