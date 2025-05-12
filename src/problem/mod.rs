@@ -648,3 +648,5 @@ mod p3343_count_number_of_balanced_permutations;
 mod p2918_minimum_equal_sum_of_two_arrays_after_replacing_zeros;
 
 mod p1550_three_consecutive_odds;
+
+mod p2094_finding_3_digit_even_numbers;
