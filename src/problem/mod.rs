@@ -650,3 +650,5 @@ mod p2918_minimum_equal_sum_of_two_arrays_after_replacing_zeros;
 mod p1550_three_consecutive_odds;
 
 mod p2094_finding_3_digit_even_numbers;
+
+mod p3335_total_characters_in_string_after_transformations_i;
