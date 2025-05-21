@@ -666,3 +666,5 @@ mod p1931_painting_a_grid_with_three_different_colors;
 mod p3024_type_of_triangle;
 
 mod p3355_zero_array_transformation_i;
+
+mod p3356_zero_array_transformation_ii;
