@@ -668,3 +668,5 @@ mod p3024_type_of_triangle;
 mod p3355_zero_array_transformation_i;
 
 mod p3356_zero_array_transformation_ii;
+
+mod p3362_zero_array_transformation_iii;
