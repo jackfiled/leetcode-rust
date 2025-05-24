@@ -672,3 +672,5 @@ mod p3356_zero_array_transformation_ii;
 mod p3362_zero_array_transformation_iii;
 
 mod p3068_find_the_maximum_sum_of_node_values;
+
+mod p2942_find_words_containing_character;
