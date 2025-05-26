@@ -676,3 +676,5 @@ mod p3068_find_the_maximum_sum_of_node_values;
 mod p2942_find_words_containing_character;
 
 mod p2131_longest_palindrome_by_concatenating_two_letter_words;
+
+mod p1857_largest_color_value_in_a_directed_graph;
