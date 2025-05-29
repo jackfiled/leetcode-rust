@@ -682,3 +682,5 @@ mod p1857_largest_color_value_in_a_directed_graph;
 mod p2894_divisible_and_non_divisible_sums_difference;
 
 mod p3372_maximize_the_number_of_target_nodes_after_connecting_trees_i;
+
+mod p3373_maximize_the_number_of_target_nodes_after_connecting_trees_ii;
