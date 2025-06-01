@@ -686,3 +686,5 @@ mod p3372_maximize_the_number_of_target_nodes_after_connecting_trees_i;
 mod p3373_maximize_the_number_of_target_nodes_after_connecting_trees_ii;
 
 mod p2359_find_closest_node_to_given_two_nodes;
+
+mod p2929_distribute_candies_among_children_ii;
