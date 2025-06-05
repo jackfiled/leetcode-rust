@@ -692,3 +692,5 @@ mod p2929_distribute_candies_among_children_ii;
 mod p1298_maximum_candies_you_can_get_from_boxes;
 
 mod p3403_find_the_lexicographically_largest_string_from_the_box_i;
+
+mod p1061_lexicographically_smallest_equivalent_string;
