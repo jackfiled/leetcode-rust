@@ -694,3 +694,5 @@ mod p1298_maximum_candies_you_can_get_from_boxes;
 mod p3403_find_the_lexicographically_largest_string_from_the_box_i;
 
 mod p1061_lexicographically_smallest_equivalent_string;
+
+mod p2434_using_a_robot_to_print_the_lexicographically_smallest_string;
