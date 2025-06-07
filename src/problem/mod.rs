@@ -696,3 +696,5 @@ mod p3403_find_the_lexicographically_largest_string_from_the_box_i;
 mod p1061_lexicographically_smallest_equivalent_string;
 
 mod p2434_using_a_robot_to_print_the_lexicographically_smallest_string;
+
+mod p3170_lexicographically_minimum_string_after_removing_stars;
