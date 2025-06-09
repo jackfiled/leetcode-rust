@@ -700,3 +700,5 @@ mod p2434_using_a_robot_to_print_the_lexicographically_smallest_string;
 mod p3170_lexicographically_minimum_string_after_removing_stars;
 
 mod p386_lexicographical_numbers;
+
+mod p440_k_th_smallest_in_lexicographical_order;
