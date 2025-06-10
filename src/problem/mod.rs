@@ -702,3 +702,5 @@ mod p3170_lexicographically_minimum_string_after_removing_stars;
 mod p386_lexicographical_numbers;
 
 mod p440_k_th_smallest_in_lexicographical_order;
+
+mod p3442_maximum_difference_between_even_and_odd_frequency_i;
